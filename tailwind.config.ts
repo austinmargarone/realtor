@@ -17,6 +17,13 @@ module.exports = {
     },
     extend: {
       colors: {
+        kw: {
+          red: "#B40101",
+          ltgray: "#CCC",
+          maingray: "#999",
+          darkgray: "#666",
+          black: "#000",
+        },
         primary: {
           500: "#FF7000",
         },
@@ -26,7 +33,6 @@ module.exports = {
         light: {
           900: "#FFFFFF",
         },
-        "accent-blue": "#1DA1F2",
       },
       fontFamily: {
         inter: ["var(--font-inter)"],
