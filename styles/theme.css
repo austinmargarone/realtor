@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .background-light {
+    @apply bg-white dark:bg-black;
+  }
+
+  .h1-bold {
+    @apply text-[30px] font-bold leading-[42px] tracking-tighter;
+  }
+}
