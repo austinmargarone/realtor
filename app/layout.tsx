@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import React from "react";
-import Navbar from "@/constants/components/Navbar";
 import { ThemeProvider } from "@/context/ThemeProvider";
+import Navbar from "@/components/Navbar";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -25,7 +25,6 @@ export default function RootLayout({
       <body className={inter.variable}>
         <ThemeProvider>
           <Navbar />
-          <h1 className="h1-bold">Test</h1>
           {children}
         </ThemeProvider>
       </body>
