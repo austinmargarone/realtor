@@ -22,7 +22,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.variable}>
+      <body className={`${inter.variable} bg-[#cccccc]	dark:bg-[#666666]`}>
         <ThemeProvider>
           <Navbar />
           {children}
