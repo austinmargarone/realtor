@@ -3,6 +3,14 @@ export default function Home() {
     <main>
       <div className="h1-bold"> Hello World! </div>
       <div>Folder Structure</div>
+      <div>Folder Structure</div> <div>Folder Structure</div>{" "}
+      <div>Folder Structure</div> <div>Folder Structure</div>{" "}
+      <div>Folder Structure</div> <div>Folder Structure</div>{" "}
+      <div>Folder Structure</div> <div>Folder Structure</div>{" "}
+      <div>Folder Structure</div> <div>Folder Structure</div>{" "}
+      <div>Folder Structure</div> <div>Folder Structure</div>{" "}
+      <div>Folder Structure</div> <div>Folder Structure</div>{" "}
+      <div>Folder Structure</div>
     </main>
   );
 }

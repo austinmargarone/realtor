@@ -49,7 +49,7 @@ const MobileNav = () => {
           width={36}
           height={36}
           alt="Menu"
-          className="invert-colors lg:hidden"
+          className="invert-colors bg-black lg:hidden"
         />
       </SheetTrigger>
       <SheetContent
