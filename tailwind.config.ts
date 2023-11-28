@@ -22,6 +22,7 @@ module.exports = {
           ltgray: "#CCC",
           maingray: "#999",
           darkgray: "#666",
+          lessblack: "#313338",
           black: "#000",
         },
         primary: {

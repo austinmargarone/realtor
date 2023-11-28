@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const Listing = () => {
   return (
-    <div className="w-fit min-w-[250px] max-w-[420px] rounded-[1rem] border bg-white p-[.21rem] dark:border-kw-darkgray dark:bg-kw-black">
+    <div className="w-fit min-w-[250px] max-w-[420px] rounded-[1rem] border bg-white p-[.5rem] dark:border-kw-darkgray dark:bg-kw-black">
       <div className="flex justify-center">
         <Image
           src={"/901.jpeg"}
