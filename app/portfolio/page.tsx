@@ -6,9 +6,9 @@ type Props = {};
 
 const page = (props: Props) => {
   return (
-    <main className="my-[1.25rem]">
-      <div className="breakpoint mx-auto flex items-center justify-between ">
-        <h2 className="h2">My Listings</h2>
+    <main>
+      <div className="breakpoint mx-auto my-[1.25rem] flex items-center justify-between">
+        <h2 className="h2 max-w-[1100px]">My Listings</h2>
       </div>
       <div className="m-[2rem] flex flex-wrap justify-center gap-[2rem]">
         {propertyData.map((listing) => (
