@@ -63,7 +63,7 @@ const Listing = ({
         </div>
         <div className="flex items-center justify-between">
           <p className="w-[60%]">{address}</p>
-          <Link href={`/portfolio${_id}`}>
+          <Link href={`/portfolio/${_id}`}>
             <Button className="w-fit border border-black text-black dark:bg-kw-red dark:text-white">
               View Listing
             </Button>
