@@ -12,10 +12,6 @@ export const menuLinks: MenuLink[] = [
     label: "Home",
   },
   {
-    route: "/about",
-    label: "About Me",
-  },
-  {
     route: "/portfolio",
     label: "Portfolio",
   },

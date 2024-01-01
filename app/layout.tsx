@@ -12,8 +12,9 @@ const inter = Inter({
   variable: "--font-inter",
 });
 export const metadata: Metadata = {
-  title: "Realtor",
-  description: "A Realtor Application",
+  title: "Austin Margarone | Realtor",
+  description:
+    "Austin Margarone is a realtor in the Greater Rochester Area of NY State.",
 };
 
 export default function RootLayout({

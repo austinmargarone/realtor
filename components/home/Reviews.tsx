@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const Reviews = () => {
@@ -26,9 +27,16 @@ const Reviews = () => {
             every step of the way. We recommend Austin without hesitation! He
             was fantastic!! Thank you,
           </p>
-          <button className="button dark:buttondark mt-[1.25rem]">
-            See More
-          </button>
+          <Link
+            href={
+              "https://www.realtor.com/realestateagents/austin-margarone_rochester_ny_3802982_051184163"
+            }
+            target="_blank"
+          >
+            <button className="button dark:buttondark mt-[1.25rem]">
+              See More
+            </button>
+          </Link>
         </div>
       </div>
     </section>
