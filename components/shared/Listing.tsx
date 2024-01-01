@@ -3,42 +3,67 @@ import React from "react";
 import { Button } from "../ui/button";
 import Link from "next/link";
 
-const Listing = () => {
+interface Props {
+  _id: string;
+  status: string;
+  image: string;
+  beds: number;
+  baths: number;
+  sqft: string;
+  lot: number;
+  sale: string;
+  list: string;
+  address: string;
+}
+
+const Listing = ({
+  _id,
+  status,
+  image,
+  beds,
+  baths,
+  sqft,
+  lot,
+  sale,
+  list,
+  address,
+}: Props) => {
   return (
     <div className="w-fit min-w-[250px] max-w-[420px] rounded-[1rem] border bg-white p-[.5rem] dark:border-kw-darkgray dark:bg-kw-black">
       <div className="flex justify-center">
         <Image
-          src={"/901.jpeg"}
+          src={image}
           alt={"Listing Photo"}
           width={450}
           height={268}
           className="rounded-t-[1rem]"
         />
       </div>
-      <div className="px-[1rem] py-[.2rem] dark:text-white">
-        <div className="flex gap-5">
-          <p>
-            <span>{/* Add Circle red or green */}</span>For Sale
-          </p>
-          <p>$300,000</p>
+      <div className="p-[1rem] dark:text-white">
+        <div className="flex gap-2">
+          {status}
+          <span>-</span>
+          <span className="font-bold">
+            ${sale && sale.trim() !== "" ? sale : list}
+          </span>
         </div>
-        <div className="flex justify-around gap-[1rem]">
+        <div className="my-[.1rem] flex justify-start gap-[1rem]">
           <p>
-            <span>3</span> bed
+            <span className="font-bold">{beds}</span> bed
           </p>
           <p>
-            <span>2</span> bath
+            <span className="font-bold">{baths}</span> bath
           </p>
           <p>
-            <span>1,000</span> sqft
+            <span className="font-bold">{sqft}</span> sqft
           </p>
           <p>
-            <span>1</span> acre lot
+            <span className="font-bold">{lot}</span> acre lot
           </p>
         </div>
         <div className="flex items-center justify-between">
-          <p className="w-[50%]">901 Long Pond Road, Rochester, NY 14616</p>
-          <Link href="/">
+          <p className="w-[60%]">{address}</p>
+          <Link href={`/portfolio${_id}`}>
             <Button className="w-fit border border-black text-black dark:bg-kw-red dark:text-white">
               View Listing
             </Button>

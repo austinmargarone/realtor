@@ -1,6 +1,7 @@
 import React from "react";
 import Listing from "../shared/Listing";
 import Link from "next/link";
+import propertyData from "../../data/property.json";
 
 const ListingCards = () => {
   return (
@@ -12,11 +13,21 @@ const ListingCards = () => {
         </Link>
       </div>
       <div className="m-[2rem] flex flex-wrap justify-center gap-[2rem]">
-        <Listing />
-        <Listing />
-        <Listing />
-        <Listing />
-        <Listing />
+        {propertyData.map((listing) => (
+          <Listing
+            key={listing.id}
+            address={listing.address}
+            image={listing.image}
+            beds={listing.beds}
+            baths={listing.baths}
+            lot={listing.lot}
+            list={listing.list}
+            sale={listing.sale}
+            status={listing.status}
+            sqft={listing.sqft}
+            _id={listing.id}
+          />
+        ))}
       </div>
     </main>
   );

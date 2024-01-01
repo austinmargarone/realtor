@@ -1,25 +1,24 @@
-import Link from "next/link";
 import React from "react";
+import propertyData from "../../data/property.json";
 
 type Props = {};
 
 const page = (props: Props) => {
   return (
-    <div>
+    <section className="breakpoint mx-auto my-[1.25rem]">
       <h1>Portfolio</h1>
       <div>
-        <ul>
-          <li>
-            <Link href="/portfolio/901-long-pond-road">901 Long Pond Road</Link>
+        {propertyData.map((item) => (
+          <li key={item.id}>
+            <a>
+              <h2>{item.title}</h2>
+              <p>{item.description}</p>
+              <p>{item.list}</p>
+            </a>
           </li>
-          <li>
-            <Link href="/portfolio/609-wild-mallard-trail">
-              609 Wild Mallard Trail
-            </Link>
-          </li>
-        </ul>
+        ))}
       </div>
-    </div>
+    </section>
   );
 };
 
