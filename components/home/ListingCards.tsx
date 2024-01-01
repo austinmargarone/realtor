@@ -5,8 +5,8 @@ import Link from "next/link";
 const ListingCards = () => {
   return (
     <main>
-      <div className="mx-[1.25em] flex items-center justify-between md:mx-[5rem] lg:mx-[7.5rem]">
-        <h2 className="h2">My Listings</h2>
+      <div className="breakpoint mx-auto flex items-center justify-between md:mx-[5rem] lg:mx-[7.5rem]">
+        <h2 className="h2">Listings</h2>
         <Link href="/listings">
           <button className="button dark:buttondark">Portfoilo</button>
         </Link>

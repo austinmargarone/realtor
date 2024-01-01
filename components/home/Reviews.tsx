@@ -4,8 +4,8 @@ import React from "react";
 const Reviews = () => {
   return (
     <section>
-      <div className="mx-auto my-[1.25rem] flex flex-col items-center justify-center gap-[1.25rem] md:max-w-[725px] md:flex-row lg:max-w-[1000px]">
-        <div className="flex w-[50%] justify-center">
+      <div className="breakpoint mx-auto my-[1.25rem] flex flex-col items-center justify-center gap-[1.25rem] md:flex-row">
+        <div className="flex justify-center lg:w-[50%]">
           <Image
             src={"/901.jpeg"}
             alt={"Listing Photo"}
@@ -14,7 +14,7 @@ const Reviews = () => {
             className="rounded-[.5rem] border-2 border-black"
           />
         </div>
-        <div className="w-[50%] ">
+        <div className="lg:w-[50%] ">
           <h2 className="h2 mb-[.66rem] dark:text-kw-black">My Reviews</h2>
           <p className="dark:text-kw-maingray">
             “Austin helped us with what has been said to be one of the most
