@@ -41,13 +41,13 @@ const Footer = () => {
             </p>
           </div>
           <div className="flex justify-center gap-[.63rem]">
-            <Link href={"/privacy-policy"}>
+            <Link href="/policy.pdf" passHref target="_blank">
               <p className="text-black underline dark:text-white">
                 Privacy Policy
               </p>
             </Link>
             <span className="text-black underline dark:text-white">|</span>
-            <Link href={"/terms-and-conditions"}>
+            <Link href="/terms.pdf" passHref target="_blank">
               <p className="text-black underline dark:text-white">
                 Terms & Coditions
               </p>
