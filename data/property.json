@@ -3,7 +3,7 @@
     "id": "1",
     "title": "605 Wild Mallard Trail",
     "address": "605 Wild Mallard Trail, Webster, NY 14580",
-    "image": "/901.jpeg",
+    "image": "/wildmallard.jpg",
     "description": "Beautiful custom-built Southern Cape with many unique architectural features located on a quiet cul-de-sac street in Webster. The house is setback on a private wooded lot with hedgerows of forsythia lining the driveway. Enjoy entertaining and preparing meals in the large fully-equipped gourmet eat-in kitchen with a fireplace, and stunning views out the sun-drenched windows. This house also has a formal dining and living room, as well as a cozy family room that walks out to a private backyard deck with a hot tub. You’ll rest well in your luxurious 1st floor primary suite. The primary bath has two walk-in closets, split sinks, a vanity, heated floors and plenty of room. The split plan allows for privacy with four additional bedrooms and two full bathrooms upstairs. Side-entry walks into a mudroom and 1st floor laundry off the 3-car garage. A finished basement awaits with a home theater, gym, rec area, kitchenette, full bath, storage room and gas fireplace with ample natural light from the egress window seat. Don’t wait on this Webster gem located within walking distance to: Gosnell Big Woods Reserve, Whiting Road Nature Preserve, Hojack Trail and Lake Ontario for biking and hiking.",
     "list": "785,000",
     "sale": "765,000",
@@ -15,14 +15,14 @@
     "garage": 3,
     "tour": "https://my.matterport.com/show/?m=1A8zFLesAh3",
     "embed": "https://my.matterport.com/show/?m=1A8zFLesAh3&play=1&qs=1&ts=1&hl=0&hr=0",
-    "status": "Sold",
+    "status": "SOLD",
     "MLS": "R1459403"
   },
   {
     "id": "2",
     "title": "609 Wild Mallard Trail",
     "address": "609 Wild Mallard Trail, Webster, NY 14580",
-    "image": "/901.jpeg",
+    "image": "/wild.jpg",
     "description": "Stunning custom-built cape with many unique architectural features, located on a quiet cul-de-sac street in Webster. The house is setback on a 1.19 acre lot with scenic views from all windows. The front porch is partially enclosed and private. The entry offers plenty of room to welcome your guest and brings you into a large living room with cathedral ceilings, custom built-ins and a gas fireplace. A formal dining room features porcelain brick flooring and a designer chandelier. The eat-in kitchen boasts maple cabinetry, stainless appliances, granite, built-in desk, gas fireplace, wet bar and pantry. Work from home in the large office and relax in the sunroom. Enormous first floor laundry with cedar closet. First floor primary suite with dual walk-in closets and a large bath. Two guest rooms with a full bath. Plus, a private guest suite upstairs with a large walk-in closet. Webster schools, located within walking distance to: Gosnell Big Woods Reserve, Whiting Road Nature Preserve, Hojack Trail and Lake Ontario for biking and hiking. Delayed Negotiations until Tuesday at 2PM. Do not wait on this unique opportunity to live in a beautiful, well-built home far below replacement cost!",
     "list": "650,000",
     "sale": "650,000",
@@ -34,14 +34,14 @@
     "garage": 2,
     "tour": "https://my.matterport.com/show/?m=Xjuo4yMEVqQ",
     "embed": "https://my.matterport.com/show/?m=Xjuo4yMEVqQ&play=1&qs=1&ts=1&hl=0&hr=0",
-    "status": "Sold",
+    "status": "SOLD",
     "MLS": "R1462403"
   },
   {
     "id": "3",
     "title": "106 Castle Grove Drive",
     "address": "106 Castle Grove Drive, Rochester, NY 14612",
-    "image": "/KWRed.png",
+    "image": "/castle.jpeg",
     "description": "Very well-maintained ranch in a quiet Greece neighborhood, with plenty of space for a family. The eat-in kitchen has ample room to cook and eat. The living room is very cozy with a fireplace. This property features a large enclosed porch in the back for entertaining, as well as a partially fenced backyard. Beautiful two car garage with an attached shed for storage/workshop and another shed in the backyard. Finished basement with a full bath and plenty of storage. Laundry hookups on the first floor and in the basement. Delayed showings until Wednesday, 5/31 at 3pm. Delayed negotiations until Tuesday 6/6 at 3PM.",
     "list": "200,000",
     "sale": "266,000",
@@ -53,14 +53,14 @@
     "garage": 2,
     "tour": "https://my.matterport.com/show/?m=pewDH5qhJMJ&mls=1",
     "embed": "https://my.matterport.com/show/?m=pewDH5qhJMJ&play=1&qs=1&ts=1&hl=0&hr=0",
-    "status": "Sold",
+    "status": "SOLD",
     "MLS": "R1473991"
   },
   {
     "id": "4",
     "title": "590 English Rd",
     "address": "590 English Rd, Rochester, NY 14616",
-    "image": "/KWRed.png",
+    "image": "/english.jpg",
     "description": "Come see this beautiful and spacious raised ranch. Through the double doors you will find an open floor plan that flows from Livingroom to Kitchen. The backyard features a large deck and patio to entertain and enjoy the warm weather. This home has stayed in the family since it was built; with the current owners adding custom upgrades. The ceiling has been opened up to a cathedral ceiling adding height and space. The Bathroom has been fitted with cherry cabinets that match the kitchen, granite countertops and a beautiful tile job throughout. The walls have been reinsulated with R15 insulation, ceiling with foamboard between the rafters and architectural shingles on the roof. You won't want to miss this move in ready opportunity.",
     "list": "174,999",
     "sale": "188,000",
@@ -72,14 +72,14 @@
     "garage": 2,
     "tour": "",
     "embed": "",
-    "status": "Sold",
+    "status": "SOLD",
     "MLS": "R1277425"
   },
   {
     "id": "5",
     "title": "5809 W Wautoma Beach Rd",
     "address": "5809 W Wautoma Beach Rd, Hilton, NY 14468",
-    "image": "/KWRed.png",
+    "image": "/wautoma.jpg",
     "description": "Come see this year-round cottage situated in a waterfront neighborhood. The home has been updated to give you a move in ready experience, with a great kitchen and light throughout the home. Along with the interior the exterior has been updated with fresh paint and equipped with a new roof. Features 3 bedrooms and a fully fenced yard with a shed on the back of the property.",
     "list": "95,000",
     "sale": "95,000",
@@ -91,7 +91,7 @@
     "garage": 1,
     "tour": "",
     "embed": "",
-    "status": "Sold",
+    "status": "SOLD",
     "MLS": "R1255995"
   }
 ]
