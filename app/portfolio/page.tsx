@@ -41,7 +41,7 @@ const page = (props: Props) => {
                 beds={sold.beds}
                 baths={sold.baths}
                 lot={sold.lot}
-                list={sold.list}
+                list={sold.sale}
                 sale={sold.sale}
                 status={sold.status}
                 sqft={sold.sqft}

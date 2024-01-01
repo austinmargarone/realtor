@@ -21,9 +21,6 @@ const About = () => {
             dreams. My goal is to take the stress out of every transaction for
             my clients to make the experience enjoyable and exciting.
           </p>
-          <button className="button dark:buttondark mt-[1.25rem]">
-            About Me
-          </button>
         </div>
       </div>
     </section>
