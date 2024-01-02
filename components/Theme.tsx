@@ -16,9 +16,9 @@ const Theme = () => {
   const { mode, setMode } = useTheme();
 
   return (
-    <Menubar className="relative border-none bg-transparent shadow-none">
+    <Menubar className="relative border-none bg-white shadow-none dark:bg-black">
       <MenubarMenu>
-        <MenubarTrigger className="focus:bg-light-900 data-{state=open]:bg-light-900 dark:focus:bg-dark-200 dark:data-[state=open]:bg-dark-200">
+        <MenubarTrigger className="focus:bg-white data-{state=open]:bg-white dark:focus:bg-black dark:data-[state=open]:bg-black">
           {mode === "light" ? (
             <Image
               src="/assets/icons/sun.svg"
@@ -36,7 +36,7 @@ const Theme = () => {
             />
           )}
         </MenubarTrigger>
-        <MenubarContent className="absolute right-[-3rem] mt-3 min-w-[120px] rounded border py-2">
+        <MenubarContent className="absolute right-[-3rem] mt-3 min-w-[120px] rounded-[0.75rem] border bg-white py-2 dark:border-black dark:bg-black">
           {themes.map((item) => (
             <MenubarItem
               key={item.value}
@@ -58,10 +58,10 @@ const Theme = () => {
                 className={`${mode === item.value && "active-theme"}`}
               />
               <p
-                className={`body-semibold text-white ${
+                className={`body-semibold text-black dark:text-white ${
                   mode === item.value
-                    ? "text-primary-500"
-                    : "text-dark100_light900"
+                    ? "text-kw-red dark:text-kw-red"
+                    : "text-black"
                 }`}
               >
                 {item.label}
