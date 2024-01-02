@@ -29,14 +29,14 @@ const Sold = ({
   link,
 }: Props) => {
   return (
-    <div className="w-fit min-w-[250px] max-w-[420px] rounded-[1rem] border bg-white p-[.5rem] dark:border-kw-darkgray dark:bg-kw-black">
+    <div className="w-fit min-w-[350px] max-w-[420px] rounded-[1rem] border bg-white p-[.5rem] dark:border-kw-darkgray dark:bg-kw-black">
       <div className="flex justify-center">
         <Image
           src={image}
           alt={"Listing Photo"}
           width={450}
           height={268}
-          className="rounded-t-[1rem]"
+          className="rounded-t-[.5rem]"
         />
       </div>
       <div className="p-[1rem] dark:text-white">
