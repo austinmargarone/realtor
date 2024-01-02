@@ -3,6 +3,7 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { formSchema } from "@/lib/types";
+import emailjs from "emailjs-com";
 
 // Define the interface for form data
 interface FormData {
@@ -32,11 +33,37 @@ const Form = () => {
   });
 
   // Define the onSubmit function
-  const onSubmit = (data: FormData) => {
-    // Zod validation succeeded, proceed with your logic
-    console.log(data);
+  const onSubmit = async (data: FormData) => {
+    try {
+      // Zod validation succeeded, proceed with your logic
+      console.log(data);
 
-    reset();
+      // Send email using emailjs
+      const templateParams = {
+        firstName: data.FirstName,
+        lastName: data.LastName,
+        email: data.Email,
+        phoneNumber: data.PhoneNumber,
+        propertyAddress: data.PropertyAddress,
+        message: data.Message,
+        buyingProperty: data.buyingProperty,
+        sellingProperty: data.sellingProperty,
+      };
+
+      await emailjs.send(
+        process.env.NEXT_PUBLIC_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_TEMPLATE_ID!,
+        templateParams,
+        process.env.NEXT_PUBLIC_PUBLIC_ID
+      );
+
+      // Reset the form after successful submission
+      reset();
+
+      console.log("Email sent successfully");
+    } catch (error) {
+      console.error("Error sending email:", error);
+    }
   };
 
   // Log form validation errors
