@@ -43,7 +43,7 @@ const Form = () => {
   console.log(errors);
 
   return (
-    <section className="flex min-w-[300px] max-w-[420px] grow bg-kw-maingray p-8 dark:bg-kw-black">
+    <section className="flex min-w-[30px] max-w-[420px] grow bg-kw-maingray p-8 dark:bg-kw-black">
       <form
         onSubmit={handleSubmit(onSubmit)}
         className="flex w-full flex-col gap-[1.25rem]"
@@ -55,7 +55,7 @@ const Form = () => {
           {...register("FirstName")}
         />
         {errors.FirstName && (
-          <p className="text-kw-red">{`First Name: ${errors.FirstName.message}`}</p>
+          <p className="mt-[-1rem] text-kw-red">{`First Name: ${errors.FirstName.message}`}</p>
         )}
         <input
           type="text"
@@ -64,7 +64,7 @@ const Form = () => {
           {...register("LastName")}
         />
         {errors.LastName && (
-          <p className="text-kw-red">{`Last Name: ${errors.LastName.message}`}</p>
+          <p className="mt-[-1rem] text-kw-red">{`Last Name: ${errors.LastName.message}`}</p>
         )}
         <input
           type="text"
@@ -73,7 +73,7 @@ const Form = () => {
           {...register("Email")}
         />
         {errors.Email && (
-          <p className="text-kw-red">{`Email: ${errors.Email.message}`}</p>
+          <p className="mt-[-1rem] text-kw-red">{`Email: ${errors.Email.message}`}</p>
         )}
         <input
           type="tel"
@@ -82,7 +82,7 @@ const Form = () => {
           {...register("PhoneNumber")}
         />
         {errors.PhoneNumber && (
-          <p className="text-kw-red">{`Phone: ${errors.PhoneNumber.message}`}</p>
+          <p className="mt-[-1rem] text-kw-red">{`Phone: ${errors.PhoneNumber.message}`}</p>
         )}
         <input
           type="text"
