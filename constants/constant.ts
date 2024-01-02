@@ -16,12 +16,12 @@ export const menuLinks: MenuLink[] = [
     label: "Portfolio",
   },
   {
-    route: "/tools",
-    label: "Tools",
-  },
-  {
     route: "/contact",
     label: "Contact Me",
+  },
+  {
+    route: "/tools",
+    label: "Tools",
   },
   {
     route: "/blog",
