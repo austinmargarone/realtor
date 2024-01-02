@@ -11,7 +11,7 @@ const Form = () => {
   const onSubmit = (data: any) => console.log(data);
   console.log(errors);
   return (
-    <section className="flex min-w-[300px] max-w-[420px] grow p-8 dark:bg-kw-black">
+    <section className="flex min-w-[300px] max-w-[420px] grow bg-kw-maingray p-8 dark:bg-kw-black">
       <form
         onSubmit={handleSubmit(onSubmit)}
         className="flex w-full flex-col gap-[1.25rem]"

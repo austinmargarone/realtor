@@ -25,9 +25,9 @@ const NavContent = () => {
               href={item.route}
               className={`${
                 isActive
-                  ? "primary-gradient rounded-lg text-light-900"
-                  : "text-dark300_light900"
-              } flex items-center justify-start gap-4 bg-transparent p-4`}
+                  ? "primary-gradient rounded-lg text-kw-red"
+                  : "text-black dark:text-white"
+              } flex items-center justify-start gap-4 p-4`}
             >
               <p className={`${isActive ? "base-bold" : "base-medium"}`}>
                 {item.label}
@@ -54,10 +54,12 @@ const MobileNav = () => {
       </SheetTrigger>
       <SheetContent
         side="right"
-        className="background-light900_dark200 border-none"
+        className="border-none bg-white dark:bg-kw-darkgray"
       >
         <Link href="/" className="flex items-center gap-1">
-          <p className="h2-bold text-black">Austin Margarone | Realtor</p>
+          <p className="h2-bold text-black dark:text-white">
+            Austin Margarone | Realtor
+          </p>
         </Link>
         <div>
           <SheetClose asChild>
