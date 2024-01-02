@@ -1,9 +1,8 @@
 "use client";
 import React from "react";
 import { useForm } from "react-hook-form";
-import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-
+import { formSchema } from "@/lib/types";
 // Define the interface for form data
 interface FormData {
   FirstName: string;
@@ -15,18 +14,6 @@ interface FormData {
   buyingProperty: boolean;
   sellingProperty: boolean;
 }
-
-// Define the Zod schema for form validation
-const formSchema = z.object({
-  FirstName: z.string().min(1).max(15),
-  LastName: z.string().min(1).max(13),
-  Email: z.string().min(1).max(25).email(),
-  PhoneNumber: z.string().min(1).max(14),
-  PropertyAddress: z.string().max(120),
-  Message: z.string().max(200),
-  buyingProperty: z.boolean(),
-  sellingProperty: z.boolean(),
-});
 
 // Create the Zod resolver
 const resolver = zodResolver(formSchema);
