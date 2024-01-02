@@ -51,43 +51,68 @@ const Form = () => {
         <input
           type="text"
           placeholder="First name"
+          className="pl-1"
           {...register("FirstName")}
         />
         {errors.FirstName && (
-          <p className="text-kw-red">{`${errors.FirstName.message}`}</p>
+          <p className="text-kw-red">{`First Name: ${errors.FirstName.message}`}</p>
         )}
-        <input type="text" placeholder="Last Name" {...register("LastName")} />
+        <input
+          type="text"
+          placeholder="Last Name"
+          className="pl-1"
+          {...register("LastName")}
+        />
         {errors.LastName && (
-          <p className="text-kw-red">{`${errors.LastName.message}`}</p>
+          <p className="text-kw-red">{`Last Name: ${errors.LastName.message}`}</p>
         )}
-        <input type="text" placeholder="Email" {...register("Email")} />
+        <input
+          type="text"
+          placeholder="Email"
+          className="pl-1"
+          {...register("Email")}
+        />
         {errors.Email && (
-          <p className="text-kw-red">{`${errors.Email.message}`}</p>
+          <p className="text-kw-red">{`Email: ${errors.Email.message}`}</p>
         )}
         <input
           type="tel"
           placeholder="Phone number"
+          className="pl-1"
           {...register("PhoneNumber")}
         />
         {errors.PhoneNumber && (
-          <p className="text-kw-red">{`${errors.PhoneNumber.message}`}</p>
+          <p className="text-kw-red">{`Phone: ${errors.PhoneNumber.message}`}</p>
         )}
         <input
           type="text"
           placeholder="Property Address"
+          className="pl-1"
           {...register("PropertyAddress")}
         />
 
-        <textarea {...register("Message")} placeholder="Message" />
+        <textarea
+          {...register("Message")}
+          placeholder="Message"
+          className="pl-1"
+        />
         <div className="flex flex-col gap-3.5">
           <div className="flex gap-3">
-            <input type="checkbox" {...register("buyingProperty")} />
+            <input
+              type="checkbox"
+              id="buyingProperty"
+              {...register("buyingProperty")}
+            />
             <label htmlFor="buyingProperty" className="dark:text-light-900">
               Buying Property
             </label>
           </div>
           <div className="flex gap-3">
-            <input type="checkbox" {...register("sellingProperty")} />
+            <input
+              type="checkbox"
+              id="sellingProperty"
+              {...register("sellingProperty")}
+            />
             <label htmlFor="sellingProperty" className="dark:text-light-900">
               Selling Property
             </label>
