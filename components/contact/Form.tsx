@@ -70,7 +70,7 @@ const Form = () => {
   console.log(errors);
 
   return (
-    <section className="flex min-w-[30px] max-w-[420px] grow bg-kw-maingray p-8 dark:bg-kw-black">
+    <section className="flex min-w-[30px] max-w-[550px] grow bg-kw-maingray p-8 dark:bg-kw-black">
       <form
         onSubmit={handleSubmit(onSubmit)}
         className="flex w-full flex-col gap-[1.25rem]"

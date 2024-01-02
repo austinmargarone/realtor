@@ -11,7 +11,7 @@ const Contact = () => {
           buying a forever home, I am here to guide you through the whole
           process.
         </p>
-        <Link href={""}>
+        <Link href={"/contact"}>
           <button className="button dark:buttondark">Contact Me</button>
         </Link>
       </div>
