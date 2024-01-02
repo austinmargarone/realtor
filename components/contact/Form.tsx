@@ -3,6 +3,7 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { formSchema } from "@/lib/types";
+
 // Define the interface for form data
 interface FormData {
   FirstName: string;
@@ -52,18 +53,31 @@ const Form = () => {
           placeholder="First name"
           {...register("FirstName")}
         />
+        {errors.FirstName && (
+          <p className="text-kw-red">{`${errors.FirstName.message}`}</p>
+        )}
         <input type="text" placeholder="Last Name" {...register("LastName")} />
+        {errors.LastName && (
+          <p className="text-kw-red">{`${errors.LastName.message}`}</p>
+        )}
         <input type="text" placeholder="Email" {...register("Email")} />
+        {errors.Email && (
+          <p className="text-kw-red">{`${errors.Email.message}`}</p>
+        )}
         <input
           type="tel"
           placeholder="Phone number"
           {...register("PhoneNumber")}
         />
+        {errors.PhoneNumber && (
+          <p className="text-kw-red">{`${errors.PhoneNumber.message}`}</p>
+        )}
         <input
           type="text"
           placeholder="Property Address"
           {...register("PropertyAddress")}
         />
+
         <textarea {...register("Message")} placeholder="Message" />
         <div className="flex flex-col gap-3.5">
           <div className="flex gap-3">
