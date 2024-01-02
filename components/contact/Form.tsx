@@ -19,12 +19,12 @@ const Form = () => {
         <input
           type="text"
           placeholder="First name"
-          {...register("First name", { required: true, max: 15, min: 1 })}
+          {...register("FirstName", { required: true, max: 15, min: 1 })}
         />
         <input
           type="text"
           placeholder="Last Name"
-          {...register("Last name", { required: true, max: 13, min: 1 })}
+          {...register("LastName", { required: true, max: 13, min: 1 })}
         />
         <input
           type="text"
@@ -34,12 +34,12 @@ const Form = () => {
         <input
           type="tel"
           placeholder="Phone number"
-          {...register("Phone number", { required: true, max: 14, min: 1 })}
+          {...register("PhoneNumber", { required: true, max: 14, min: 1 })}
         />
         <input
           type="text"
           placeholder="Property Address"
-          {...register("Property Address", {
+          {...register("PropertyAddress", {
             required: true,
             max: 120,
             min: 1,
@@ -55,16 +55,28 @@ const Form = () => {
         />
         <div className="flex flex-col gap-3.5">
           <div className="flex gap-3">
-            <input type="checkbox" placeholder="buyer" {...register} />
-            <label className="dark:text-light-900">Buying Property</label>
+            <input
+              type="checkbox"
+              placeholder="buyer"
+              {...register("buyingProperty")}
+            />
+            <label htmlFor="buyingProperty" className="dark:text-light-900">
+              Buying Property
+            </label>
           </div>
           <div className="flex gap-3">
-            <input type="checkbox" placeholder="seller" {...register} />
-            <label className="dark:text-light-900">Selling Property</label>
+            <input
+              type="checkbox"
+              placeholder="seller"
+              {...register("sellingProperty")}
+            />
+            <label htmlFor="sellingProperty" className="dark:text-light-900">
+              Selling Property
+            </label>
           </div>
         </div>
-        <button className="button">
-          <input type="submit" />
+        <button className="button" type="submit">
+          Submit
         </button>
       </form>
     </section>
