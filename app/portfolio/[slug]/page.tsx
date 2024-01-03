@@ -20,7 +20,26 @@ const Page = ({ params }: Props) => {
 
   return (
     <div>
-      <PropertyListing title={property.address} />
+      <PropertyListing
+        title={property.address}
+        slug={property.slug}
+        id={property.id}
+        address={property.address}
+        image={property.image}
+        description={property.description}
+        list={property.list}
+        sale={property.sale}
+        beds={property.beds}
+        baths={property.baths}
+        sqft={property.sqft}
+        lot={property.lot}
+        year={property.year}
+        garage={property.garage}
+        tour={property.tour}
+        embed={property.embed}
+        status={property.status}
+        MLS={property.MLS}
+      />
     </div>
   );
 };
