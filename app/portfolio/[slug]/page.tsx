@@ -1,6 +1,7 @@
 import React from "react";
 import propertyData from "../../../data/property.json";
 import PropertyListing from "@/components/listing/PropertyListing";
+import ListYours from "@/components/listing/ListYours";
 
 export const dynamic = "force-dynamic";
 export const revalidate = 1;
@@ -40,6 +41,7 @@ const Page = ({ params }: Props) => {
         status={property.status}
         MLS={property.MLS}
       />
+      <ListYours />
     </div>
   );
 };
