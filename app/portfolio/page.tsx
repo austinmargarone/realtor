@@ -4,9 +4,7 @@ import Listing from "@/components/shared/Listing";
 import sold from "../../data/sold.json";
 import Sold from "@/components/shared/Sold";
 
-type Props = {};
-
-const page = (props: Props) => {
+const page = () => {
   return (
     <main>
       <div className="breakpoint mx-auto my-[1.25rem] flex flex-col items-center justify-between">

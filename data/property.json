@@ -1,5 +1,6 @@
 [
   {
+    "slug": "605-wild-mallard-trail",
     "id": "1",
     "title": "605 Wild Mallard Trail",
     "address": "605 Wild Mallard Trail, Webster, NY 14580",
@@ -19,6 +20,7 @@
     "MLS": "R1459403"
   },
   {
+    "slug": "609-wild-mallard-trail",
     "id": "2",
     "title": "609 Wild Mallard Trail",
     "address": "609 Wild Mallard Trail, Webster, NY 14580",
@@ -38,6 +40,7 @@
     "MLS": "R1462403"
   },
   {
+    "slug": "106-castle-grove-drive",
     "id": "3",
     "title": "106 Castle Grove Drive",
     "address": "106 Castle Grove Drive, Rochester, NY 14612",
@@ -57,6 +60,7 @@
     "MLS": "R1473991"
   },
   {
+    "slug": "590-english-rd",
     "id": "4",
     "title": "590 English Rd",
     "address": "590 English Rd, Rochester, NY 14616",
@@ -76,6 +80,7 @@
     "MLS": "R1277425"
   },
   {
+    "slug": "5809-w-wautoma-beach-rd",
     "id": "5",
     "title": "5809 W Wautoma Beach Rd",
     "address": "5809 W Wautoma Beach Rd, Hilton, NY 14468",
