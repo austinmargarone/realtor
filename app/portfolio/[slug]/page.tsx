@@ -14,13 +14,15 @@ type Props = {
 };
 
 const Page = ({ params }: Props) => {
-  const property = propertyData.find((property) => property.id === params.slug);
+  const property = propertyData.find(
+    (property) => property.slug === params.slug
+  );
   if (!property) {
     return <div>Property not found</div>;
   }
 
   return (
-    <div>
+    <div className="flex flex-col gap-[0.625rem]">
       <PropertyListing
         title={property.address}
         slug={property.slug}

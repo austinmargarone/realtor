@@ -24,6 +24,7 @@ const page = () => {
                 status={listing.status}
                 sqft={listing.sqft}
                 _id={listing.id}
+                slug={listing.slug}
               />
             ))}
           </div>

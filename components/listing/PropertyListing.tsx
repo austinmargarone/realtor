@@ -43,7 +43,7 @@ const PropertyListing = ({
   MLS,
 }: Props) => {
   return (
-    <main className="breakpoint mx-auto my-[1.25rem]">
+    <main className="breakpoint mx-auto my-[1.25rem] flex flex-col gap-[0.625rem]">
       {/* Image */}
       <section>
         <div className="mx-auto flex h-fit justify-center">
@@ -59,36 +59,36 @@ const PropertyListing = ({
       {/* Property Details */}
       <section>
         <div className="flex flex-col">
-          <div>{address}</div>
-          <div>
-            <p>
+          <h1 className="h4 mb-[.625rem]">{address}</h1>
+          <div className="w-fit bg-black px-5">
+            <p className="text-white">
               {status} <span> - ${sale}</span>
             </p>
           </div>
-          <div className="flex gap-3">
-            <p>
+          <div className="my-[.625rem] flex gap-3">
+            <p className="outlineborder">
               {beds}
               <span> Beds</span>
             </p>
-            <p>
+            <p className="outlineborder">
               {baths}
               <span> Bath</span>
             </p>
-            <p>
+            <p className="outlineborder">
               {sqft}
               <span> sqft</span>
             </p>
           </div>
           <div className="flex gap-3">
-            <p>
+            <p className="outlineborder">
               {lot}
               <span> Acres</span>
             </p>
-            <p>
+            <p className="outlineborder">
               <span> Built</span>
               {year}
             </p>
-            <p>
+            <p className="outlineborder">
               {garage}
               <span> Cars</span>
             </p>
@@ -99,8 +99,6 @@ const PropertyListing = ({
       <section>
         <p>{description}</p>
       </section>
-      {/* Property Features */}
-      <section></section>
       {/* Property Tour */}
       <section>
         {embed ? (

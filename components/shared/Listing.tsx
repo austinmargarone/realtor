@@ -5,6 +5,7 @@ import Link from "next/link";
 
 interface Props {
   _id: string;
+  slug: string;
   status: string;
   image: string;
   beds: number;
@@ -18,6 +19,7 @@ interface Props {
 
 const Listing = ({
   _id,
+  slug,
   status,
   image,
   beds,
@@ -63,7 +65,7 @@ const Listing = ({
         </div>
         <div className="flex items-center justify-between">
           <p className="w-[60%]">{address}</p>
-          <Link href={`/portfolio/${_id}`}>
+          <Link href={`/portfolio/${slug}`}>
             <Button className="w-fit border border-black text-black dark:bg-kw-red dark:text-white">
               View Listing
             </Button>
