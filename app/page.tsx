@@ -1,11 +1,15 @@
 import About from "@/components/home/About";
 import Contact from "@/components/home/Contact";
+import Cover from "@/components/home/Cover";
 import ListingCards from "@/components/home/ListingCards";
 import Reviews from "@/components/home/Reviews";
 
 export default function Home() {
   return (
     <main>
+      <section>
+        <Cover />
+      </section>
       <section>
         <About />
       </section>
