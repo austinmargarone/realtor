@@ -6,7 +6,7 @@ const Reviews = () => {
   return (
     <section>
       <div className="breakpoint mx-auto my-[1.25rem] flex flex-col items-center justify-center gap-[1.25rem] md:flex-row">
-        <div className="flex justify-center lg:w-[50%]">
+        <div className="flex justify-center md:w-[50%]">
           <Image
             src={"/901.jpeg"}
             alt={"Listing Photo"}
@@ -15,7 +15,7 @@ const Reviews = () => {
             className="rounded-[.5rem] border-2 border-black"
           />
         </div>
-        <div className="lg:w-[50%] ">
+        <div className="md:w-[50%] ">
           <h2 className="h2 mb-[.66rem] dark:text-kw-black">My Reviews</h2>
           <p className="dark:text-kw-maingray">
             “Austin helped us with what has been said to be one of the most
@@ -33,7 +33,7 @@ const Reviews = () => {
             }
             target="_blank"
           >
-            <button className="button dark:buttondark mt-[1.25rem]">
+            <button className="button dark:buttondark mx-auto mt-[1.25rem] flex">
               See More
             </button>
           </Link>
