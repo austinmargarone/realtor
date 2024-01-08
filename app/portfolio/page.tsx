@@ -9,7 +9,7 @@ const page = () => {
     <main>
       <div className="breakpoint mx-auto my-[1.25rem] flex flex-col items-center justify-between">
         <div>
-          <h2 className="h2 max-w-[1100px] dark:text-white">My Listings</h2>
+          <h2 className="h1 max-w-[1100px] dark:text-white">My Listings</h2>
           <div className="m-[2rem] flex flex-wrap justify-center gap-[2rem]">
             {propertyData.map((listing) => (
               <Listing

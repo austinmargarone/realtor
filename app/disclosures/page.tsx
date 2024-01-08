@@ -5,7 +5,7 @@ import React from "react";
 const page = () => {
   return (
     <main className="breakpoint mx-auto my-[1.25rem] flex flex-col">
-      <h1 className="h2 dark:text-white">Real Estate Disclosures</h1>
+      <h1 className="h1 dark:text-white">Real Estate Disclosures</h1>
       <section className="mx-auto my-[1.25rem] flex max-w-[420px] flex-col gap-[1.5rem]">
         <div className="flex items-center justify-between">
           <h3 className="body dark:bodydark w-[50%]">
