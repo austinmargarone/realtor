@@ -5,9 +5,9 @@ import Theme from "./Theme";
 const Navbar = () => {
   return (
     <header>
-      <nav className="z-50 flex w-full items-center justify-between gap-5 bg-white p-6 px-[1.25rem] dark:bg-black lg:px-[3rem] xl:px-[5rem]">
+      <nav className="z-50 flex w-full items-center justify-between gap-5 bg-white p-6 px-[1.25rem] shadow-lg dark:bg-black lg:px-[3rem] xl:px-[5rem]">
         <Link href="/">
-          <p className="h2-bold font-extrabold text-black dark:text-white">
+          <p className="lg:h4 font-extrabold text-black dark:text-white">
             Austin Margarone | Realtor
           </p>
         </Link>

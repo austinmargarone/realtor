@@ -20,6 +20,7 @@
     font-weight: 700;
     line-height: 130%;
     letter-spacing: -0.04rem;
+    text-align: center;
   }
 
   .h2 {
@@ -85,6 +86,7 @@
     transition:
       background-color 0.3s,
       color 0.3s;
+    box-shadow: lg;
   }
 
   .button:hover {
