@@ -15,7 +15,7 @@ const About = () => {
           />
         </div>
         <div className="lg:w-[50%] ">
-          <h2 className="h2 mb-[.66rem] dark:text-kw-black">About Me</h2>
+          <h2 className="h2 mb-[.66rem] dark:text-white">About Me</h2>
           <p className="dark:text-kw-maingray">
             I enjoy working with buyers and sellers to help them achieve their
             dreams. My goal is to take the stress out of every transaction for

@@ -7,7 +7,9 @@ const ListingCards = () => {
   return (
     <main>
       <div className="breakpoint mx-auto flex items-center justify-between md:mx-[5rem] lg:mx-[7.5rem]">
-        <h2 className="h2 mx-auto sm:mx-0">Featured Listings</h2>
+        <h2 className="h2 mx-auto dark:text-white sm:mx-0">
+          Featured Listings
+        </h2>
         <div className="hidden sm:flex">
           <Link href="/portfolio">
             <button className="button dark:buttondark">Portfoilo</button>
