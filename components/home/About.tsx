@@ -11,7 +11,7 @@ const About = () => {
             alt={"Listing Photo"}
             width={450}
             height={268}
-            className="rounded-full border-[3px] border-black"
+            className="rounded-full border-[3px] border-black shadow-lg"
           />
         </div>
         <div className="lg:w-[50%] ">

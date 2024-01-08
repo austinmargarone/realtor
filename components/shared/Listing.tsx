@@ -31,7 +31,7 @@ const Listing = ({
   address,
 }: Props) => {
   return (
-    <div className="w-fit min-w-[350px] max-w-[420px] rounded-[1rem] border bg-white p-[.5rem] dark:border-kw-darkgray dark:bg-kw-black">
+    <div className="w-fit min-w-[350px] max-w-[420px] rounded-[1rem] border bg-white p-[.5rem] shadow-lg dark:border-kw-darkgray dark:bg-kw-black">
       <div className="flex justify-center">
         <Image
           src={image}

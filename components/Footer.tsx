@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <section className="border-black bg-white dark:bg-black ">
+    <section className="border-black bg-white shadow-lg dark:bg-black">
       <div className="breakpoint mx-auto flex flex-col items-center pb-[1rem]  lg:flex-row lg:justify-between lg:py-[2.5rem]">
         <div className="mt-[1rem] flex items-center justify-center gap-[1.25rem] lg:mt-0">
           <Link
@@ -18,7 +18,7 @@ const Footer = () => {
               alt={"Realtor Logo"}
               width={150}
               height={150}
-              className="h-[5rem] w-[5rem] lg:h-[7rem] lg:w-[7rem]"
+              className="h-[5rem] w-[5rem] rounded-sm dark:shadow-lg lg:h-[7rem] lg:w-[7rem]"
             />
           </Link>
           <Image
@@ -26,7 +26,7 @@ const Footer = () => {
             alt={"KW Logo"}
             width={150}
             height={150}
-            className="h-[3rem] w-fit lg:h-[4rem]"
+            className="h-[3rem] w-fit dark:shadow-lg lg:h-[4rem]"
           />
         </div>
         <div className="mt-[1rem] flex flex-col">

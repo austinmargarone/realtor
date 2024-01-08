@@ -52,7 +52,7 @@ const PropertyListing = ({
             alt={slug}
             width={1000}
             height={1000}
-            className="w-full max-w-[720px]"
+            className="w-full max-w-[720px] rounded-[.75rem] shadow-lg"
           />
         </div>
       </section>
@@ -60,35 +60,35 @@ const PropertyListing = ({
       <section>
         <div className="flex flex-col">
           <h1 className="h4 mb-[.625rem]">{address}</h1>
-          <div className="w-fit bg-black px-5">
+          <div className="w-fit rounded-sm bg-black px-5 shadow-md">
             <p className="text-white">
               {status} <span> - ${sale}</span>
             </p>
           </div>
           <div className="my-[.625rem] flex gap-3">
-            <p className="outlineborder">
+            <p className="outlineborder shadow-md">
               {beds}
               <span> Beds</span>
             </p>
-            <p className="outlineborder">
+            <p className="outlineborder shadow-md">
               {baths}
               <span> Bath</span>
             </p>
-            <p className="outlineborder">
+            <p className="outlineborder shadow-md">
               {sqft}
               <span> sqft</span>
             </p>
           </div>
           <div className="flex gap-3">
-            <p className="outlineborder">
+            <p className="outlineborder shadow-md">
               {lot}
               <span> Acres</span>
             </p>
-            <p className="outlineborder">
+            <p className="outlineborder shadow-md">
               <span> Built</span>
               {year}
             </p>
-            <p className="outlineborder">
+            <p className="outlineborder shadow-md">
               {garage}
               <span> Cars</span>
             </p>
@@ -105,7 +105,7 @@ const PropertyListing = ({
           <iframe
             width="853"
             height="480"
-            className="mx-auto flex h-[500px] w-[300px] sm:w-[100%] lg:h-[600px]"
+            className="mx-auto flex h-[500px] w-[300px] rounded-md shadow-lg sm:w-[100%] lg:h-[600px]"
             src={embed}
           ></iframe>
         ) : (

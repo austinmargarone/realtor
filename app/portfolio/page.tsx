@@ -30,7 +30,9 @@ const page = () => {
           </div>
         </div>
         <div>
-          <h2 className="h2 max-w-[1100px]">Buyer Transactions</h2>
+          <h2 className="h2 max-w-[1100px] dark:text-white">
+            Buyer Transactions
+          </h2>
           <div className="m-[2rem] flex flex-wrap justify-center gap-[2rem]">
             {sold.map((sold) => (
               <Sold
