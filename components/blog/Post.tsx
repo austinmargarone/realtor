@@ -8,7 +8,11 @@ interface Props {
   slug: {
     current: string;
   };
-  mainImage: string;
+  mainImage: {
+    asset: {
+      url: string;
+    };
+  };
   categories: {
     name: string;
   };
@@ -27,18 +31,18 @@ const Post = ({
   return (
     <main>
       <Link href={`blog/${slug.current}`}>
-        <div className="mx-auto mb-[1.25rem] flex rounded-[.5rem] border-[3px] border-black bg-white p-[1rem] shadow-lg dark:bg-black">
-          <div className="flex w-full">
-            <div className="flex w-[25%] items-center justify-center">
+        <div className="mx-auto mb-[1.25rem] flex h-[35rem] min-h-[12.5rem] rounded-[.5rem] border-[3px] border-kw-maingray bg-white p-[1rem] shadow-lg dark:border-kw-lessblack dark:bg-black lg:max-h-[25rem]">
+          <div className="my-[.75rem] flex w-full gap-[1.25rem] lg:my-[1.25rem]">
+            <div className="hidden items-center justify-center lg:flex lg:w-[25%]">
               <Image
-                src={mainImage}
-                width={50}
-                height={50}
+                src={mainImage.asset.url}
+                width={500}
+                height={500}
                 alt={title}
-                className="h-[80px] w-[80px] rounded-[0.75rem]"
+                className="h-fit w-full rounded-[0.75rem]"
               />
             </div>
-            <div className="flex w-[75%] flex-col justify-start">
+            <div className="my-auto flex flex-col justify-start lg:w-[75%]">
               <div className="mb-[.75rem]">
                 <h2 className="h3 line-clamp-2 flex justify-start dark:text-white">
                   {title}
@@ -47,7 +51,7 @@ const Post = ({
               <div>
                 <h2 className="h2 body dark:text-kw-red">{categories.name}</h2>
               </div>
-              <div className="line-clamp-6">
+              <div className="line-clamp-6 md:line-clamp-[8] lg:line-clamp-[10]">
                 {body.map((block) => (
                   <div key={block._key}>
                     {block._type === "block" && (
@@ -58,7 +62,16 @@ const Post = ({
                   </div>
                 ))}
               </div>
-              <div className="body dark:bodydark mt-[.75rem] flex justify-center">
+              <div className="mx-auto my-[.75rem] flex items-center justify-center lg:hidden">
+                <Image
+                  src={mainImage.asset.url}
+                  width={500}
+                  height={500}
+                  alt={title}
+                  className="h-[15rem] w-full rounded-[0.75rem]"
+                />
+              </div>
+              <div className="body dark:bodydark mt-[.75rem] flex items-end justify-center text-[12px]">
                 {publishedAt}
               </div>
             </div>

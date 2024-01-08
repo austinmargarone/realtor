@@ -18,8 +18,17 @@ export async function getPost(): Promise<Post> {
         name
       },
       mainImage{
+        asset->{
+          url,
+          metadata {
+            dimensions {
+              width,
+              height
+            }
+          }
+        },
         alt
-      },
+      },      
       categories[]->{
         // Assuming the 'category' type has a 'name' field
         name

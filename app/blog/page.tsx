@@ -12,7 +12,7 @@ const page = async ({ params }: Props) => {
   const post = await getPost();
 
   return (
-    <main className="breakpoint mx-auto my-[1.25rem] flex flex-col">
+    <div className="breakpoint mx-auto my-[1.25rem] flex flex-col">
       <h1 className="h1 mx-auto mb-[1.25rem] flex dark:text-white">Blog</h1>
       {post.map((post) => (
         <div key={post.id}>
@@ -26,7 +26,7 @@ const page = async ({ params }: Props) => {
           />
         </div>
       ))}
-    </main>
+    </div>
   );
 };
 
