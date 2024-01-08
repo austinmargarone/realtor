@@ -6,7 +6,7 @@ const ListYours = () => {
     <section>
       <div className="breakpoint mx-auto my-[1.25rem] flex flex-col items-center justify-center gap-[1.25rem]">
         <h2 className="h2 dark:text-white">List Your Property</h2>
-        <p className="flex max-w-[600px] text-center dark:text-kw-ltgray">
+        <p className="body flex max-w-[600px] text-center dark:text-kw-ltgray">
           Selling your home is an art, and I amm meticulous about the details.
           Your needs are at the forefront of every decision, from the strategic
           pricing that reflects your properties value to the tailored marketing

@@ -46,6 +46,13 @@
     line-height: 100%;
     letter-spacing: 0;
   }
+  .body {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: 0;
+  }
   .outlineborder {
     border-width: 1.5px;
     border-color: black;
