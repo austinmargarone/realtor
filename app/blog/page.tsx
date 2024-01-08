@@ -1,7 +1,6 @@
 import Post from "@/components/blog/Post";
 import { getPost } from "@/sanity/sanity-utils";
 
-import console from "console";
 import React from "react";
 
 export const dynamic = "force-dynamic";
@@ -11,7 +10,6 @@ type Props = {
 };
 const page = async ({ params }: Props) => {
   const post = await getPost();
-  console.log("author", post);
 
   return (
     <main className="breakpoint mx-auto flex flex-col">

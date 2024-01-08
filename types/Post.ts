@@ -1,4 +1,7 @@
+import { Key } from "react";
+
 export type Post = {
+  id: Key | null | undefined;
   map(
     arg0: (post: any) => import("react").JSX.Element
   ): import("react").ReactNode | Iterable<import("react").ReactNode>;
@@ -8,7 +11,8 @@ export type Post = {
     alt: string;
   };
   categories: {
-    name: string;
+    title: string;
+    description: string;
   }[];
   publishedAt: string;
   body: BlockContent[];
