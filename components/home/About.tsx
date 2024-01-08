@@ -7,11 +7,11 @@ const About = () => {
       <div className="breakpoint mx-auto my-[1.25rem] flex flex-col items-center justify-center gap-[1.25rem] md:flex-row">
         <div className="flex justify-center lg:w-[50%]">
           <Image
-            src={"/headshot.webp"}
+            src={"/smallheadshot.jpeg"}
             alt={"Listing Photo"}
             width={450}
             height={268}
-            className="rounded-[.5rem] border-2 border-black"
+            className="rounded-full border-[3px] border-black"
           />
         </div>
         <div className="lg:w-[50%] ">
