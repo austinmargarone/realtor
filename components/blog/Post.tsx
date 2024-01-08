@@ -26,10 +26,10 @@ const Post = ({
 }: Props) => {
   return (
     <main>
-      <div className="mx-auto flex">
-        <Link href={`blog/${slug.current}`}>
-          <div className="flex">
-            <div className="flex items-center justify-center">
+      <Link href={`blog/${slug.current}`}>
+        <div className="mx-auto mb-[1.25rem] flex rounded-[.5rem] border-[3px] border-black bg-white p-[1rem] dark:bg-black">
+          <div className="flex w-full">
+            <div className="flex w-[25%] items-center justify-center">
               <Image
                 src={mainImage}
                 width={50}
@@ -38,14 +38,14 @@ const Post = ({
                 className="h-[80px] w-[80px] rounded-[0.75rem]"
               />
             </div>
-            <div className="flex flex-col justify-start">
+            <div className="flex w-[75%] flex-col justify-start">
               <div>
                 <h2 className="h2 body dark:bodydark">{title}</h2>
               </div>
               <div>
                 <h2 className="h2 body dark:text-kw-red">{categories.name}</h2>
               </div>
-              <div>
+              <div className="line-clamp-6">
                 {body.map((block) => (
                   <div key={block._key}>
                     {block._type === "block" && (
@@ -55,12 +55,12 @@ const Post = ({
                     )}
                   </div>
                 ))}
-                <div className="body dark:bodydark">{publishedAt}</div>
               </div>
+              <div className="body dark:bodydark">{publishedAt}</div>
             </div>
           </div>
-        </Link>
-      </div>
+        </div>
+      </Link>
     </main>
   );
 };
