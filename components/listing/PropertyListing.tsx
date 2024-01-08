@@ -97,7 +97,7 @@ const PropertyListing = ({
       </section>
       {/* Property Description */}
       <section>
-        <p className="body">{description}</p>
+        <p className="body dark:bodydark">{description}</p>
       </section>
       {/* Property Tour */}
       <section>
@@ -113,7 +113,7 @@ const PropertyListing = ({
         )}
       </section>
       <section>
-        <div className="body flex flex-col">
+        <div className="body dark:bodydark flex flex-col">
           <span>Listing Agent: Austin Margarone</span>
           <span>MLS# {MLS}</span>
         </div>

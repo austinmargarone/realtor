@@ -18,7 +18,7 @@ const Reviews = () => {
         </div>
         <div className="md:w-[50%] ">
           <h2 className="h2 mb-[.66rem] dark:text-white">My Reviews</h2>
-          <p className="body dark:text-kw-maingray">
+          <p className="body dark:bodydark">
             "Austin helped us with what has been said to be one of the most
             stressful times in a person's life. Austin was punctual, always
             prepared, and creative. He thought of things to show the house at

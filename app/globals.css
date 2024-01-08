@@ -52,6 +52,15 @@
     font-weight: 400;
     line-height: 150%;
     letter-spacing: 0;
+    color: #000;
+  }
+  .bodydark {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: 0;
+    color: #ccc;
   }
   .outlineborder {
     border-width: 1.5px;
