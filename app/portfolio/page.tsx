@@ -29,7 +29,7 @@ const page = () => {
             ))}
           </div>
         </div>
-        <div>
+        <div className="mt-[1.25rem]">
           <h2 className="h2 max-w-[1100px] dark:text-white">
             Buyer Transactions
           </h2>
