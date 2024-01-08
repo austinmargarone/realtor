@@ -27,7 +27,7 @@ const Post = ({
   return (
     <main>
       <Link href={`blog/${slug.current}`}>
-        <div className="mx-auto mb-[1.25rem] flex rounded-[.5rem] border-[3px] border-black bg-white p-[1rem] dark:bg-black">
+        <div className="mx-auto mb-[1.25rem] flex rounded-[.5rem] border-[3px] border-black bg-white p-[1rem] shadow-lg dark:bg-black">
           <div className="flex w-full">
             <div className="flex w-[25%] items-center justify-center">
               <Image
@@ -39,8 +39,10 @@ const Post = ({
               />
             </div>
             <div className="flex w-[75%] flex-col justify-start">
-              <div>
-                <h2 className="h2 body dark:bodydark">{title}</h2>
+              <div className="mb-[.75rem]">
+                <h2 className="h3 line-clamp-2 flex justify-start dark:text-white">
+                  {title}
+                </h2>
               </div>
               <div>
                 <h2 className="h2 body dark:text-kw-red">{categories.name}</h2>
@@ -56,7 +58,9 @@ const Post = ({
                   </div>
                 ))}
               </div>
-              <div className="body dark:bodydark">{publishedAt}</div>
+              <div className="body dark:bodydark mt-[.75rem] flex justify-center">
+                {publishedAt}
+              </div>
             </div>
           </div>
         </div>
