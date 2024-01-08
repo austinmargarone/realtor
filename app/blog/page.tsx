@@ -1,3 +1,4 @@
+import Post from "@/components/blog/Post";
 import { getPost } from "@/sanity/sanity-utils";
 
 import console from "console";
@@ -13,11 +14,18 @@ const page = async ({ params }: Props) => {
   console.log("author", post);
 
   return (
-    <main>
-      <h1>Posts</h1>
+    <main className="breakpoint mx-auto flex flex-col">
+      <h1 className="h1 mx-auto flex">Blog</h1>
       {post.map((post) => (
         <div key={post.id}>
-          <Post />
+          <Post
+            title={post.title}
+            slug={post.slug}
+            mainImage={post.mainImage}
+            categories={post.categories}
+            publishedAt={post.publishedAt}
+            body={post.body}
+          />
         </div>
       ))}
     </main>

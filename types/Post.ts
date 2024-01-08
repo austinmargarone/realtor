@@ -11,5 +11,18 @@ export type Post = {
     name: string;
   }[];
   publishedAt: string;
-  body: string;
+  body: BlockContent[];
+};
+
+export type BlockContent = {
+  _key: string;
+  _type: string;
+  style: string;
+  list: string;
+  children: {
+    _key: string;
+    _type: string;
+    text: string;
+    marks: string[];
+  }[];
 };
