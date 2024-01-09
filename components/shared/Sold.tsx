@@ -44,6 +44,8 @@ const Sold = ({
           </div>
           <div className="p-[1rem] dark:text-white">
             <div className="flex gap-2">
+              <div className="my-auto flex h-3 w-3 rounded-full bg-kw-red"></div>
+
               {status}
               <span>-</span>
               <span className="font-bold">

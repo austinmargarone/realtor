@@ -11,6 +11,7 @@
     "year": 1998,
     "garage": 3,
     "status": "SOLD",
+    "color": "kw-red",
     "link": "https://www.realtor.com/realestateandhomes-detail/533-Forest-Lawn-Rd_Webster_NY_14580_M39170-55085"
   },
   {
@@ -25,6 +26,7 @@
     "year": 1957,
     "garage": 2,
     "status": "SOLD",
+    "color": "kw-red",
     "link": "https://www.realtor.com/realestateandhomes-detail/554-Jennifer-Ln_Webster_NY_14580_M35554-52272"
   },
   {
@@ -39,6 +41,7 @@
     "year": 1917,
     "garage": 0,
     "status": "SOLD",
+    "color": "kw-red",
     "link": "https://www.realtor.com/realestateandhomes-detail/123-Albemarle-St_Rochester_NY_14613_M31474-80600"
   },
   {
@@ -53,6 +56,7 @@
     "year": 1971,
     "garage": 2,
     "status": "SOLD",
+    "color": "kw-red",
     "link": "https://www.realtor.com/realestateandhomes-detail/1213-Hinchey-Rd_Rochester_NY_14624_M46658-54891"
   },
   {
@@ -67,6 +71,7 @@
     "year": 1960,
     "garage": 1,
     "status": "SOLD",
+    "color": "kw-red",
     "link": "https://www.realtor.com/realestateandhomes-detail/114-Nichols-St_Spencerport_NY_14559_M40688-58864"
   },
   {
@@ -81,6 +86,7 @@
     "year": 1989,
     "garage": 1,
     "status": "SOLD",
+    "color": "kw-red",
     "link": "https://www.realtor.com/realestateandhomes-detail/49-Flower-Dale-Cir_Rochester_NY_14626_M47250-94441"
   }
 ]

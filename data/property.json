@@ -17,6 +17,7 @@
     "tour": "https://my.matterport.com/show/?m=1A8zFLesAh3",
     "embed": "https://my.matterport.com/show/?m=1A8zFLesAh3&play=1&qs=1&ts=1&hl=0&hr=0",
     "status": "SOLD",
+    "color": "kw-red",
     "MLS": "R1459403"
   },
   {
@@ -37,6 +38,7 @@
     "tour": "https://my.matterport.com/show/?m=Xjuo4yMEVqQ",
     "embed": "https://my.matterport.com/show/?m=Xjuo4yMEVqQ&play=1&qs=1&ts=1&hl=0&hr=0",
     "status": "SOLD",
+    "color": "kw-red",
     "MLS": "R1462403"
   },
   {
@@ -57,6 +59,7 @@
     "tour": "https://my.matterport.com/show/?m=pewDH5qhJMJ&mls=1",
     "embed": "https://my.matterport.com/show/?m=pewDH5qhJMJ&play=1&qs=1&ts=1&hl=0&hr=0",
     "status": "SOLD",
+    "color": "kw-red",
     "MLS": "R1473991"
   },
   {
@@ -77,6 +80,7 @@
     "tour": "",
     "embed": "",
     "status": "SOLD",
+    "color": "kw-red",
     "MLS": "R1277425"
   },
   {
@@ -97,6 +101,7 @@
     "tour": "",
     "embed": "",
     "status": "SOLD",
+    "color": "kw-red",
     "MLS": "R1255995"
   }
 ]

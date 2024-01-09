@@ -60,35 +60,36 @@ const PropertyListing = ({
       <section>
         <div className="flex flex-col">
           <h1 className="h4 mb-[.625rem]">{address}</h1>
-          <div className="w-fit rounded-sm bg-black px-5 shadow-md">
+          <div className="flex w-fit rounded-sm bg-black px-5 py-1 shadow-md">
+            <div className="my-auto mr-[1rem] flex h-3 w-3 rounded-full bg-kw-red"></div>
             <p className="text-white">
               {status} <span> - ${sale}</span>
             </p>
           </div>
           <div className="my-[.625rem] flex gap-3">
-            <p className="outlineborder shadow-md">
+            <p className="outlineborder bg-kw-darkgray text-white shadow-md dark:bg-kw-maingray dark:text-black">
               {beds}
               <span> Beds</span>
             </p>
-            <p className="outlineborder shadow-md">
+            <p className="outlineborder bg-kw-darkgray text-white shadow-md dark:bg-kw-maingray dark:text-black">
               {baths}
               <span> Bath</span>
             </p>
-            <p className="outlineborder shadow-md">
+            <p className="outlineborder bg-kw-darkgray text-white shadow-md dark:bg-kw-maingray dark:text-black">
               {sqft}
               <span> sqft</span>
             </p>
           </div>
           <div className="flex gap-3">
-            <p className="outlineborder shadow-md">
+            <p className="outlineborder bg-kw-darkgray text-white shadow-md dark:bg-kw-maingray dark:text-black">
               {lot}
               <span> Acres</span>
             </p>
-            <p className="outlineborder shadow-md">
-              <span> Built</span>
+            <p className="outlineborder bg-kw-darkgray text-white shadow-md dark:bg-kw-maingray dark:text-black">
+              <span>Built </span>
               {year}
             </p>
-            <p className="outlineborder shadow-md">
+            <p className="outlineborder bg-kw-darkgray text-white shadow-md dark:bg-kw-maingray dark:text-black">
               {garage}
               <span> Cars</span>
             </p>
