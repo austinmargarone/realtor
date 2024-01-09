@@ -8,13 +8,15 @@ const Reviews = () => {
     <section>
       <div className="breakpoint mx-auto my-[1.25rem] flex flex-col items-center justify-center gap-[1.25rem] md:flex-row">
         <div className="flex justify-center md:w-[50%]">
-          <Image
-            src={"/wildmallard.jpg"}
-            alt={"Listing Photo"}
-            width={450}
-            height={268}
-            className="rounded-[.5rem] border-2 border-black shadow-lg"
-          />
+          <Link href={"portfolio/605-wild-mallard-trail"}>
+            <Image
+              src={"/wildmallard.jpg"}
+              alt={"Listing Photo"}
+              width={450}
+              height={268}
+              className="rounded-[.5rem] border-2 border-black shadow-lg"
+            />
+          </Link>
         </div>
         <div className="md:w-[50%] ">
           <h2 className="h2 mb-[.66rem] dark:text-white">My Reviews</h2>

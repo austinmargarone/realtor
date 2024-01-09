@@ -117,6 +117,11 @@
     border-radius: 5px;
   }
 
+  .contactformlte {
+    padding: 0.33rem;
+    border-radius: 5px;
+  }
+
   @media (min-width: 576px) and (max-width: 767.98px) {
     /* Small devices (sm) */
     .breakpoint {
