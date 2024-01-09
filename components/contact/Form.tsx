@@ -78,7 +78,7 @@ const Form = () => {
         <input
           type="text"
           placeholder="First name"
-          className="pl-1"
+          className="contactform pl-1 dark:placeholder:text-white"
           {...register("FirstName")}
         />
         {errors.FirstName && (
@@ -87,7 +87,7 @@ const Form = () => {
         <input
           type="text"
           placeholder="Last Name"
-          className="pl-1"
+          className="contactform pl-1 dark:placeholder:text-white"
           {...register("LastName")}
         />
         {errors.LastName && (
@@ -96,7 +96,7 @@ const Form = () => {
         <input
           type="text"
           placeholder="Email"
-          className="pl-1"
+          className="contactform pl-1 dark:placeholder:text-white"
           {...register("Email")}
         />
         {errors.Email && (
@@ -105,7 +105,7 @@ const Form = () => {
         <input
           type="tel"
           placeholder="Phone number"
-          className="pl-1"
+          className="contactform pl-1 dark:placeholder:text-white"
           {...register("PhoneNumber")}
         />
         {errors.PhoneNumber && (
@@ -114,14 +114,14 @@ const Form = () => {
         <input
           type="text"
           placeholder="Property Address"
-          className="pl-1"
+          className="contactform pl-1 dark:placeholder:text-white"
           {...register("PropertyAddress")}
         />
 
         <textarea
           {...register("Message")}
           placeholder="Message"
-          className="pl-1"
+          className="contactform pl-1 dark:placeholder:text-white"
         />
         <div className="flex flex-col gap-3.5">
           <div className="flex gap-3">
