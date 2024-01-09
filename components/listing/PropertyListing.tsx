@@ -60,14 +60,14 @@ const PropertyListing = ({
       <section>
         <div className="flex flex-col">
           <h1 className="h4 mb-[.625rem]">{address}</h1>
-          <div className="flex w-fit rounded-sm bg-black px-5 py-1 shadow-md">
-            <div className="my-auto mr-[1rem] flex h-3 w-3 rounded-full bg-kw-red"></div>
+          <div className="flex w-fit rounded-sm bg-black px-[15px] py-1 shadow-md">
+            <div className="my-auto mr-[12px] flex h-3 w-3 rounded-full bg-kw-red"></div>
             <p className="text-white">
               {status} <span> - ${sale}</span>
             </p>
           </div>
           <div className="my-[.625rem] flex gap-3">
-            <p className="outlineborder bg-kw-darkgray text-white shadow-md dark:bg-kw-maingray dark:text-black">
+            <p className="outlineborder shadow-md dark:bg-kw-maingray dark:text-black">
               {beds}
               <span> Beds</span>
             </p>

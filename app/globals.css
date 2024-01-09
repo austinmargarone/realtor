@@ -66,10 +66,12 @@
   .outlineborder {
     border-width: 1.5px;
     border-color: black;
-    padding-left: 0.25rem;
-    padding-right: 0.25rem;
-    padding-top: 0.1rem;
-    padding-bottom: 0.1rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-top: 0.125rem;
+    padding-bottom: 0.125rem;
+    background-color: #666;
+    color: #fff;
   }
   .button {
     display: inline-block;
