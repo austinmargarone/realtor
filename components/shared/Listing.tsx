@@ -7,6 +7,7 @@ interface Props {
   _id: string;
   slug: string;
   status: string;
+  color: string;
   image: string;
   beds: number;
   baths: number;
@@ -21,6 +22,7 @@ const Listing = ({
   _id,
   slug,
   status,
+  color,
   image,
   beds,
   baths,
@@ -45,7 +47,10 @@ const Listing = ({
           </div>
           <div className="p-[1rem] dark:text-white">
             <div className="flex gap-2">
-              <div className="my-auto flex h-3 w-3 rounded-full bg-kw-red"></div>
+              <div
+                className="my-auto flex h-3 w-3 rounded-full"
+                style={{ backgroundColor: color }}
+              ></div>
               {status}
               <span>-</span>
               <span className="font-bold">

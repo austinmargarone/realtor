@@ -5,6 +5,7 @@ import Link from "next/link";
 
 interface Props {
   status: string;
+  color: string;
   image: string;
   beds: number;
   baths: number;
@@ -18,6 +19,7 @@ interface Props {
 
 const Sold = ({
   status,
+  color,
   image,
   beds,
   baths,
@@ -29,8 +31,7 @@ const Sold = ({
   link,
 }: Props) => {
   return (
-    <main>
-      {" "}
+    <article>
       <Link href={`${link}`} target="_blank">
         <div className="w-fit min-w-[350px] max-w-[450px] rounded-[1rem] border bg-white p-[.5rem] shadow-lg dark:border-kw-darkgray dark:bg-kw-black">
           <div className="flex justify-center">
@@ -44,7 +45,10 @@ const Sold = ({
           </div>
           <div className="p-[1rem] dark:text-white">
             <div className="flex gap-2">
-              <div className="my-auto flex h-3 w-3 rounded-full bg-kw-red"></div>
+              <div
+                className="my-auto flex h-3 w-3 rounded-full"
+                style={{ backgroundColor: color }}
+              ></div>
 
               {status}
               <span>-</span>
@@ -77,7 +81,7 @@ const Sold = ({
           </div>
         </div>
       </Link>
-    </main>
+    </article>
   );
 };
 

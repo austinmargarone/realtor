@@ -27,6 +27,7 @@ const page = () => {
                 sqft={listing.sqft}
                 _id={listing.id}
                 slug={listing.slug}
+                color={listing.color}
               />
             ))}
           </div>
@@ -47,6 +48,7 @@ const page = () => {
                 list={sold.sale}
                 sale={sold.sale}
                 status={sold.status}
+                color={sold.color}
                 sqft={sold.sqft}
                 link={sold.link}
               />
