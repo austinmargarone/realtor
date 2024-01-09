@@ -1,5 +1,5 @@
 import Post from "@/components/blog/Post";
-import { getPost } from "@/sanity/sanity-utils";
+import { getAllPost } from "@/sanity/sanity-utils";
 
 import React from "react";
 
@@ -9,10 +9,10 @@ type Props = {
   params: { post: string };
 };
 const page = async ({ params }: Props) => {
-  const post = await getPost();
+  const post = await getAllPost();
 
   return (
-    <div className="breakpoint mx-auto my-[1.25rem] flex flex-col">
+    <article className="breakpoint mx-auto my-[1.25rem] flex flex-col">
       <h1 className="h1 mx-auto mb-[1.25rem] flex dark:text-white">Blog</h1>
       {post.map((post) => (
         <div key={post.id}>
@@ -26,7 +26,7 @@ const page = async ({ params }: Props) => {
           />
         </div>
       ))}
-    </div>
+    </article>
   );
 };
 

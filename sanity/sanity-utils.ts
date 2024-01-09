@@ -4,7 +4,43 @@ import { Post } from "@/types/Post";
 import { Author } from "next/dist/lib/metadata/types/metadata-types";
 import { Category } from "@/types/Category";
 
-export async function getPost(): Promise<Post> {
+export async function getPost(slug: string): Promise<Post> {
+  const client = createClient({
+    projectId,
+    dataset,
+    apiVersion,
+  });
+  return client.fetch(
+    groq`*[_type == 'post' && slug.current == $slug][0]{
+      title,
+      slug,
+      author->{
+        name
+      },
+      mainImage{
+        asset->{
+          url,
+          metadata {
+            dimensions {
+              width,
+              height
+            }
+          }
+        },
+        alt
+      },      
+      categories[]->{
+        // Assuming the 'category' type has a 'name' field
+        name
+      },
+      publishedAt,
+      body
+    }`,
+    { slug }
+  );
+}
+
+export async function getAllPost(): Promise<Post> {
   const client = createClient({
     projectId,
     dataset,
