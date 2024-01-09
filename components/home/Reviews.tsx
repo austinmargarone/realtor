@@ -13,7 +13,7 @@ const Reviews = () => {
             alt={"Listing Photo"}
             width={450}
             height={268}
-            className="rounded-[.5rem] border-2 border-black shadow-lg hover:scale-110 dark:hover:border-kw-ltgray"
+            className="rounded-[.5rem] border-2 border-black shadow-lg"
           />
         </div>
         <div className="md:w-[50%] ">

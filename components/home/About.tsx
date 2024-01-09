@@ -11,7 +11,7 @@ const About = () => {
             alt={"Listing Photo"}
             width={450}
             height={268}
-            className="h-[300px] w-[300px] rounded-full border-[3px] border-black shadow-lg hover:scale-90 hover:border-kw-red dark:hover:border-kw-ltgray md:h-[325px] md:w-[325px] lg:h-[400px] lg:w-[400px] xl:h-[420px] xl:w-[420px]"
+            className="h-[300px] w-[300px] rounded-full border-[3px] border-black shadow-lg  md:h-[325px] md:w-[325px] lg:h-[400px] lg:w-[400px] xl:h-[420px] xl:w-[420px]"
           />
         </div>
         <div className="md:w-[50%] ">
