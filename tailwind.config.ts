@@ -24,6 +24,7 @@ module.exports = {
           darkgray: "#666",
           lessblack: "#313338",
           black: "#000",
+          activegreen: "#00B400",
         },
         primary: {
           500: "#FF7000",

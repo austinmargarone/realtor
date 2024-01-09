@@ -28,6 +28,7 @@ const ListingCards = () => {
             list={listing.list}
             sale={listing.sale}
             status={listing.status}
+            color={listing.color}
             sqft={listing.sqft}
             _id={listing.id}
             slug={listing.slug}

@@ -7,6 +7,7 @@ interface Props {
   _id: string;
   slug: string;
   status: string;
+  color: string;
   image: string;
   beds: number;
   baths: number;
@@ -21,6 +22,7 @@ const Listing = ({
   _id,
   slug,
   status,
+  color,
   image,
   beds,
   baths,
@@ -44,12 +46,14 @@ const Listing = ({
             />
           </div>
           <div className="p-[1rem] dark:text-white">
-            <div className="flex gap-2">
-              {status}
+            <div className="flex gap-2 font-bold">
+              <div
+                className="my-auto flex h-3 w-3 rounded-full"
+                style={{ backgroundColor: color }}
+              ></div>
+              <span>{status}</span>
               <span>-</span>
-              <span className="font-bold">
-                ${sale && sale.trim() !== "" ? sale : list}
-              </span>
+              <span>${sale && sale.trim() !== "" ? sale : list}</span>
             </div>
             <div className="my-[.1rem] flex justify-start gap-[1rem]">
               <p>
