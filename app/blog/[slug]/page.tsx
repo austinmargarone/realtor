@@ -1,4 +1,5 @@
 import Contact from "@/components/blog/Contact";
+import FullPost from "@/components/blog/FullPost";
 import { getPost } from "@/sanity/sanity-utils";
 import React from "react";
 
@@ -8,12 +9,18 @@ interface Props {
 
 const page = async ({ params }: Props) => {
   const post = await getPost(params.slug);
-  const title = post.title;
-  console.log(post);
   return (
-    <main>
-      <section>{title}</section>
+    <main className="breakpoint mx-auto">
       <section>
+        <FullPost
+          title={post.title}
+          mainImage={post.mainImage}
+          categories={post.categories}
+          publishedAt={post.publishedAt}
+          body={post.body}
+        />
+      </section>
+      <section className="mt-[2.5rem]">
         <Contact />
       </section>
     </main>

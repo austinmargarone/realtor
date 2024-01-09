@@ -1,4 +1,4 @@
-import { BlockContent } from "@/types/Post";
+import { BlockContent } from "@/types/BlockContent";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -14,8 +14,9 @@ interface Props {
     };
   };
   categories: {
-    name: string;
-  };
+    title: string;
+    description: string;
+  }[];
   publishedAt: string;
   body: BlockContent[];
 }
@@ -28,6 +29,7 @@ const Post = ({
   body,
   publishedAt,
 }: Props) => {
+  const category = categories.map((cat) => cat.title);
   return (
     <main>
       <Link href={`blog/${slug.current}`}>
@@ -48,10 +50,10 @@ const Post = ({
                   {title}
                 </h2>
               </div>
-              <div>
-                <h2 className="h2 body dark:text-kw-red">{categories.name}</h2>
+              <div className="mb-2">
+                <h2 className="text-kw-red">{category}</h2>
               </div>
-              <div className="line-clamp-6 md:line-clamp-[8] lg:line-clamp-[10]">
+              <div className="line-clamp-6 md:line-clamp-[8]">
                 {body.map((block) => (
                   <div key={block._key}>
                     {block._type === "block" && (

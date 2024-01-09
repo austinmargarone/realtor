@@ -1,4 +1,5 @@
 import { Key } from "react";
+import { BlockContent } from "./BlockContent";
 
 export type Post = {
   id: Key | null | undefined;
@@ -8,6 +9,7 @@ export type Post = {
   title: string;
   slug: string;
   mainImage: {
+    asset: any;
     alt: string;
   };
   categories: {
@@ -16,17 +18,4 @@ export type Post = {
   }[];
   publishedAt: string;
   body: BlockContent[];
-};
-
-export type BlockContent = {
-  _key: string;
-  _type: string;
-  style: string;
-  list: string;
-  children: {
-    _key: string;
-    _type: string;
-    text: string;
-    marks: string[];
-  }[];
 };

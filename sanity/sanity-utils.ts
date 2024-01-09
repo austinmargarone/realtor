@@ -30,8 +30,7 @@ export async function getPost(slug: string): Promise<Post> {
         alt
       },      
       categories[]->{
-        // Assuming the 'category' type has a 'name' field
-        name
+        title,
       },
       publishedAt,
       body
@@ -66,8 +65,7 @@ export async function getAllPost(): Promise<Post> {
         alt
       },      
       categories[]->{
-        // Assuming the 'category' type has a 'name' field
-        name
+        title,
       },
       publishedAt,
       body
