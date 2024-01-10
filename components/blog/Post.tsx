@@ -73,9 +73,6 @@ const Post = ({
                   className="h-[15rem] w-full rounded-[0.75rem]"
                 />
               </div>
-              <div className="body dark:bodydark mt-[.75rem] flex items-end justify-center text-[12px]">
-                {publishedAt}
-              </div>
             </div>
           </div>
         </div>

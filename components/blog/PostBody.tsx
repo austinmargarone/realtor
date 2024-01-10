@@ -18,7 +18,6 @@ const PostBody = ({ publishedAt, body }: Props) => {
           </div>
         ))}
       </div>
-      <p className="body dark:bodydark mt-[.625rem]">{publishedAt}</p>
     </div>
   );
 };
