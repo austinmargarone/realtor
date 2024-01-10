@@ -1,8 +1,8 @@
 import { defineField, defineType } from "sanity";
 
 export default defineType({
-  name: "soldProperty",
-  title: "Sold Property",
+  name: "soldPortfolio",
+  title: "SoldPortfolio",
   type: "document",
   fields: [
     defineField({
@@ -15,11 +15,7 @@ export default defineType({
       title: "Address",
       type: "string",
     }),
-    defineField({
-      name: "image",
-      title: "Image",
-      type: "string",
-    }),
+
     defineField({
       name: "sale",
       title: "Sale Price",
@@ -49,24 +45,6 @@ export default defineType({
       name: "year",
       title: "Year Built",
       type: "number",
-    }),
-    defineField({
-      name: "garage",
-      title: "Garage Spaces",
-      type: "number",
-    }),
-    defineField({
-      name: "status",
-      title: "Status",
-      type: "string",
-      options: {
-        list: ["SOLD"],
-      },
-    }),
-    defineField({
-      name: "color",
-      title: "Color",
-      type: "string",
     }),
     defineField({
       name: "link",

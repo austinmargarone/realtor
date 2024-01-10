@@ -1,12 +1,8 @@
-import Image from "next/image";
 import React from "react";
 import { Button } from "../ui/button";
 import Link from "next/link";
 
 interface Props {
-  status: string;
-  color: string;
-  image: string;
   beds: number;
   baths: number;
   sqft: string;
@@ -17,24 +13,12 @@ interface Props {
   link: string;
 }
 
-const Sold = ({
-  status,
-  color,
-  image,
-  beds,
-  baths,
-  sqft,
-  lot,
-  sale,
-  list,
-  address,
-  link,
-}: Props) => {
+const Sold = ({ beds, baths, sqft, lot, sale, list, address, link }: Props) => {
   return (
     <article>
       <div className="w-fit min-w-[350px] max-w-[450px] rounded-[1rem] border bg-white p-[.5rem] shadow-lg dark:border-kw-darkgray dark:bg-kw-black">
         <Link href={`${link}`} target="_blank">
-          <div className="flex justify-center">
+          {/* <div className="flex justify-center">
             <Image
               src={image}
               alt={"Listing Photo"}
@@ -42,15 +26,12 @@ const Sold = ({
               height={268}
               className="rounded-t-[.5rem]"
             />
-          </div>
+          </div> */}
         </Link>
         <div className="p-[1rem] dark:text-white">
           <div className="flex gap-2 font-bold">
-            <div
-              className="my-auto flex h-3 w-3 rounded-full"
-              style={{ backgroundColor: color }}
-            ></div>
-            <span>{status}</span>
+            <div className="my-auto flex h-3 w-3 rounded-full bg-kw-red"></div>
+            <span>SOLD</span>
             <span>-</span>
             <span>${sale && sale.trim() !== "" ? sale : list}</span>
           </div>

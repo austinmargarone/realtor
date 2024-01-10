@@ -5,8 +5,8 @@ import category from "./schemas/category";
 import post from "./schemas/post";
 import author from "./schemas/author";
 import propertyListing from "./schemas/propertyListing";
-import sold from "./schemas/sold";
+import soldPortfolio from "./schemas/soldPortfolio";
 
 export const schema: { types: SchemaTypeDefinition[] } = {
-  types: [post, author, category, blockContent, propertyListing, sold],
+  types: [post, author, category, blockContent, propertyListing, soldPortfolio],
 };

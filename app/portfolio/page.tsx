@@ -1,11 +1,18 @@
 import React from "react";
 import Listing from "@/components/shared/Listing";
-import sold from "../../data/sold.json";
 import Sold from "@/components/shared/Sold";
 import property from "../../data/property.json";
+import { getSoldPortfolio } from "@/sanity/sanity-utils";
+
+export const dynamic = "force-dynamic";
+export const revalidate = 1;
 
 const page = async () => {
   const propertyListing = await property;
+
+  const solddata = await getSoldPortfolio();
+  console.log(solddata);
+
   return (
     <main>
       <div className="breakpoint mx-auto my-[1.25rem] flex flex-col items-center justify-between">
@@ -18,7 +25,7 @@ const page = async () => {
               <Listing
                 key={listing.id}
                 address={listing.address}
-                image={listing.image}
+                images={listing.image}
                 beds={listing.beds}
                 baths={listing.baths}
                 lot={listing.lot}
@@ -37,18 +44,15 @@ const page = async () => {
             Buyer Transactions
           </h2>
           <div className="m-[2rem] flex flex-wrap justify-center gap-[2rem]">
-            {sold.map((sold) => (
+            {solddata.map((sold) => (
               <Sold
                 key={sold.id}
                 address={sold.address}
-                image={sold.image}
                 beds={sold.beds}
                 baths={sold.baths}
                 lot={sold.lot}
                 list={sold.sale}
                 sale={sold.sale}
-                status={sold.status}
-                color={sold.color}
                 sqft={sold.sqft}
                 link={sold.link}
               />

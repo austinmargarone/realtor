@@ -3,8 +3,8 @@ import { apiVersion, dataset, projectId } from "./env";
 import { Post } from "@/types/Post";
 import { Author } from "next/dist/lib/metadata/types/metadata-types";
 import { Category } from "@/types/Category";
-import { Sold } from "@/types/Sold";
 import { PropertyListing } from "@/types/Listings";
+import { SoldPortfolio } from "@/types/SoldPortfolio";
 
 export async function getPost(slug: string): Promise<Post> {
   const client = createClient({
@@ -141,25 +141,21 @@ export async function getPropertyListings(
   );
 }
 
-export async function getSold(): Promise<Sold[]> {
+export async function getSoldPortfolio(): Promise<SoldPortfolio[]> {
   const client = createClient({
     projectId,
     dataset,
     apiVersion,
   });
-  return client.fetch(/* groq */ `*[_type == 'sold'] {
+  return client.fetch(/* groq */ `*[_type == 'soldPortfolio'] {
       id,
       address,
-      image,
       sale,
       beds,
       baths,
       sqft,
       lot,
       year,
-      garage,
-      status,
-      color,
       link
     }`);
 }
