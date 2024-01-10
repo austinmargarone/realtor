@@ -55,6 +55,7 @@ const page = async () => {
                 sale={sold.sale}
                 sqft={sold.sqft}
                 link={sold.link}
+                mainImage={sold.mainImage}
               />
             ))}
           </div>

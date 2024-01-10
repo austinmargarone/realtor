@@ -1,10 +1,16 @@
 import React from "react";
 import { Button } from "../ui/button";
 import Link from "next/link";
+import Image from "next/image";
 
 interface Props {
   beds: number;
   baths: number;
+  mainImage: {
+    asset: {
+      url: string;
+    };
+  };
   sqft: string;
   lot: number;
   sale: string;
@@ -13,20 +19,30 @@ interface Props {
   link: string;
 }
 
-const Sold = ({ beds, baths, sqft, lot, sale, list, address, link }: Props) => {
+const Sold = ({
+  beds,
+  baths,
+  sqft,
+  lot,
+  sale,
+  list,
+  address,
+  link,
+  mainImage,
+}: Props) => {
   return (
     <article>
       <div className="w-fit min-w-[350px] max-w-[450px] rounded-[1rem] border bg-white p-[.5rem] shadow-lg dark:border-kw-darkgray dark:bg-kw-black">
         <Link href={`${link}`} target="_blank">
-          {/* <div className="flex justify-center">
+          <div className="flex justify-center">
             <Image
-              src={image}
+              src={mainImage.asset.url}
               alt={"Listing Photo"}
               width={450}
               height={268}
               className="rounded-t-[.5rem]"
             />
-          </div> */}
+          </div>
         </Link>
         <div className="p-[1rem] dark:text-white">
           <div className="flex gap-2 font-bold">
