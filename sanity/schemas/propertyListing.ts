@@ -30,6 +30,15 @@ export default defineType({
           options: {
             layout: "slideshow",
           },
+          fields: [
+            {
+              name: "alt", // Add alt tag field for each image
+              title: "Alt Text",
+              type: "string",
+              description: "Alternative text for accessibility",
+              validation: (Rule) => Rule.required(),
+            },
+          ],
         },
       ],
     }),

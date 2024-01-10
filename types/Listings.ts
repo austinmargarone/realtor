@@ -14,6 +14,7 @@ export type PropertyListing = {
       x: number;
       y: number;
     };
+    alt?: string;
   }>;
   description: string;
   list: string;
@@ -25,8 +26,8 @@ export type PropertyListing = {
   year: number;
   garage: number;
   tour: string;
-  embed: string;
-  status: string;
+  embed?: string;
+  status?: string;
   color: string;
   MLS: string;
 };
