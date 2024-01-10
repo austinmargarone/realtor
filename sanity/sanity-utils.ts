@@ -150,6 +150,18 @@ export async function getSoldPortfolio(): Promise<SoldPortfolio[]> {
   return client.fetch(/* groq */ `*[_type == 'soldPortfolio'] {
       id,
       address,
+      mainImage{
+        asset->{
+          url,
+          metadata {
+            dimensions {
+              width,
+              height
+            }
+          }
+        },
+        alt
+      },   
       sale,
       beds,
       baths,
