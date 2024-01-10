@@ -1,17 +1,14 @@
 import React from "react";
 import Listing from "@/components/shared/Listing";
 import Sold from "@/components/shared/Sold";
-import property from "../../data/property.json";
-import { getSoldPortfolio } from "@/sanity/sanity-utils";
+import { getListPortfolio, getSoldPortfolio } from "@/sanity/sanity-utils";
 
 export const dynamic = "force-dynamic";
 export const revalidate = 1;
 
 const page = async () => {
-  const propertyListing = await property;
-
   const solddata = await getSoldPortfolio();
-  console.log(solddata);
+  const listdata = await getListPortfolio();
 
   return (
     <main>
@@ -21,19 +18,16 @@ const page = async () => {
             My Listings
           </h2>
           <div className="m-[2rem] flex flex-wrap justify-center gap-[2rem]">
-            {propertyListing.map((listing) => (
+            {listdata.map((listing) => (
               <Listing
                 key={listing.id}
                 address={listing.address}
-                images={listing.image}
+                mainImage={listing.mainImage}
                 beds={listing.beds}
                 baths={listing.baths}
                 lot={listing.lot}
-                list={listing.list}
                 sale={listing.sale}
-                status={listing.status}
                 sqft={listing.sqft}
-                slug={listing.slug}
                 color={listing.color}
               />
             ))}

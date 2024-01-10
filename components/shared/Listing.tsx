@@ -4,39 +4,37 @@ import { Button } from "../ui/button";
 import Link from "next/link";
 
 interface Props {
-  slug: string;
-  status: any;
-  color: string;
-  images: any;
   beds: number;
   baths: number;
+  mainImage: {
+    asset: {
+      url: string;
+    };
+  };
   sqft: string;
   lot: number;
   sale: string;
-  list: string;
   address: string;
+  color: string;
 }
 
 const Listing = ({
-  slug,
-  status,
   color,
-  images,
+  mainImage,
   beds,
   baths,
   sqft,
   lot,
   sale,
-  list,
   address,
 }: Props) => {
   return (
     <main>
       <div className="w-fit min-w-[350px] max-w-[450px] rounded-[1rem] border bg-white p-[.5rem] dark:border-kw-darkgray dark:bg-kw-black">
-        <Link href={`/portfolio/${slug}`}>
+        <Link href={`/portfolio/${"slug"}`}>
           <div className="flex justify-center">
             <Image
-              src={images}
+              src={mainImage.asset.url}
               alt={"Listing Photo"}
               width={450}
               height={268}
@@ -50,9 +48,9 @@ const Listing = ({
               className="my-auto flex h-3 w-3 rounded-full"
               style={{ backgroundColor: color }}
             ></div>
-            <span>{status}</span>
+            <span>{"status"}</span>
             <span>-</span>
-            <span>${sale && sale.trim() !== "" ? sale : list}</span>
+            <span>${sale}</span>
           </div>
           <div className="my-[.1rem] flex justify-start gap-[1rem]">
             <p>
@@ -70,7 +68,7 @@ const Listing = ({
           </div>
           <div className="flex items-center justify-between">
             <p className="w-[60%]">{address}</p>
-            <Link href={`/portfolio/${slug}`}>
+            <Link href={`/portfolio/${"slug"}`}>
               <Button className="w-fit border border-black text-black hover:animate-pulse dark:bg-kw-red dark:text-white">
                 View Listing
               </Button>

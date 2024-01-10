@@ -61,9 +61,17 @@ export default defineType({
       type: "number",
     }),
     defineField({
-      name: "link",
-      title: "Realtor.com Link",
-      type: "url",
+      name: "status",
+      title: "Status",
+      type: "string",
+      options: {
+        list: ["Active", "SOLD", "PENDING"],
+      },
+    }),
+    defineField({
+      name: "slug",
+      title: "Route",
+      type: "string",
     }),
   ],
   preview: {

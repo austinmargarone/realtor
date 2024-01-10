@@ -4,6 +4,9 @@ import Cover from "@/components/home/Cover";
 import ListingCards from "@/components/home/ListingCards";
 import Reviews from "@/components/home/Reviews";
 
+export const dynamic = "force-dynamic";
+export const revalidate = 1;
+
 export default function Home() {
   return (
     <main>

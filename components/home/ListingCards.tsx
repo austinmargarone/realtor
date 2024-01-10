@@ -1,10 +1,11 @@
 import React from "react";
 import Listing from "../shared/Listing";
 import Link from "next/link";
-import property from "../../data/property.json";
+import { getListPortfolio } from "@/sanity/sanity-utils";
 
 const ListingCards = async () => {
-  const propertyListing = await property;
+  const listdata = await getListPortfolio();
+
   return (
     <main>
       <div className="breakpoint mx-auto flex items-center justify-between md:mx-[5rem] lg:mx-[7.5rem]">
@@ -18,20 +19,17 @@ const ListingCards = async () => {
         </div>
       </div>
       <div className="m-[2rem] flex flex-wrap justify-center gap-[2rem]">
-        {propertyListing.slice(0, 4).map((listing) => (
+        {listdata.slice(0, 4).map((listing) => (
           <Listing
             key={listing.id}
             address={listing.address}
-            image={listing.image}
+            mainImage={listing.mainImage}
             beds={listing.beds}
             baths={listing.baths}
             lot={listing.lot}
-            list={listing.list}
             sale={listing.sale}
-            status={listing.status}
             color={listing.color}
             sqft={listing.sqft}
-            slug={listing.slug}
           />
         ))}
       </div>
