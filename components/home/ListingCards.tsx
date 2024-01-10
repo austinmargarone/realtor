@@ -5,7 +5,6 @@ import property from "../../data/property.json";
 
 const ListingCards = async () => {
   const propertyListing = await property;
-  console.log(property);
   return (
     <main>
       <div className="breakpoint mx-auto flex items-center justify-between md:mx-[5rem] lg:mx-[7.5rem]">
