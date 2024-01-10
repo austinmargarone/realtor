@@ -107,14 +107,16 @@ export async function getCategory(): Promise<Category> {
   );
 }
 
-export async function getPropertyListings(): Promise<PropertyListing[]> {
+export async function getPropertyListings(
+  slug: string
+): Promise<PropertyListing[]> {
   const client = createClient({
     projectId,
     dataset,
     apiVersion,
   });
   return client.fetch(
-    `*[_type == 'propertyListing'] {
+    `*[_type == 'propertyListing && slug.current == $slug][0]'] {
       slug,
       id,
       title,
@@ -134,7 +136,8 @@ export async function getPropertyListings(): Promise<PropertyListing[]> {
       status,
       color,
       MLS
-    }`
+    }`,
+    { slug }
   );
 }
 

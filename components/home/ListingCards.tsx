@@ -1,10 +1,11 @@
 import React from "react";
 import Listing from "../shared/Listing";
 import Link from "next/link";
-import { getPropertyListings } from "@/sanity/sanity-utils";
+import property from "../../data/property.json";
 
 const ListingCards = async () => {
-  const propertyListing = await getPropertyListings();
+  const propertyListing = await property;
+  console.log(property);
   return (
     <main>
       <div className="breakpoint mx-auto flex items-center justify-between md:mx-[5rem] lg:mx-[7.5rem]">
@@ -22,7 +23,7 @@ const ListingCards = async () => {
           <Listing
             key={listing.id}
             address={listing.address}
-            image={listing.images}
+            image={listing.image}
             beds={listing.beds}
             baths={listing.baths}
             lot={listing.lot}

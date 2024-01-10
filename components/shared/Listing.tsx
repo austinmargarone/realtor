@@ -7,7 +7,7 @@ interface Props {
   slug: string;
   status: any;
   color: string;
-  images: any;
+  image: any;
   beds: number;
   baths: number;
   sqft: string;
@@ -21,7 +21,7 @@ const Listing = ({
   slug,
   status,
   color,
-  images,
+  image,
   beds,
   baths,
   sqft,
@@ -36,7 +36,7 @@ const Listing = ({
         <Link href={`/portfolio/${slug}`}>
           <div className="flex justify-center">
             <Image
-              src={images}
+              src={image}
               alt={"Listing Photo"}
               width={450}
               height={268}
