@@ -44,20 +44,22 @@ const page = async () => {
             Buyer Transactions
           </h2>
           <div className="m-[2rem] flex flex-wrap justify-center gap-[2rem]">
-            {solddata.map((sold) => (
-              <Sold
-                key={sold.id}
-                address={sold.address}
-                beds={sold.beds}
-                baths={sold.baths}
-                lot={sold.lot}
-                list={sold.sale}
-                sale={sold.sale}
-                sqft={sold.sqft}
-                link={sold.link}
-                mainImage={sold.mainImage}
-              />
-            ))}
+            {solddata
+              .sort((a, b) => a.id.localeCompare(b.id))
+              .map((sold) => (
+                <Sold
+                  key={sold.id}
+                  address={sold.address}
+                  beds={sold.beds}
+                  baths={sold.baths}
+                  lot={sold.lot}
+                  list={sold.sale}
+                  sale={sold.sale}
+                  sqft={sold.sqft}
+                  link={sold.link}
+                  mainImage={sold.mainImage}
+                />
+              ))}
           </div>
         </div>
       </div>
