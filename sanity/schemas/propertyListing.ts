@@ -32,7 +32,7 @@ export default defineType({
           },
           fields: [
             {
-              name: "alt", // Add alt tag field for each image
+              name: "alt",
               title: "Alt Text",
               type: "string",
               description: "Alternative text for accessibility",

@@ -1,10 +1,12 @@
 import React from "react";
-import propertyData from "../../data/property.json";
 import Listing from "@/components/shared/Listing";
 import sold from "../../data/sold.json";
 import Sold from "@/components/shared/Sold";
+import { getPropertyListings } from "@/sanity/sanity-utils";
 
-const page = () => {
+const page = async () => {
+  const propertyListing = await getPropertyListings();
+
   return (
     <main>
       <div className="breakpoint mx-auto my-[1.25rem] flex flex-col items-center justify-between">
@@ -13,11 +15,11 @@ const page = () => {
             My Listings
           </h2>
           <div className="m-[2rem] flex flex-wrap justify-center gap-[2rem]">
-            {propertyData.map((listing) => (
+            {propertyListing.map((listing) => (
               <Listing
                 key={listing.id}
                 address={listing.address}
-                image={listing.image}
+                image={listing.images[0].url}
                 beds={listing.beds}
                 baths={listing.baths}
                 lot={listing.lot}
@@ -25,7 +27,6 @@ const page = () => {
                 sale={listing.sale}
                 status={listing.status}
                 sqft={listing.sqft}
-                _id={listing.id}
                 slug={listing.slug}
                 color={listing.color}
               />

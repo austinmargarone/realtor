@@ -6,9 +6,9 @@ import Link from "next/link";
 interface Props {
   _id: string;
   slug: string;
-  status: string;
+  status: any;
   color: string;
-  image: string;
+  image: any;
   beds: number;
   baths: number;
   sqft: string;
