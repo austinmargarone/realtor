@@ -51,24 +51,6 @@ export default defineType({
       type: "number",
     }),
     defineField({
-      name: "garage",
-      title: "Garage Spaces",
-      type: "number",
-    }),
-    defineField({
-      name: "status",
-      title: "Status",
-      type: "string",
-      options: {
-        list: ["SOLD"],
-      },
-    }),
-    defineField({
-      name: "color",
-      title: "Color",
-      type: "string",
-    }),
-    defineField({
       name: "link",
       title: "Realtor.com Link",
       type: "url",

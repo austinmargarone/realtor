@@ -148,18 +148,15 @@ export async function getSoldProperties(): Promise<SoldProperty[]> {
     apiVersion,
   });
   return client.fetch(/* groq */ `*[_type == 'soldProperty'] {
-      id,
-      address,
-      image,
-      sale,
-      beds,
-      baths,
-      sqft,
-      lot,
-      year,
-      garage,
-      status,
-      color,
-      link
+    id,
+    address,
+    image,
+    sale,
+    beds,
+    baths,
+    sqft,
+    lot,
+    year,
+    link,
     }`);
 }

@@ -1,15 +1,12 @@
 export type SoldProperty = {
-  id: string;
-  address: string;
-  image: string;
-  sale: string;
-  beds: number;
-  baths: number;
-  sqft: string;
-  lot: number;
-  year: number;
-  garage: number;
-  status: string;
-  color: string;
-  link: string;
+  id: String;
+  address: String;
+  image: String;
+  sale: String;
+  beds: Number;
+  baths: Number;
+  sqft: String;
+  lot: Number;
+  year: Number;
+  link: String;
 };

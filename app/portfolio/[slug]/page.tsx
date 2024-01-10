@@ -1,8 +1,7 @@
 import React from "react";
-import propertyData from "../../../data/property.json";
-import PropertyListing from "@/components/listing/PropertyListing";
 import ListYours from "@/components/listing/ListYours";
-
+import FullListing from "@/components/listing/FullListing";
+import { getPropertyListings } from "@/sanity/sanity-utils";
 export const dynamic = "force-dynamic";
 export const revalidate = 1;
 
@@ -10,38 +9,34 @@ type Props = {
   params: {
     [x: string]: string;
     propertyData: string;
+    slug: string;
   };
 };
 
-const Page = ({ params }: Props) => {
-  const property = propertyData.find(
-    (property) => property.slug === params.slug
-  );
-  if (!property) {
-    return <div>Property not found</div>;
-  }
-
+const Page = async ({ params }: Props) => {
+  const property = await getPropertyListings(params.slug);
+  console.log(property);
   return (
     <div className="flex flex-col gap-[0.625rem]">
-      <PropertyListing
-        title={property.address}
-        slug={property.slug}
-        id={property.id}
-        address={property.address}
-        image={property.image}
-        description={property.description}
-        list={property.list}
-        sale={property.sale}
-        beds={property.beds}
-        baths={property.baths}
-        sqft={property.sqft}
-        lot={property.lot}
-        year={property.year}
-        garage={property.garage}
-        tour={property.tour}
-        embed={property.embed}
-        status={property.status}
-        MLS={property.MLS}
+      <FullListing
+        slug={params.slug}
+        id={params.id}
+        title={params.title}
+        address={params.address}
+        image={""}
+        description={""}
+        list={""}
+        sale={""}
+        beds={0}
+        baths={0}
+        sqft={""}
+        lot={0}
+        year={0}
+        garage={0}
+        tour={""}
+        embed={""}
+        status={""}
+        MLS={""}
       />
       <ListYours />
     </div>
