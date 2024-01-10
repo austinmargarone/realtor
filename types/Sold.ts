@@ -1,4 +1,4 @@
-export type SoldProperty = {
+export type Sold = {
   id: string;
   address: string;
   image: string;
