@@ -16,6 +16,8 @@ interface Props {
   sale: string;
   address: string;
   color: string;
+  slug: string;
+  status: string;
 }
 
 const Listing = ({
@@ -27,11 +29,13 @@ const Listing = ({
   lot,
   sale,
   address,
+  slug,
+  status,
 }: Props) => {
   return (
     <main>
       <div className="w-fit min-w-[350px] max-w-[450px] rounded-[1rem] border bg-white p-[.5rem] dark:border-kw-darkgray dark:bg-kw-black">
-        <Link href={`/portfolio/${"slug"}`}>
+        <Link href={`/portfolio/${slug}`}>
           <div className="flex justify-center">
             <Image
               src={mainImage.asset.url}
@@ -48,7 +52,7 @@ const Listing = ({
               className="my-auto flex h-3 w-3 rounded-full"
               style={{ backgroundColor: color }}
             ></div>
-            <span>{"status"}</span>
+            <span>{status}</span>
             <span>-</span>
             <span>${sale}</span>
           </div>
@@ -68,7 +72,7 @@ const Listing = ({
           </div>
           <div className="flex items-center justify-between">
             <p className="w-[60%]">{address}</p>
-            <Link href={`/portfolio/${"slug"}`}>
+            <Link href={`/portfolio/${slug}`}>
               <Button className="w-fit border border-black text-black hover:animate-pulse dark:bg-kw-red dark:text-white">
                 View Listing
               </Button>

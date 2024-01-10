@@ -69,6 +69,11 @@ export default defineType({
       },
     }),
     defineField({
+      name: "color",
+      title: "Color",
+      type: "string",
+    }),
+    defineField({
       name: "slug",
       title: "Route",
       type: "string",

@@ -19,19 +19,24 @@ const ListingCards = async () => {
         </div>
       </div>
       <div className="m-[2rem] flex flex-wrap justify-center gap-[2rem]">
-        {listdata.slice(0, 4).map((listing) => (
-          <Listing
-            key={listing.id}
-            address={listing.address}
-            mainImage={listing.mainImage}
-            beds={listing.beds}
-            baths={listing.baths}
-            lot={listing.lot}
-            sale={listing.sale}
-            color={listing.color}
-            sqft={listing.sqft}
-          />
-        ))}
+        {listdata
+          .sort((a, b) => a.id.localeCompare(b.id))
+          .slice(0, 4)
+          .map((listing) => (
+            <Listing
+              key={listing.id}
+              address={listing.address}
+              mainImage={listing.mainImage}
+              beds={listing.beds}
+              baths={listing.baths}
+              lot={listing.lot}
+              sale={listing.sale}
+              color={listing.color}
+              sqft={listing.sqft}
+              status={listing.status}
+              slug={listing.slug}
+            />
+          ))}
       </div>
       <Link href="/portfolio">
         <button className="button dark:buttondark mx-auto flex sm:hidden">

@@ -18,19 +18,23 @@ const page = async () => {
             My Listings
           </h2>
           <div className="m-[2rem] flex flex-wrap justify-center gap-[2rem]">
-            {listdata.map((listing) => (
-              <Listing
-                key={listing.id}
-                address={listing.address}
-                mainImage={listing.mainImage}
-                beds={listing.beds}
-                baths={listing.baths}
-                lot={listing.lot}
-                sale={listing.sale}
-                sqft={listing.sqft}
-                color={listing.color}
-              />
-            ))}
+            {listdata
+              .sort((a, b) => a.id.localeCompare(b.id))
+              .map((listing) => (
+                <Listing
+                  key={listing.id}
+                  address={listing.address}
+                  mainImage={listing.mainImage}
+                  beds={listing.beds}
+                  baths={listing.baths}
+                  lot={listing.lot}
+                  sale={listing.sale}
+                  sqft={listing.sqft}
+                  color={listing.color}
+                  slug={listing.slug}
+                  status={listing.status}
+                />
+              ))}
           </div>
         </div>
         <div className="mt-[1.25rem]">

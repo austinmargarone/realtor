@@ -202,6 +202,6 @@ export async function getListPortfolio(): Promise<ListPortfolio[]> {
       year,
       status,
       color,
-      link
+      slug
     }`);
 }

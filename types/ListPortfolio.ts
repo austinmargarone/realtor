@@ -1,3 +1,5 @@
+type StatusType = "Active" | "SOLD" | "PENDING";
+
 export type ListPortfolio = {
   id: string;
   address: string;
@@ -11,7 +13,7 @@ export type ListPortfolio = {
   sqft: string;
   lot: number;
   year: number;
-  link: string;
-  status?: string;
+  slug: string;
+  status: StatusType;
   color: string;
 };
