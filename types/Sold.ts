@@ -1,7 +1,6 @@
 export type SoldProperty = {
   id: String;
   address: String;
-  image: String;
   sale: String;
   beds: Number;
   baths: Number;

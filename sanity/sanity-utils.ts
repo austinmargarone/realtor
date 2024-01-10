@@ -150,7 +150,6 @@ export async function getSoldProperties(): Promise<SoldProperty[]> {
   return client.fetch(/* groq */ `*[_type == 'soldProperty'] {
     id,
     address,
-    image,
     sale,
     beds,
     baths,

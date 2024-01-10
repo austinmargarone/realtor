@@ -15,11 +15,7 @@ export default defineType({
       title: "Address",
       type: "string",
     }),
-    defineField({
-      name: "image",
-      title: "Image",
-      type: "string",
-    }),
+
     defineField({
       name: "sale",
       title: "Sale Price",
