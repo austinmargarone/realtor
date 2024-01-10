@@ -5,6 +5,7 @@ import { Author } from "next/dist/lib/metadata/types/metadata-types";
 import { Category } from "@/types/Category";
 import { PropertyListing } from "@/types/Listings";
 import { SoldPortfolio } from "@/types/SoldPortfolio";
+import { ListPortfolio } from "@/types/ListPortfolio";
 
 export async function getPost(slug: string): Promise<Post> {
   const client = createClient({
@@ -168,6 +169,39 @@ export async function getSoldPortfolio(): Promise<SoldPortfolio[]> {
       sqft,
       lot,
       year,
+      link
+    }`);
+}
+
+export async function getListPortfolio(): Promise<ListPortfolio[]> {
+  const client = createClient({
+    projectId,
+    dataset,
+    apiVersion,
+  });
+  return client.fetch(/* groq */ `*[_type == 'listPortfolio'] {
+      id,
+      address,
+      mainImage{
+        asset->{
+          url,
+          metadata {
+            dimensions {
+              width,
+              height
+            }
+          }
+        },
+        alt
+      },   
+      sale,
+      beds,
+      baths,
+      sqft,
+      lot,
+      year,
+      status,
+      color,
       link
     }`);
 }
