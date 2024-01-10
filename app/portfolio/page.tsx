@@ -6,7 +6,7 @@ import { getPropertyListings } from "@/sanity/sanity-utils";
 
 const page = async () => {
   const propertyListing = await getPropertyListings();
-
+  console.log(propertyListing);
   return (
     <main>
       <div className="breakpoint mx-auto my-[1.25rem] flex flex-col items-center justify-between">
@@ -19,7 +19,7 @@ const page = async () => {
               <Listing
                 key={listing.id}
                 address={listing.address}
-                image={listing.images[0].url}
+                image={listing.images}
                 beds={listing.beds}
                 baths={listing.baths}
                 lot={listing.lot}

@@ -4,11 +4,10 @@ import { Button } from "../ui/button";
 import Link from "next/link";
 
 interface Props {
-  _id: string;
   slug: string;
   status: any;
   color: string;
-  image: any;
+  images: any;
   beds: number;
   baths: number;
   sqft: string;
@@ -19,11 +18,10 @@ interface Props {
 }
 
 const Listing = ({
-  _id,
   slug,
   status,
   color,
-  image,
+  images,
   beds,
   baths,
   sqft,
@@ -38,7 +36,7 @@ const Listing = ({
         <Link href={`/portfolio/${slug}`}>
           <div className="flex justify-center">
             <Image
-              src={image}
+              src={images}
               alt={"Listing Photo"}
               width={450}
               height={268}
