@@ -3,7 +3,10 @@ export type PropertyListing = {
   id: string;
   title: string;
   address: string;
-  image: string;
+  image: {
+    asset: any;
+    alt: string;
+  };
   description: string;
   list: string;
   sale: string;
