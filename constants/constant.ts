@@ -20,10 +20,6 @@ export const menuLinks: MenuLink[] = [
     label: "Contact Me",
   },
   {
-    route: "/tools",
-    label: "Tools",
-  },
-  {
     route: "/blog",
     label: "Blog",
   },
