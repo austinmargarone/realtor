@@ -21,9 +21,17 @@ export default defineType({
       type: "string",
     }),
     defineField({
-      name: "image",
-      title: "Image",
-      type: "string",
+      name: "images",
+      title: "Images",
+      type: "array",
+      of: [
+        {
+          type: "image",
+          options: {
+            layout: "slideshow",
+          },
+        },
+      ],
     }),
     defineField({
       name: "description",

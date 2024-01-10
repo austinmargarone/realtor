@@ -3,10 +3,18 @@ export type PropertyListing = {
   id: string;
   title: string;
   address: string;
-  image: {
-    asset: any;
-    alt: string;
-  };
+  images: Array<{
+    asset: {
+      _ref: string;
+      _type: "imageType";
+    };
+    hotspot?: {
+      height: number;
+      width: number;
+      x: number;
+      y: number;
+    };
+  }>;
   description: string;
   list: string;
   sale: string;
