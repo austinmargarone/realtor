@@ -10,6 +10,10 @@ interface Props {
   color: string;
   slug: string;
   status: string;
+  MLS: string;
+  embed: string;
+  description: string;
+  garage: string;
 }
 
 const PropertyListing = ({
@@ -22,6 +26,10 @@ const PropertyListing = ({
   address,
   slug,
   status,
+  MLS,
+  embed,
+  description,
+  garage,
 }: Props) => {
   return (
     <main className="breakpoint mx-auto my-[1.25rem] flex flex-col gap-[0.625rem]">
@@ -42,7 +50,10 @@ const PropertyListing = ({
         <div className="flex flex-col">
           <h1 className="h4 mb-[.625rem]">{address}</h1>
           <div className="flex w-fit rounded-sm bg-black px-[15px] py-1 shadow-md">
-            <div className="my-auto mr-[12px] flex h-3 w-3 rounded-full bg-kw-red"></div>
+            <div
+              className="my-auto mr-[12px] flex h-3 w-3 rounded-full"
+              style={{ backgroundColor: color }}
+            ></div>
             <p className="text-white">
               {status} <span> - ${sale}</span>
             </p>
@@ -71,7 +82,7 @@ const PropertyListing = ({
               {"year"}
             </p>
             <p className="outlineborder bg-kw-darkgray text-white shadow-md dark:bg-kw-maingray dark:text-black">
-              {"garage"}
+              {garage}
               <span> Cars</span>
             </p>
           </div>
@@ -79,11 +90,11 @@ const PropertyListing = ({
       </section>
       {/* Property Description */}
       <section>
-        <p className="body dark:bodydark">{"description"}</p>
+        <p className="body dark:bodydark">{description}</p>
       </section>
       {/* Property Tour */}
       <section>
-        {/* {embed ? (
+        {embed ? (
           <iframe
             width="853"
             height="480"
@@ -92,12 +103,12 @@ const PropertyListing = ({
           ></iframe>
         ) : (
           <></>
-        )} */}
+        )}
       </section>
       <section>
         <div className="body dark:bodydark flex flex-col">
           <span>Listing Agent: Austin Margarone</span>
-          <span>MLS# {"MLS"}</span>
+          <span>MLS# {MLS}</span>
         </div>
       </section>
     </main>

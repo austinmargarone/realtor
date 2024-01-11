@@ -25,6 +25,10 @@ const Page = async ({ params }: Props) => {
         address={listing.address}
         slug={listing.slug}
         status={listing.status}
+        MLS={listing.MLS}
+        embed={listing.embed}
+        description={listing.description}
+        garage={listing.garage}
       />
       <ListYours />
     </div>

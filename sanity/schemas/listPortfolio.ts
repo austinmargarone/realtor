@@ -16,23 +16,33 @@ export default defineType({
       type: "string",
     }),
     defineField({
-      name: "mainImage",
-      title: "Main image",
-      type: "image",
-      options: {
-        hotspot: true,
-      },
-      fields: [
+      name: "imageSlideshow",
+      title: "Image Slideshow",
+      type: "array",
+      of: [
         {
-          name: "alt",
-          type: "string",
-          title: "Alternative Text",
+          type: "image",
+          options: {
+            hotspot: true,
+          },
+          fields: [
+            {
+              name: "alt",
+              type: "string",
+              title: "Alternative Text",
+            },
+          ],
         },
       ],
     }),
     defineField({
       name: "sale",
       title: "Sale Price",
+      type: "string",
+    }),
+    defineField({
+      name: "list",
+      title: "List Price",
       type: "string",
     }),
     defineField({
@@ -76,6 +86,31 @@ export default defineType({
     defineField({
       name: "slug",
       title: "Route",
+      type: "string",
+    }),
+    defineField({
+      name: "description",
+      title: "Description",
+      type: "text",
+    }),
+    defineField({
+      name: "garage",
+      title: "Garage",
+      type: "number",
+    }),
+    defineField({
+      name: "tour",
+      title: "Tour Link",
+      type: "string",
+    }),
+    defineField({
+      name: "embed",
+      title: "Embed Link",
+      type: "string",
+    }),
+    defineField({
+      name: "MLS",
+      title: "MLS",
       type: "string",
     }),
   ],

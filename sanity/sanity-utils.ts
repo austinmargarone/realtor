@@ -129,7 +129,23 @@ export async function getMyListing(slug: string): Promise<ListPortfolio> {
         color,
         slug,
         description,
-        list
+        list,
+       imageSlideshow[]{
+          asset->{
+            url,
+            metadata {
+              dimensions {
+                width,
+                height
+              }
+            }
+          },
+          alt
+        },
+        garage,
+        tour,
+        embed,
+        MLS
       }`,
       { slug }
     );

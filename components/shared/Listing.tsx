@@ -1,16 +1,11 @@
-import Image from "next/image";
 import React from "react";
 import { Button } from "../ui/button";
 import Link from "next/link";
+import Image from "next/image";
 
 interface Props {
   beds: number;
   baths: number;
-  mainImage: {
-    asset: {
-      url: string;
-    };
-  };
   sqft: string;
   lot: number;
   sale: string;
@@ -22,7 +17,6 @@ interface Props {
 
 const Listing = ({
   color,
-  mainImage,
   beds,
   baths,
   sqft,
@@ -37,13 +31,13 @@ const Listing = ({
       <div className="w-fit min-w-[350px] max-w-[450px] rounded-[1rem] border bg-white p-[.5rem] dark:border-kw-darkgray dark:bg-kw-black">
         <Link href={`/portfolio/${slug}`}>
           <div className="flex justify-center">
-            <Image
-              src={mainImage.asset.url}
+            {/* <Image
+              src={imageSlideshow.asset.url}
               alt={"Listing Photo"}
               width={450}
               height={268}
               className="rounded-t-[.5rem]"
-            />
+            /> */}
           </div>
         </Link>
         <div className="p-[1rem] dark:text-white">
