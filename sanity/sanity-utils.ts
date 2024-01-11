@@ -3,7 +3,6 @@ import { apiVersion, dataset, projectId } from "./env";
 import { Post } from "@/types/Post";
 import { Author } from "next/dist/lib/metadata/types/metadata-types";
 import { Category } from "@/types/Category";
-import { PropertyListing } from "@/types/Listings";
 import { SoldPortfolio } from "@/types/SoldPortfolio";
 import { ListPortfolio } from "@/types/ListPortfolio";
 
@@ -108,38 +107,38 @@ export async function getCategory(): Promise<Category> {
   );
 }
 
-export async function getPropertyListings(
-  slug: string
-): Promise<PropertyListing[]> {
-  const client = createClient({
-    projectId,
-    dataset,
-    apiVersion,
-  });
-  return client.fetch(
-    `*[_type == 'propertyListing && slug.current == $slug][0]'] {
-      slug,
-      id,
-      title,
-      address,
-      image,
-      description,
-      list,
-      sale,
-      beds,
-      baths,
-      sqft,
-      lot,
-      year,
-      garage,
-      tour,
-      embed,
-      status,
-      color,
-      MLS
-    }`,
-    { slug }
-  );
+export async function getMyListing(slug: string): Promise<ListPortfolio> {
+  try {
+    const client = createClient({
+      projectId,
+      dataset,
+      apiVersion,
+    });
+
+    const result = await client.fetch(
+      groq`*[_type == 'listPortfolio' && slug == $slug][0]{
+        id,
+        address, 
+        sale,
+        beds,
+        baths,
+        sqft,
+        lot,
+        year,
+        status,
+        color,
+        slug,
+        description,
+        list
+      }`,
+      { slug }
+    );
+
+    return result;
+  } catch (error) {
+    console.error("Error fetching data:", error);
+    throw error;
+  }
 }
 
 export async function getSoldPortfolio(): Promise<SoldPortfolio[]> {
@@ -162,7 +161,7 @@ export async function getSoldPortfolio(): Promise<SoldPortfolio[]> {
           }
         },
         alt
-      },   
+      },  
       sale,
       beds,
       baths,

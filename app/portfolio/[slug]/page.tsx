@@ -1,48 +1,30 @@
 import React from "react";
-import propertyData from "../../../data/property.json";
-import PropertyListing from "@/components/listing/PropertyListing";
 import ListYours from "@/components/listing/ListYours";
+import { getMyListing } from "@/sanity/sanity-utils";
 
 export const dynamic = "force-dynamic";
 export const revalidate = 1;
 
-type Props = {
-  params: {
-    [x: string]: string;
-    propertyData: string;
-  };
-};
+interface Props {
+  params: { slug: string };
+}
 
-const Page = ({ params }: Props) => {
-  const property = propertyData.find(
-    (property) => property.slug === params.slug
-  );
-  if (!property) {
-    return <div>Property not found</div>;
-  }
-
+const Page = async ({ params }: Props) => {
+  const listing = await getMyListing(params.slug);
+  console.log(listing);
   return (
     <div className="flex flex-col gap-[0.625rem]">
-      <PropertyListing
-        title={property.address}
-        slug={property.slug}
-        id={property.id}
-        address={property.address}
-        image={property.image}
-        description={property.description}
-        list={property.list}
-        sale={property.sale}
-        beds={property.beds}
-        baths={property.baths}
-        sqft={property.sqft}
-        lot={property.lot}
-        year={property.year}
-        garage={property.garage}
-        tour={property.tour}
-        embed={property.embed}
-        status={property.status}
-        MLS={property.MLS}
-      />
+      {/* <PropertyListing
+        color={color}
+        beds={beds}
+        baths={baths}
+        sqft={sqft}
+        lot={lot}
+        sale={sale}
+        address={address}
+        slug={slug}
+        status={status}
+      /> */}
       <ListYours />
     </div>
   );

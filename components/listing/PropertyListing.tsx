@@ -1,60 +1,41 @@
-import Image from "next/image";
 import React from "react";
 
 interface Props {
-  slug: string;
-  id: string;
-  title: string;
-  address: string;
-  image: string;
-  description: string;
-  list: string;
-  sale: string;
   beds: number;
   baths: number;
   sqft: string;
   lot: number;
-  year: number;
-  garage: number;
-  tour: string;
-  embed: string;
+  sale: string;
+  address: string;
+  color: string;
+  slug: string;
   status: string;
-  MLS: string;
 }
 
 const PropertyListing = ({
-  slug,
-  id,
-  title,
-  address,
-  image,
-  description,
-  list,
-  sale,
+  color,
   beds,
   baths,
   sqft,
   lot,
-  year,
-  garage,
-  tour,
-  embed,
+  sale,
+  address,
+  slug,
   status,
-  MLS,
 }: Props) => {
   return (
     <main className="breakpoint mx-auto my-[1.25rem] flex flex-col gap-[0.625rem]">
       {/* Image */}
       <section>
-        <div className="mx-auto flex h-fit justify-center">
+        {/* <div className="mx-auto flex h-fit justify-center">
           <Image
             src={image}
-            alt={slug}
+            alt={"slug"}
             width={1000}
             height={1000}
             className="w-full max-w-[720px] rounded-[.75rem] shadow-lg"
           />
-        </div>
+        </div> */}
       </section>
       {/* Property Details */}
       <section>
@@ -63,34 +44,34 @@ const PropertyListing = ({
           <div className="flex w-fit rounded-sm bg-black px-[15px] py-1 shadow-md">
             <div className="my-auto mr-[12px] flex h-3 w-3 rounded-full bg-kw-red"></div>
             <p className="text-white">
-              {status} <span> - ${sale}</span>
+              {"status"} <span> - ${"sale"}</span>
             </p>
           </div>
           <div className="my-[.625rem] flex gap-3">
             <p className="outlineborder shadow-md dark:bg-kw-maingray dark:text-black">
-              {beds}
+              {"beds"}
               <span> Beds</span>
             </p>
             <p className="outlineborder bg-kw-darkgray text-white shadow-md dark:bg-kw-maingray dark:text-black">
-              {baths}
+              {"baths"}
               <span> Bath</span>
             </p>
             <p className="outlineborder bg-kw-darkgray text-white shadow-md dark:bg-kw-maingray dark:text-black">
-              {sqft}
+              {"sqft"}
               <span> sqft</span>
             </p>
           </div>
           <div className="flex gap-3">
             <p className="outlineborder bg-kw-darkgray text-white shadow-md dark:bg-kw-maingray dark:text-black">
-              {lot}
+              {"lot"}
               <span> Acres</span>
             </p>
             <p className="outlineborder bg-kw-darkgray text-white shadow-md dark:bg-kw-maingray dark:text-black">
               <span>Built </span>
-              {year}
+              {"year"}
             </p>
             <p className="outlineborder bg-kw-darkgray text-white shadow-md dark:bg-kw-maingray dark:text-black">
-              {garage}
+              {"garage"}
               <span> Cars</span>
             </p>
           </div>
@@ -98,11 +79,11 @@ const PropertyListing = ({
       </section>
       {/* Property Description */}
       <section>
-        <p className="body dark:bodydark">{description}</p>
+        <p className="body dark:bodydark">{"description"}</p>
       </section>
       {/* Property Tour */}
       <section>
-        {embed ? (
+        {/* {embed ? (
           <iframe
             width="853"
             height="480"
@@ -111,12 +92,12 @@ const PropertyListing = ({
           ></iframe>
         ) : (
           <></>
-        )}
+        )} */}
       </section>
       <section>
         <div className="body dark:bodydark flex flex-col">
           <span>Listing Agent: Austin Margarone</span>
-          <span>MLS# {MLS}</span>
+          <span>MLS# {"MLS"}</span>
         </div>
       </section>
     </main>
