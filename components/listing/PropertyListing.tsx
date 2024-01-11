@@ -44,26 +44,26 @@ const PropertyListing = ({
           <div className="flex w-fit rounded-sm bg-black px-[15px] py-1 shadow-md">
             <div className="my-auto mr-[12px] flex h-3 w-3 rounded-full bg-kw-red"></div>
             <p className="text-white">
-              {"status"} <span> - ${"sale"}</span>
+              {status} <span> - ${sale}</span>
             </p>
           </div>
           <div className="my-[.625rem] flex gap-3">
             <p className="outlineborder shadow-md dark:bg-kw-maingray dark:text-black">
-              {"beds"}
+              {beds}
               <span> Beds</span>
             </p>
             <p className="outlineborder bg-kw-darkgray text-white shadow-md dark:bg-kw-maingray dark:text-black">
-              {"baths"}
+              {baths}
               <span> Bath</span>
             </p>
             <p className="outlineborder bg-kw-darkgray text-white shadow-md dark:bg-kw-maingray dark:text-black">
-              {"sqft"}
+              {sqft}
               <span> sqft</span>
             </p>
           </div>
           <div className="flex gap-3">
             <p className="outlineborder bg-kw-darkgray text-white shadow-md dark:bg-kw-maingray dark:text-black">
-              {"lot"}
+              {lot}
               <span> Acres</span>
             </p>
             <p className="outlineborder bg-kw-darkgray text-white shadow-md dark:bg-kw-maingray dark:text-black">
