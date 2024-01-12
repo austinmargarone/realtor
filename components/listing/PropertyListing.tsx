@@ -38,6 +38,15 @@ interface DivStyle {
   paddingBottom: string;
 }
 
+const customArrowStyle: React.CSSProperties = {
+  position: "absolute",
+  top: "50%",
+  transform: "translateY(-50%)",
+  fontSize: "24px",
+  color: "#fff", // Adjust color as needed
+  cursor: "pointer",
+};
+
 const divStyle: DivStyle = {
   display: "flex",
   alignItems: "center",
@@ -69,7 +78,15 @@ const PropertyListing = ({
       {/* Image */}
       <section>
         <div>
-          <Slide autoplay={false}>
+          <Slide
+            autoplay={false}
+            prevArrow={
+              <div style={{ ...customArrowStyle, left: "10px" }}>{"<"}</div>
+            }
+            nextArrow={
+              <div style={{ ...customArrowStyle, right: "10px" }}>{">"}</div>
+            }
+          >
             {imageSlideshow.map((slideImage: SlideImage, index: number) => (
               <div key={index}>
                 <div

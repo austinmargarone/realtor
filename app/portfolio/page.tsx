@@ -9,6 +9,7 @@ export const revalidate = 1;
 const page = async () => {
   const solddata = await getSoldPortfolio();
   const listdata = await getListPortfolio();
+  console.log(listdata);
 
   return (
     <main>
@@ -32,6 +33,7 @@ const page = async () => {
                   color={listing.color}
                   slug={listing.slug}
                   status={listing.status}
+                  imageSlideshow={listing.imageSlideshow}
                 />
               ))}
           </div>

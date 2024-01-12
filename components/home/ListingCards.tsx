@@ -26,7 +26,6 @@ const ListingCards = async () => {
             <Listing
               key={listing.id}
               address={listing.address}
-              mainImage={listing.mainImage}
               beds={listing.beds}
               baths={listing.baths}
               lot={listing.lot}
@@ -35,6 +34,7 @@ const ListingCards = async () => {
               sqft={listing.sqft}
               status={listing.status}
               slug={listing.slug}
+              imageSlideshow={listing.imageSlideshow}
             />
           ))}
       </div>

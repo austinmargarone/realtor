@@ -197,7 +197,7 @@ export async function getListPortfolio(): Promise<ListPortfolio[]> {
   return client.fetch(/* groq */ `*[_type == 'listPortfolio'] {
       id,
       address,
-      mainImage{
+      imageSlideshow[]{
         asset->{
           url,
           metadata {
@@ -208,7 +208,7 @@ export async function getListPortfolio(): Promise<ListPortfolio[]> {
           }
         },
         alt
-      },   
+      },
       sale,
       beds,
       baths,
