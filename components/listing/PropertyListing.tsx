@@ -1,4 +1,15 @@
+"use client";
 import React from "react";
+import { Slide } from "react-slideshow-image";
+import "react-slideshow-image/dist/styles.css";
+
+interface SlideImage {
+  asset: {
+    url: string;
+  };
+  alt: string;
+  caption?: string;
+}
 
 interface Props {
   beds: number;
@@ -14,7 +25,28 @@ interface Props {
   embed: string;
   description: string;
   garage: string;
+  imageSlideshow: any;
 }
+
+interface DivStyle {
+  display: string;
+  alignItems: string;
+  justifyContent: string;
+  backgroundSize: string;
+  backgroundPosition: string;
+  position: "relative";
+  paddingBottom: string;
+}
+
+const divStyle: DivStyle = {
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  backgroundSize: "cover",
+  backgroundPosition: "center",
+  position: "relative",
+  paddingBottom: "56.25%", // 16:9 aspect ratio
+};
 
 const PropertyListing = ({
   color,
@@ -30,20 +62,28 @@ const PropertyListing = ({
   embed,
   description,
   garage,
+  imageSlideshow,
 }: Props) => {
   return (
     <main className="breakpoint mx-auto my-[1.25rem] flex flex-col gap-[0.625rem]">
       {/* Image */}
       <section>
-        {/* <div className="mx-auto flex h-fit justify-center">
-          <Image
-            src={image}
-            alt={"slug"}
-            width={1000}
-            height={1000}
-            className="w-full max-w-[720px] rounded-[.75rem] shadow-lg"
-          />
-        </div> */}
+        <div>
+          <Slide autoplay={false}>
+            {imageSlideshow.map((slideImage: SlideImage, index: number) => (
+              <div key={index}>
+                <div
+                  style={{
+                    ...divStyle,
+                    backgroundImage: `url(${slideImage.asset.url})`,
+                  }}
+                >
+                  <span className="hidden">{slideImage.alt}</span>
+                </div>
+              </div>
+            ))}
+          </Slide>
+        </div>
       </section>
       {/* Property Details */}
       <section>

@@ -12,7 +12,6 @@ interface Props {
 
 const Page = async ({ params }: Props) => {
   const listing = await getMyListing(params.slug);
-  console.log(listing);
   return (
     <div className="flex flex-col gap-[0.625rem]">
       <PropertyListing
@@ -29,6 +28,7 @@ const Page = async ({ params }: Props) => {
         embed={listing.embed}
         description={listing.description}
         garage={listing.garage}
+        imageSlideshow={listing.imageSlideshow}
       />
       <ListYours />
     </div>
