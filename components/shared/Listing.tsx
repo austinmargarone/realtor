@@ -59,8 +59,8 @@ const Listing = ({
 }: Props) => {
   return (
     <main>
-      <div className="w-fit min-w-[350px] max-w-[450px] rounded-[1rem] border bg-white p-[.5rem] dark:border-kw-darkgray dark:bg-kw-black">
-        <div>
+      <div className="w-fit min-w-[350px] max-w-[450px] rounded-[1rem] border bg-white p-[.5rem] shadow-lg dark:border-kw-darkgray dark:bg-kw-black">
+        <div className="w-[350px] sm:w-full">
           <Slide
             autoplay={false}
             prevArrow={
@@ -111,7 +111,7 @@ const Listing = ({
             </div>
             <div className="flex items-center justify-between">
               <p className="w-[60%]">{address}</p>
-              <Button className="w-fit border border-black text-black hover:animate-pulse dark:bg-kw-red dark:text-white">
+              <Button className="w-fit border border-black bg-kw-maingray text-white hover:animate-pulse dark:bg-kw-red dark:text-white">
                 View Listing
               </Button>
             </div>

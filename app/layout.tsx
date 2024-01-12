@@ -15,6 +15,8 @@ export const metadata: Metadata = {
   title: "Austin Margarone | Realtor",
   description:
     "Austin Margarone is a realtor in the Greater Rochester Area of NY State.",
+  keywords:
+    "Austin Margarone, Realtor, Real Estate, Rochester, NY, New York, Homes, Houses, Property, Listing, Listings, Buy, Sell, Rent",
 };
 
 export default function RootLayout({

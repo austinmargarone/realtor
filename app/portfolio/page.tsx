@@ -9,7 +9,6 @@ export const revalidate = 1;
 const page = async () => {
   const solddata = await getSoldPortfolio();
   const listdata = await getListPortfolio();
-  console.log(listdata);
 
   return (
     <main>
