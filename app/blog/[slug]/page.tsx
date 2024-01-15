@@ -4,6 +4,9 @@ import PostBody from "@/components/blog/PostBody";
 import { getPost } from "@/sanity/sanity-utils";
 import React from "react";
 
+export const dynamic = "force-dynamic";
+export const revalidate = 1;
+
 interface Props {
   params: { slug: string };
 }
