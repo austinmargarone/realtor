@@ -1,5 +1,6 @@
-import { BlockContent } from "@/types/BlockContent";
 import React from "react";
+import { BlockContent } from "@/types/BlockContent";
+import Image from "next/image";
 
 interface Props {
   publishedAt: string;
@@ -9,11 +10,21 @@ interface Props {
 const PostBody = ({ publishedAt, body }: Props) => {
   return (
     <div className="breakpoint mx-auto mt-[1.25rem] py-[2.5rem]">
-      <div className="line-clamp-6 md:line-clamp-[8] lg:line-clamp-[10]">
-        {body.map((block) => (
-          <div key={block._key}>
-            {block._type === "block" && (
-              <div className="body dark:bodydark">{block.children[0].text}</div>
+      <div>
+        {body.map((bodyItem) => (
+          <div key={bodyItem._key}>
+            {bodyItem._type === "block" && (
+              <div className="body dark:bodydark">
+                {(bodyItem as any).children[0].text}
+              </div>
+            )}
+            {bodyItem._type === "image" && (
+              <Image
+                src={`/${(bodyItem as any).asset._ref}`}
+                alt={(bodyItem as any).alt}
+                width={250}
+                height={250}
+              />
             )}
           </div>
         ))}
