@@ -35,10 +35,10 @@ const PostBody = ({ publishedAt, body }: Props) => {
             {bodyItem._type === "image" && bodyItem.asset && (
               <Image
                 alt={(bodyItem as any).alt}
-                width={250}
-                height={250}
+                width={500}
+                height={500}
                 src={builder.image(bodyItem.asset._ref).url()}
-                className="mx-auto mb-[1.25rem] h-fit w-[350px]"
+                className="mx-auto my-[1.25rem] flex h-fit w-[325px] rounded-[0.75rem] xs:w-[350px] sm:w-[400px] md:w-[500px]"
               />
             )}
           </div>
@@ -52,13 +52,13 @@ const getBodyStyle = (style: string) => {
   // Map your Sanity styles to HTML elements or React components
   switch (style) {
     case "h1":
-      return "h1 dark:text-white";
+      return "blogh3 md:blogh1 dark:text-white";
     case "h2":
-      return "h2 dark:text-white";
+      return "blogh3 md:blogh2 dark:text-white";
     case "h3":
-      return "h3 dark:text-white";
+      return "blogh4 md:blogh3 dark:text-white";
     case "h4":
-      return "h4 dark:text-white";
+      return "blogh4 dark:text-white";
     default:
       return "body dark:bodydark"; // Default style
   }

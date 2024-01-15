@@ -122,6 +122,48 @@
     border-radius: 5px;
   }
 
+  /* Blog */
+
+  .blogh1 {
+    font-size: 4rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%;
+    letter-spacing: -0.04rem;
+    margin-top: 1rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .blogh2 {
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 115%;
+    letter-spacing: -0.03rem;
+    margin-top: 1rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .blogh3 {
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 105%;
+    letter-spacing: -0.01rem;
+    margin-top: 1rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .blogh4 {
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%;
+    letter-spacing: 0;
+    margin-top: 1rem;
+    margin-bottom: 0.25rem;
+  }
+
   @media (min-width: 576px) and (max-width: 767.98px) {
     /* Small devices (sm) */
     .breakpoint {
