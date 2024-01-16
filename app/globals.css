@@ -172,6 +172,7 @@
     letter-spacing: 0;
     margin-top: 1rem;
     margin-bottom: 0.25rem;
+    justify-content: center;
   }
 
   .blognormal {
@@ -204,6 +205,7 @@
     letter-spacing: 0;
     margin-top: 1rem;
     margin-bottom: 0.25rem;
+    justify-content: center;
     color: #ccc;
   }
 
@@ -273,6 +275,28 @@
     margin-top: 1rem;
     margin-bottom: 0.25rem;
     color: #ccc;
+  }
+
+  .blogbullet {
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: 0;
+    margin-top: 0.5rem;
+    margin-bottom: 0.25rem;
+    color: #b40101;
+  }
+
+  .darkblogbullet {
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: 0;
+    margin-top: 0.5rem;
+    margin-bottom: 0.25rem;
+    color: #b40101;
   }
 
   @media (min-width: 576px) and (max-width: 767.98px) {

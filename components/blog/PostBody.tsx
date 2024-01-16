@@ -90,8 +90,7 @@ const getBodyStyle = (style: string, list: string) => {
     case "normal":
       return "blognormal dark:darkblognormal";
     case "small":
-      return "blogsmall dark:darkblogsmall";
-
+      return "blogsmall dark:darkblogsmall flex flex-col";
     default:
       return "body dark:darkbody";
   }
