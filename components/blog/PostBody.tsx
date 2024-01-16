@@ -85,8 +85,12 @@ const getBodyStyle = (style: string, list: string) => {
       return "blogh4 md:blogh3 dark:text-white";
     case "h4":
       return "blogh4 dark:text-white";
+    case "quote":
+      return "blogquote dark:darkblogquote";
+    case "normal":
+      return "blognormal dark:darkblognormal";
     default:
-      return "body dark:text-white";
+      return "body dark:darkbody";
   }
 };
 
@@ -94,10 +98,10 @@ const getSpanStyle = (marks: string[]) => {
   // Map your Sanity marks to HTML elements or React components
   let style = "normal";
   if (marks.includes("strong")) {
-    style = "bold";
+    style = "blogbold dark:darkblogbold";
   }
   if (marks.includes("em")) {
-    style = "italic";
+    style = "blogitalic dark:darkblogitalic";
   }
 
   return style;
