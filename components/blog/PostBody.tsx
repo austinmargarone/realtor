@@ -77,6 +77,10 @@ const PostBody = ({ publishedAt, body }: Props) => {
 const getBodyStyle = (style: string, list: string) => {
   // Map your Sanity styles and list items to HTML elements or React components
   switch (style) {
+    case "normal":
+      return "body dark:bodydark";
+    case "small":
+      return "blogsmall dark:darkblogsmall";
     case "h1":
       return "blogh3 md:blogh1 dark:text-white";
     case "h2":
