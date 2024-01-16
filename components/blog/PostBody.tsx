@@ -34,7 +34,7 @@ const PostBody = ({ publishedAt, body }: Props) => {
             {bodyItem._type === "block" && (
               <div className={getBodyStyle(bodyItem.style, bodyItem.listItem)}>
                 {bodyItem.listItem === "bullet" ? (
-                  <ul className="list-disc">
+                  <ul className="list-disc pl-8">
                     {bodyItem.children.map((span) => (
                       <components.listItem.bullet key={span._key}>
                         <span className={getSpanStyle(span.marks)}>
@@ -85,10 +85,13 @@ const getBodyStyle = (style: string, list: string) => {
       return "blogh4 md:blogh3 dark:text-white";
     case "h4":
       return "blogh4 dark:text-white";
-    case "quote":
+    case "blockquote":
       return "blogquote dark:darkblogquote";
     case "normal":
       return "blognormal dark:darkblognormal";
+    case "small":
+      return "blogsmall dark:darkblogsmall";
+
     default:
       return "body dark:darkbody";
   }
@@ -102,6 +105,12 @@ const getSpanStyle = (marks: string[]) => {
   }
   if (marks.includes("em")) {
     style = "blogitalic dark:darkblogitalic";
+  }
+  if (marks.includes("underline")) {
+    style = "blogunderline dark:darkblogunderline";
+  }
+  if (marks.includes("bullet")) {
+    style = "blogunderline dark:darkblogunderline";
   }
 
   return style;
