@@ -10,7 +10,7 @@ const PostLinks: React.FC<PostLinksProps> = ({ links }) => {
     <div className="breakpoint mx-auto pt-[1.25rem]">
       <h2 className="h2 flex justify-start dark:text-white">Links</h2>
       {links ? (
-        <ul className="list-disc pl-7 pt-[.25rem]">
+        <ul className="list-disc pl-7 pt-[.25rem] dark:text-white">
           {links.map((linkItem, index) => (
             <li key={index}>
               <Link href={linkItem.url} passHref target="_blank">
