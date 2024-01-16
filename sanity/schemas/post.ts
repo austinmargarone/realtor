@@ -56,8 +56,21 @@ export default defineType({
       title: "Body",
       type: "blockContent",
     }),
+    defineField({
+      name: "links",
+      title: "Links",
+      type: "array",
+      of: [
+        {
+          type: "object",
+          fields: [
+            { name: "text", title: "Text", type: "string" },
+            { name: "url", title: "URL", type: "url" },
+          ],
+        },
+      ],
+    }),
   ],
-
   preview: {
     select: {
       title: "title",

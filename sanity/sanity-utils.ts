@@ -35,8 +35,11 @@ export async function getPost(slug: string): Promise<Post> {
         title,
       },
       publishedAt,
-      body
-    }`,
+      body,
+      links[]{
+        text,
+        url
+      }    }`,
     { slug }
   );
 }

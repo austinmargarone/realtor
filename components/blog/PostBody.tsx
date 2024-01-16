@@ -21,7 +21,7 @@ const PostBody = ({ publishedAt, body }: Props) => {
   const components = {
     listItem: {
       bullet: ({ children }: { children: React.ReactNode }) => (
-        <li style={{ listStyleType: "" }}>{children}</li>
+        <li style={{ listStyleType: "disclosure-closed" }}>{children}</li>
       ),
     },
   };
@@ -34,7 +34,7 @@ const PostBody = ({ publishedAt, body }: Props) => {
             {bodyItem._type === "block" && (
               <div className={getBodyStyle(bodyItem.style, bodyItem.listItem)}>
                 {bodyItem.listItem === "bullet" ? (
-                  <ul className="list-disc pl-8">
+                  <ul className="list-disc">
                     {bodyItem.children.map((span) => (
                       <components.listItem.bullet key={span._key}>
                         <span className={getSpanStyle(span.marks)}>
@@ -77,10 +77,6 @@ const PostBody = ({ publishedAt, body }: Props) => {
 const getBodyStyle = (style: string, list: string) => {
   // Map your Sanity styles and list items to HTML elements or React components
   switch (style) {
-    case "normal":
-      return "blognormal dark:darkblognormal";
-    case "small":
-      return "blogsmall dark:darkblogsmall";
     case "h1":
       return "blogh3 md:blogh1 dark:text-white";
     case "h2":
@@ -89,12 +85,8 @@ const getBodyStyle = (style: string, list: string) => {
       return "blogh4 md:blogh3 dark:text-white";
     case "h4":
       return "blogh4 dark:text-white";
-    case "blockquote":
-      return "blogquote dark:darkblogquote";
-    case "bold":
-      return "blogbold dark:darkblogbold";
     default:
-      return "body dark:bodydark";
+      return "body dark:text-white";
   }
 };
 
@@ -102,13 +94,10 @@ const getSpanStyle = (marks: string[]) => {
   // Map your Sanity marks to HTML elements or React components
   let style = "normal";
   if (marks.includes("strong")) {
-    style = "blogbold dark:darkblogbold";
+    style = "bold";
   }
   if (marks.includes("em")) {
-    style = "blogitalic dark:darkblogitalic";
-  }
-  if (marks.includes("url")) {
-    style = "blogurl dark:darkblogurl";
+    style = "italic";
   }
 
   return style;
