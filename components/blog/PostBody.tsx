@@ -18,18 +18,44 @@ const PostBody = ({ publishedAt, body }: Props) => {
     dataset,
   });
 
+  const components = {
+    listItem: {
+      bullet: ({ children }: { children: React.ReactNode }) => (
+        <li style={{ listStyleType: "" }}>{children}</li>
+      ),
+    },
+  };
+
   return (
     <div className="breakpoint mx-auto mt-[1.25rem] py-[2.5rem]">
       <div>
         {body.map((bodyItem) => (
           <div key={bodyItem._key}>
             {bodyItem._type === "block" && (
-              <div className={getBodyStyle(bodyItem.style)}>
-                {bodyItem.children.map((span) => (
-                  <span key={span._key} className={getSpanStyle(span.marks)}>
-                    {span.text}
-                  </span>
-                ))}
+              <div className={getBodyStyle(bodyItem.style, bodyItem.listItem)}>
+                {bodyItem.listItem === "bullet" ? (
+                  <ul className="list-disc pl-8">
+                    {bodyItem.children.map((span) => (
+                      <components.listItem.bullet key={span._key}>
+                        <span className={getSpanStyle(span.marks)}>
+                          {span.text}
+                        </span>
+                      </components.listItem.bullet>
+                    ))}
+                  </ul>
+                ) : (
+                  // Handle other list types if needed
+                  <div>
+                    {bodyItem.children.map((span) => (
+                      <span
+                        key={span._key}
+                        className={getSpanStyle(span.marks)}
+                      >
+                        {span.text}
+                      </span>
+                    ))}
+                  </div>
+                )}
               </div>
             )}
             {bodyItem._type === "image" && bodyItem.asset && (
@@ -48,8 +74,8 @@ const PostBody = ({ publishedAt, body }: Props) => {
   );
 };
 
-const getBodyStyle = (style: string) => {
-  // Map your Sanity styles to HTML elements or React components
+const getBodyStyle = (style: string, list: string) => {
+  // Map your Sanity styles and list items to HTML elements or React components
   switch (style) {
     case "h1":
       return "blogh3 md:blogh1 dark:text-white";
@@ -60,7 +86,7 @@ const getBodyStyle = (style: string) => {
     case "h4":
       return "blogh4 dark:text-white";
     default:
-      return "body dark:bodydark"; // Default style
+      return "body dark:bodydark";
   }
 };
 

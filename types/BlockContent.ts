@@ -14,6 +14,7 @@ export type BlockContent =
       _type: string;
       style: string;
       list: string;
+      listItem: string;
       children: {
         _key: string;
         _type: string;
