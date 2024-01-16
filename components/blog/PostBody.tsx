@@ -78,7 +78,7 @@ const getBodyStyle = (style: string, list: string) => {
   // Map your Sanity styles and list items to HTML elements or React components
   switch (style) {
     case "normal":
-      return "body dark:bodydark";
+      return "blognormal dark:darkblognormal";
     case "small":
       return "blogsmall dark:darkblogsmall";
     case "h1":
@@ -89,6 +89,10 @@ const getBodyStyle = (style: string, list: string) => {
       return "blogh4 md:blogh3 dark:text-white";
     case "h4":
       return "blogh4 dark:text-white";
+    case "blockquote":
+      return "blogquote dark:darkblogquote";
+    case "bold":
+      return "blogbold dark:darkblogbold";
     default:
       return "body dark:bodydark";
   }
@@ -98,10 +102,13 @@ const getSpanStyle = (marks: string[]) => {
   // Map your Sanity marks to HTML elements or React components
   let style = "normal";
   if (marks.includes("strong")) {
-    style = "bold";
+    style = "blogbold dark:darkblogbold";
   }
   if (marks.includes("em")) {
-    style = "italic";
+    style = "blogitalic dark:darkblogitalic";
+  }
+  if (marks.includes("url")) {
+    style = "blogurl dark:darkblogurl";
   }
 
   return style;

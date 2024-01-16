@@ -174,8 +174,120 @@
     margin-bottom: 0.25rem;
   }
 
+  .blognormal {
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: 0;
+    margin-top: 1rem;
+    margin-bottom: 0.25rem;
+    color: #000;
+  }
+
+  .darkblognormal {
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: 0;
+    margin-top: 1rem;
+    margin-bottom: 0.25rem;
+    color: #ccc;
+  }
+
   .darkblogsmall {
     font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: 0;
+    margin-top: 1rem;
+    margin-bottom: 0.25rem;
+    color: #ccc;
+  }
+
+  .blogquote {
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: 0;
+    margin-top: 1rem;
+    margin-bottom: 0.25rem;
+    font-style: oblique;
+    color: #000;
+  }
+
+  .darkblogquote {
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: 0;
+    margin-top: 1rem;
+    margin-bottom: 0.25rem;
+    font-style: oblique;
+    color: #ccc;
+  }
+
+  .blogbold {
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+    letter-spacing: 0;
+    margin-top: 1rem;
+    margin-bottom: 0.25rem;
+    color: #000;
+  }
+
+  .darkblogbold {
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+    letter-spacing: 0;
+    margin-top: 1rem;
+    margin-bottom: 0.25rem;
+    color: #ccc;
+  }
+
+  .blogitalic {
+    font-size: 1.125rem;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: 0;
+    margin-top: 1rem;
+    margin-bottom: 0.25rem;
+    color: #000;
+  }
+
+  .darkblogitalic {
+    font-size: 1.125rem;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: 0;
+    margin-top: 1rem;
+    margin-bottom: 0.25rem;
+    color: #ccc;
+  }
+
+  .blogurl {
+    font-size: 0.125rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: 0;
+    margin-top: 1rem;
+    margin-bottom: 0.25rem;
+    color: #000;
+  }
+
+  .darkblogurl {
+    font-size: 1.125rem;
     font-style: normal;
     font-weight: 400;
     line-height: 150%;
