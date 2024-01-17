@@ -29,6 +29,7 @@ const Page = async ({ params }: Props) => {
         description={listing.description}
         garage={listing.garage}
         imageSlideshow={listing.imageSlideshow}
+        year={listing.year}
       />
       <ListYours />
     </div>

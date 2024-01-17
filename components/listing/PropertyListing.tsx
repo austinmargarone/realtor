@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import React from "react";
 import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
@@ -20,6 +21,7 @@ interface Props {
   address: string;
   color: string;
   slug: string;
+  year: number;
   status: string;
   MLS: string;
   embed: string;
@@ -66,6 +68,7 @@ const PropertyListing = ({
   sale,
   address,
   slug,
+  year,
   status,
   MLS,
   embed,
@@ -115,33 +118,77 @@ const PropertyListing = ({
               {status} <span> - ${sale}</span>
             </p>
           </div>
-          <div className="my-[.625rem] flex gap-3">
-            <p className="outlineborder shadow-md dark:bg-kw-maingray dark:text-black">
-              {beds}
-              <span> Beds</span>
-            </p>
-            <p className="outlineborder bg-kw-darkgray text-white shadow-md dark:bg-kw-maingray dark:text-black">
-              {baths}
-              <span> Bath</span>
-            </p>
-            <p className="outlineborder bg-kw-darkgray text-white shadow-md dark:bg-kw-maingray dark:text-black">
-              {sqft}
-              <span> sqft</span>
-            </p>
-          </div>
-          <div className="flex gap-3">
-            <p className="outlineborder bg-kw-darkgray text-white shadow-md dark:bg-kw-maingray dark:text-black">
-              {lot}
-              <span> Acres</span>
-            </p>
-            <p className="outlineborder bg-kw-darkgray text-white shadow-md dark:bg-kw-maingray dark:text-black">
-              <span>Built </span>
-              {"year"}
-            </p>
-            <p className="outlineborder bg-kw-darkgray text-white shadow-md dark:bg-kw-maingray dark:text-black">
-              {garage}
-              <span> Cars</span>
-            </p>
+          <div className="flex sm:flex-col">
+            <div className="my-[.625rem] flex w-[150px] flex-wrap gap-3 sm:w-full sm:flex-none">
+              <p className="outlineborder flex gap-1  bg-kw-ltgray pr-[.5rem] text-black shadow-md dark:bg-kw-maingray dark:text-black">
+                <Image
+                  src={"/icons/icons8-bedroom-48.png"}
+                  alt={"Icon8 Bedroom"}
+                  width={50}
+                  height={50}
+                  className="m-auto h-[1rem] w-[1rem]"
+                />
+                {beds}
+                <span> Beds</span>
+              </p>
+              <p className="outlineborder flex gap-1  bg-kw-ltgray pr-[.5rem] text-black shadow-md dark:bg-kw-maingray dark:text-black">
+                <Image
+                  src={"/icons/icons8-bathroom-50.png"}
+                  alt={"Icon8 Bathroom"}
+                  width={50}
+                  height={50}
+                  className="m-auto h-[1rem] w-[1rem]"
+                />
+                {baths}
+                <span> Bath</span>
+              </p>
+              <p className="outlineborder flex gap-1  bg-kw-ltgray pr-[.5rem] text-black shadow-md dark:bg-kw-maingray dark:text-black">
+                <Image
+                  src={"/icons/icons8-size-30.png"}
+                  alt={"Icon8 Sqft"}
+                  width={50}
+                  height={50}
+                  className="m-auto h-[1rem] w-[1rem]"
+                />
+                {sqft}
+                <span> sqft</span>
+              </p>
+            </div>
+            <div className="my-[.625rem] flex w-[150px] flex-wrap gap-3 sm:w-full sm:flex-none">
+              <p className="outlineborder flex gap-1  bg-kw-ltgray pr-[.5rem] text-black shadow-md dark:bg-kw-maingray dark:text-black">
+                <Image
+                  src={"/icons/icons8-land-64.png"}
+                  alt={"Icon8 Acres"}
+                  width={50}
+                  height={50}
+                  className="m-auto h-[1rem] w-[1rem]"
+                />
+                {lot}
+                <span> Acres</span>
+              </p>
+              <p className="outlineborder flex gap-1  bg-kw-ltgray pr-[.5rem] text-black shadow-md dark:bg-kw-maingray dark:text-black">
+                <Image
+                  src={"/icons/icons8-calendar-50.png"}
+                  alt={"Icon8 Calendar"}
+                  width={50}
+                  height={50}
+                  className="m-auto h-[1rem] w-[1rem]"
+                />
+                <span>Built </span>
+                <span>{year}</span>
+              </p>
+              <p className="outlineborder flex gap-1  bg-kw-ltgray pr-[.5rem] text-black shadow-md dark:bg-kw-maingray dark:text-black">
+                <Image
+                  src={"/icons/icons8-garage-100.png"}
+                  alt={"Icon8 Garage"}
+                  width={50}
+                  height={50}
+                  className="m-auto h-[1rem] w-[1rem]"
+                />
+                {garage}
+                <span> Cars</span>
+              </p>
+            </div>
           </div>
         </div>
       </section>
