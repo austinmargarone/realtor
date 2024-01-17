@@ -30,7 +30,7 @@ const page = (props: Props) => {
             width="640"
             height="480"
             src="https://grar.stats.showingtime.com/infoserv/s-v1/KVvo-R1F?w=640&amp;h=480"
-            className="mx-auto w-[300px] rounded-sm sm:w-[500px] md:w-[600px]"
+            className="mx-auto w-[300px] rounded-sm sm:w-[500px] md:w-[600px] lg:w-[650px]"
           ></iframe>
         </div>
         {/* Sales Price - Long Term */}
@@ -42,7 +42,7 @@ const page = (props: Props) => {
             width="640"
             height="480"
             src="https://grar.stats.showingtime.com/infoserv/s-v1/KVvU-n2S?w=640&amp;h=480"
-            className="mx-auto w-[300px] rounded-sm sm:w-[500px] md:w-[600px]"
+            className="mx-auto w-[300px] rounded-sm sm:w-[500px] md:w-[600px] lg:w-[650px]"
           ></iframe>
         </div>
         {/* Price Per SQFT */}
@@ -52,7 +52,7 @@ const page = (props: Props) => {
             width="640"
             height="480"
             src="https://grar.stats.showingtime.com/infoserv/s-v1/KVvX-sqN?w=640&amp;h=480"
-            className="mx-auto w-[300px] rounded-sm sm:w-[500px] md:w-[600px]"
+            className="mx-auto w-[300px] rounded-sm sm:w-[500px] md:w-[600px] lg:w-[650px]"
           ></iframe>
         </div>
         {/* Days on Market */}
@@ -62,7 +62,7 @@ const page = (props: Props) => {
             width="640"
             height="480"
             src="https://grar.stats.showingtime.com/infoserv/s-v1/KVvR-rDA?w=640&amp;h=480"
-            className="mx-auto w-[300px] rounded-sm sm:w-[500px] md:w-[600px]"
+            className="mx-auto w-[300px] rounded-sm sm:w-[500px] md:w-[600px] lg:w-[650px]"
           ></iframe>
         </div>
         {/* Homes For Sale */}
@@ -72,7 +72,7 @@ const page = (props: Props) => {
             width="640"
             height="480"
             src="https://grar.stats.showingtime.com/infoserv/s-v1/KVvq-hOW?w=640&amp;h=480"
-            className="mx-auto w-[300px] rounded-sm sm:w-[500px] md:w-[600px]"
+            className="mx-auto w-[300px] rounded-sm sm:w-[500px] md:w-[600px] lg:w-[650px]"
           ></iframe>
         </div>
       </section>
