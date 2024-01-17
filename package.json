@@ -32,6 +32,7 @@
     "react-hook-form-resolvers": "^0.0.1",
     "react-slideshow-image": "^4.3.0",
     "sanity": "^3.23.4",
+    "sharp": "^0.33.2",
     "styled-components": "^6.1.6",
     "tailwind-merge": "^2.0.0",
     "tailwindcss-animate": "^1.0.7",
