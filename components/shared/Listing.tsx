@@ -61,7 +61,7 @@ const Listing = ({
   return (
     <main>
       <div className="w-fit min-w-[350px] max-w-[450px] rounded-[1rem] border bg-white p-[.5rem] shadow-lg dark:border-kw-darkgray dark:bg-kw-black">
-        <div className="w-[350px] sm:w-full">
+        <div className="w-[350px] xs:w-full">
           <Fade
             transitionDuration={100}
             autoplay={false}

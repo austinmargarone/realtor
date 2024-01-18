@@ -17,7 +17,7 @@ const page = async () => {
           <h2 className="md:h1 h2 max-w-[1100px] dark:text-white">
             My Listings
           </h2>
-          <div className="m-[2rem] flex flex-wrap justify-center gap-[2rem]">
+          <div className="my-[2rem] flex flex-wrap justify-center gap-[2rem]">
             {listdata
               .sort((a, b) => a.id.localeCompare(b.id))
               .map((listing) => (
@@ -41,7 +41,7 @@ const page = async () => {
           <h2 className="h2 max-w-[1100px] dark:text-white">
             Buyer Transactions
           </h2>
-          <div className="m-[2rem] flex flex-wrap justify-center gap-[2rem]">
+          <div className="my-[2rem] flex flex-wrap justify-center gap-[2rem]">
             {solddata
               .sort((a, b) => a.id.localeCompare(b.id))
               .map((sold) => (
