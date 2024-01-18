@@ -44,7 +44,6 @@ const customArrowStyle: React.CSSProperties = {
   position: "absolute",
   top: "50%",
   transform: "translateY(-50%)",
-  fontSize: "24px",
   color: "#fff", // Adjust color as needed
   cursor: "pointer",
 };
@@ -101,7 +100,7 @@ const PropertyListing = ({
             }
             nextArrow={
               <div
-                className="my-auto mr-[-3.5rem] flex h-[5rem] w-[5rem] items-center rounded-full text-white md:mr-[-3rem] lg:mr-[-2.5rem]"
+                className="my-auto flex h-[5rem] w-[5rem] items-center justify-end rounded-full text-white"
                 style={{ ...customArrowStyle }}
               >
                 <Image
@@ -166,7 +165,7 @@ const PropertyListing = ({
                 {baths}
                 <span> Bath</span>
               </p>
-              <p className="outlineborder flex gap-1  bg-kw-ltgray pr-[.5rem] text-black shadow-md dark:bg-kw-maingray dark:text-black">
+              <p className="outlineborder flex gap-1 bg-kw-ltgray pr-[.5rem] text-black shadow-md dark:bg-kw-maingray dark:text-black">
                 <Image
                   src={"/icons/icons8-size-30.png"}
                   alt={"Icon8 Sqft"}
