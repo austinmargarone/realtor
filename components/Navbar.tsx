@@ -30,7 +30,7 @@ const Dropdown: React.FC<DropdownProps> = ({ options, onItemSelected }) => {
           {options.map((tool: ToolOption) => (
             <Link href={tool.value} key={tool.value} passHref>
               <li
-                className="cursor-pointer px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-800"
+                className="cursor-pointer px-4 py-2 hover:bg-kw-ltgray dark:hover:bg-kw-red"
                 onClick={() => onItemSelected(tool.value)}
               >
                 {tool.label}

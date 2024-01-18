@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const About = () => {
@@ -6,13 +7,15 @@ const About = () => {
     <section>
       <div className="breakpoint mx-auto my-[1.25rem] flex flex-col items-center justify-center gap-[1.25rem] md:flex-row">
         <div className="flex justify-center md:w-[50%]">
-          <Image
-            src={"/smallheadshot.jpeg"}
-            alt={"Listing Photo"}
-            width={450}
-            height={268}
-            className="h-[300px] w-[300px] rounded-full border-[3px] border-black bg-black  p-5 shadow-lg md:h-[325px] md:w-[325px] lg:h-[400px] lg:w-[400px] xl:h-[420px] xl:w-[420px]"
-          />
+          <Link href={"/about"}>
+            <Image
+              src={"/smallheadshot.jpeg"}
+              alt={"Listing Photo"}
+              width={450}
+              height={268}
+              className="h-[300px] w-[300px] rounded-full border-[3px] border-black bg-black  p-5 shadow-lg hover:border-kw-red md:h-[325px] md:w-[325px] lg:h-[400px] lg:w-[400px] xl:h-[420px] xl:w-[420px]"
+            />
+          </Link>
         </div>
         <div className="md:w-[50%] ">
           <h2 className="h2 mb-[.66rem] dark:text-white">About Me</h2>
