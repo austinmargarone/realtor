@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Fade } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 import { Button } from "../ui/button";
+import Image from "next/image";
 
 interface SlideImage {
   asset: {
@@ -66,10 +67,27 @@ const Listing = ({
             autoplay={false}
             canSwipe={true}
             prevArrow={
-              <div style={{ ...customArrowStyle, left: "10px" }}>{"<"}</div>
+              <div style={{ ...customArrowStyle }}>
+                <Image
+                  src={"/icons/icons8-chevron-left-30.png"}
+                  alt={"Left Arrow"}
+                  width={25}
+                  height={25}
+                  className="shadow-lg"
+                />
+              </div>
             }
             nextArrow={
-              <div style={{ ...customArrowStyle, right: "10px" }}>{">"}</div>
+              <div style={{ ...customArrowStyle }}>
+                {" "}
+                <Image
+                  src={"/icons/icons8-chevron-right-30.png"}
+                  alt={"Right Arrow"}
+                  width={25}
+                  height={25}
+                  className="shadow-lg"
+                />
+              </div>
             }
           >
             {imageSlideshow.map((slideImage: SlideImage, index: number) => (
