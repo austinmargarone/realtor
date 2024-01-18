@@ -113,14 +113,14 @@ const Form = () => {
         )}
         <input
           type="text"
-          placeholder="Property Address"
+          placeholder="Property Address (optional)"
           className="dark:contactform contactformlte pl-1 placeholder:text-black dark:placeholder:text-white"
           {...register("PropertyAddress")}
         />
 
         <textarea
           {...register("Message")}
-          placeholder="Message"
+          placeholder="Message (optional)"
           className="dark:contactform contactformlte pl-1 placeholder:text-black dark:placeholder:text-white"
         />
         <div className="flex flex-col gap-3.5">
