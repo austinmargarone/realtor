@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import React from "react";
-import { Slide } from "react-slideshow-image";
+import { Fade } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 
 interface SlideImage {
@@ -81,13 +81,37 @@ const PropertyListing = ({
       {/* Image */}
       <section>
         <div>
-          <Slide
+          <Fade
+            transitionDuration={100}
             autoplay={false}
+            canSwipe={true}
             prevArrow={
-              <div style={{ ...customArrowStyle, left: "10px" }}>{"<"}</div>
+              <div
+                className="my-auto flex h-[5rem] w-[5rem] items-center rounded-full text-white"
+                style={{ ...customArrowStyle }}
+              >
+                <Image
+                  src={"/icons/icons8-double-left-64white.png"}
+                  alt={"Arrow Left"}
+                  width={50}
+                  height={50}
+                  className="h-[1.5rem] w-[1.5rem] shadow-lg md:h-[2rem] md:w-[2rem] lg:h-[2.5rem] lg:w-[2.5rem]"
+                />
+              </div>
             }
             nextArrow={
-              <div style={{ ...customArrowStyle, right: "10px" }}>{">"}</div>
+              <div
+                className="my-auto mr-[-3.5rem] flex h-[5rem] w-[5rem] items-center rounded-full text-white md:mr-[-3rem] lg:mr-[-2.5rem]"
+                style={{ ...customArrowStyle }}
+              >
+                <Image
+                  src={"/icons/icons8-double-right-64.png"}
+                  alt={"Arrow Right"}
+                  width={50}
+                  height={50}
+                  className="h-[1.5rem] w-[1.5rem] shadow-lg md:h-[2rem] md:w-[2rem] lg:h-[2.5rem] lg:w-[2.5rem]"
+                />
+              </div>
             }
           >
             {imageSlideshow.map((slideImage: SlideImage, index: number) => (
@@ -102,7 +126,7 @@ const PropertyListing = ({
                 </div>
               </div>
             ))}
-          </Slide>
+          </Fade>
         </div>
       </section>
       {/* Property Details */}

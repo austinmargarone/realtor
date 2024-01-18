@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Link from "next/link";
-import { Slide } from "react-slideshow-image";
+import { Fade } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 import { Button } from "../ui/button";
 
@@ -61,8 +61,10 @@ const Listing = ({
     <main>
       <div className="w-fit min-w-[350px] max-w-[450px] rounded-[1rem] border bg-white p-[.5rem] shadow-lg dark:border-kw-darkgray dark:bg-kw-black">
         <div className="w-[350px] sm:w-full">
-          <Slide
+          <Fade
+            transitionDuration={100}
             autoplay={false}
+            canSwipe={true}
             prevArrow={
               <div style={{ ...customArrowStyle, left: "10px" }}>{"<"}</div>
             }
@@ -82,7 +84,7 @@ const Listing = ({
                 </div>
               </div>
             ))}
-          </Slide>
+          </Fade>
         </div>
         <div className="p-[1rem] dark:text-white">
           <Link href={`/portfolio/${slug}`}>
