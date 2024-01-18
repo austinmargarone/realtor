@@ -33,7 +33,7 @@ const Post = ({
   return (
     <main>
       <Link href={`blog/${slug.current}`}>
-        <div className="mx-auto mb-[1.25rem] flex h-[35rem] min-h-[12.5rem] rounded-[.5rem] border-[3px] border-kw-maingray bg-white p-[1rem] shadow-lg dark:border-kw-lessblack dark:bg-black lg:max-h-[25rem]">
+        <div className="mx-auto mb-[1.25rem] flex h-[36rem] min-h-[12.5rem] rounded-[.5rem] border-[3px] border-kw-maingray bg-white p-[1rem] shadow-lg dark:border-kw-lessblack dark:bg-black md:h-[38rem] lg:h-[36rem] lg:max-h-[25rem]">
           <div className="my-[.75rem] flex w-full gap-[1.25rem] lg:my-[1.25rem]">
             <div className="hidden items-center justify-center lg:flex lg:w-[25%]">
               <Image
@@ -53,7 +53,7 @@ const Post = ({
               <div className="mb-2">
                 <h2 className="text-kw-red">{category}</h2>
               </div>
-              <div className="line-clamp-6 md:line-clamp-[8]">
+              <div className="line-clamp-6 w-[250px] xs:w-fit md:line-clamp-[8]">
                 {body.map((block) => (
                   <div key={block._key}>
                     {block._type === "block" && (
