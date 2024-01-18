@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 type Props = {};
@@ -13,6 +14,17 @@ const page = (props: Props) => {
           src="https://dashboards.domusanalytics.com/v/RochesterInfographic"
         ></iframe>
       </div>
+      <section className="mx-auto mb-[2.5rem] flex flex-col gap-[30px] md:flex-row">
+        <Link href="/tools/charts">
+          <button className="button w-[200px]">Market Charts</button>
+        </Link>
+        <Link href="/tools/mortgage">
+          <button className="button w-[200px]">Mortgage Calculaor</button>
+        </Link>
+        <Link href="/tools/matterport">
+          <button className="button w-[200px]">Matterport Services</button>
+        </Link>
+      </section>
       <div className="mx-auto mb-[1.25rem] flex">
         <Image
           src={"/rocvert.jpg"}
@@ -22,60 +34,6 @@ const page = (props: Props) => {
           className="mx-auto flex h-full w-[300px] justify-center rounded-sm shadow-lg xs:w-[300px] sm:w-[500px] md:w-[600px] lg:hidden"
         />
       </div>
-      <section className="mx-auto mb-[2.5rem] flex flex-col gap-6">
-        {/* Sales Price - Short Term */}
-        <div className="flex flex-col">
-          <h3 className="h2 pb-[4px] dark:text-white">Sales Price</h3>
-          <iframe
-            width="640"
-            height="480"
-            src="https://grar.stats.showingtime.com/infoserv/s-v1/KVvo-R1F?w=640&amp;h=480"
-            className="mx-auto w-[300px] rounded-sm sm:w-[500px] md:w-[600px] lg:w-[650px]"
-          ></iframe>
-        </div>
-        {/* Sales Price - Long Term */}
-        <div className="flex flex-col">
-          <h3 className="h2 pb-[4px] dark:text-white">
-            Sales Price - Long Term
-          </h3>
-          <iframe
-            width="640"
-            height="480"
-            src="https://grar.stats.showingtime.com/infoserv/s-v1/KVvU-n2S?w=640&amp;h=480"
-            className="mx-auto w-[300px] rounded-sm sm:w-[500px] md:w-[600px] lg:w-[650px]"
-          ></iframe>
-        </div>
-        {/* Price Per SQFT */}
-        <div className="flex flex-col">
-          <h3 className="h2 pb-[4px] dark:text-white">Price Per SQFT</h3>{" "}
-          <iframe
-            width="640"
-            height="480"
-            src="https://grar.stats.showingtime.com/infoserv/s-v1/KVvX-sqN?w=640&amp;h=480"
-            className="mx-auto w-[300px] rounded-sm sm:w-[500px] md:w-[600px] lg:w-[650px]"
-          ></iframe>
-        </div>
-        {/* Days on Market */}
-        <div className="flex flex-col">
-          <h3 className="h2 pb-[4px] dark:text-white">Days on Market</h3>
-          <iframe
-            width="640"
-            height="480"
-            src="https://grar.stats.showingtime.com/infoserv/s-v1/KVvR-rDA?w=640&amp;h=480"
-            className="mx-auto w-[300px] rounded-sm sm:w-[500px] md:w-[600px] lg:w-[650px]"
-          ></iframe>
-        </div>
-        {/* Homes For Sale */}
-        <div className="flex flex-col">
-          <h3 className="h2 pb-[4px] dark:text-white">Inventory</h3>
-          <iframe
-            width="640"
-            height="480"
-            src="https://grar.stats.showingtime.com/infoserv/s-v1/KVvq-hOW?w=640&amp;h=480"
-            className="mx-auto w-[300px] rounded-sm sm:w-[500px] md:w-[600px] lg:w-[650px]"
-          ></iframe>
-        </div>
-      </section>
     </div>
   );
 };
