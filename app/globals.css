@@ -122,6 +122,11 @@
     border-radius: 5px;
   }
 
+  .ul {
+    list-style-type: circle;
+    padding: 0px 0px 0px 25px;
+  }
+
   /* Blog */
 
   .blogh1 {
