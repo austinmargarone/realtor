@@ -75,7 +75,6 @@ export async function getAllPost(): Promise<Post> {
         title,
       },
       publishedAt,
-      description,
       body
     }`
   );
@@ -151,7 +150,9 @@ export async function getMyListing(slug: string): Promise<ListPortfolio> {
         garage,
         tour,
         embed,
-        MLS
+        MLS,
+        keywords,
+        metadesc
       }`,
       { slug }
     );

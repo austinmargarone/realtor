@@ -6,6 +6,7 @@ export type ListPortfolio = {
   imageSlideshow: {
     alt: string;
     asset: {
+      url: any;
       _ref: string;
       _type: string;
     };
@@ -25,4 +26,6 @@ export type ListPortfolio = {
   tour: string;
   embed: string;
   MLS: string;
+  keywords: string[];
+  metadesc: string;
 };

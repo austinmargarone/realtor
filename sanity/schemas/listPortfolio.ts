@@ -113,6 +113,20 @@ export default defineType({
       title: "MLS",
       type: "string",
     }),
+    defineField({
+      name: "keywords",
+      title: "Keywords",
+      type: "array",
+      of: [{ type: "string" }],
+      options: {
+        layout: "tags",
+      },
+    }),
+    defineField({
+      name: "metadesc",
+      title: "Meta Description",
+      type: "text",
+    }),
   ],
   preview: {
     select: {
