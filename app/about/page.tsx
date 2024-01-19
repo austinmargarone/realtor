@@ -1,6 +1,15 @@
 import Contact from "@/components/about/Contact";
 import Content from "@/components/about/Content";
+import type { Metadata } from "next";
 import React from "react";
+
+export const metadata: Metadata = {
+  title: "About | Austin Margarone",
+  description:
+    "Austin Margarone is a licensed real estate salesperson in Rochester, NY. He works with buyers and sellers to make the process easy and stress-free.",
+  keywords:
+    "Austin Margarone, Realtor, Real Estate, Rochester, NY, New York, Homes, Houses, Property, Listing, Listings, Buy, Sell, Rent",
+};
 
 const page = () => {
   return (

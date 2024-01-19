@@ -1,6 +1,15 @@
 import Contact from "@/components/home/Contact";
 import Link from "next/link";
 import React from "react";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Discloures | Austin Margarone",
+  description:
+    "Austin Margarone's resoruces and disclosures for real estate transactions.",
+  keywords:
+    "Austin Margarone, Realtor, Real Estate, Rochester, NY, New York, Homes, Houses, Property, Listing, Listings, Buy, Sell, Rent",
+};
 
 const page = () => {
   return (

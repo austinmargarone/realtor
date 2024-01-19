@@ -18,9 +18,9 @@ const Content = () => {
           take pride in being part of the Rochester, NY community. After high
           school, I studied building trades at Alfred State College. This
           background knowledge gives me the ability to see houses differently
-          than my competition. Contact me today, I look forward to assisting you
-          with your next real estate transaction. My goal is to make the process
-          easy and stress-free.
+          than my competition. My goal is to make the process easy and
+          stress-free. Contact me today, I look forward to assisting you with
+          your next real estate transaction.
         </p>
         <Link href="https://www.realtor.com/realestateagents/austin-margarone_rochester_ny_3802982_051184163">
           <Button className="button mt-[.75rem] text-black">

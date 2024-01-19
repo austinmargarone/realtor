@@ -1,6 +1,15 @@
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import React from "react";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Matterport Virtual Tours | Austin Margarone",
+  description:
+    "Austin Margarone provides Matterport virtual tours for his listings.",
+  keywords:
+    "Austin Margarone, Realtor, Real Estate, Rochester, NY, New York, Virtual Tours, Matterport, 3D, 3D Tours, Digital Twins, listings, listing, sell",
+};
 
 const page = () => {
   return (
