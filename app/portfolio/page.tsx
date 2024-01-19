@@ -4,12 +4,24 @@ import Sold from "@/components/shared/Sold";
 import { getListPortfolio, getSoldPortfolio } from "@/sanity/sanity-utils";
 import type { Metadata } from "next";
 
+const baseURL = process.env.NEXT_PUBLIC_BASE_URL;
+
 export const metadata: Metadata = {
   title: "Portfolio | Austin Margarone",
   description:
     "Austin Margarone's portfolio of listings and buyer transactions.",
   keywords:
     "Austin Margarone, Realtor, Real Estate, Rochester, NY, New York, Listing, Listings, Buy, Sell, Rent, Portfolio, Transactions",
+  openGraph: {
+    images: [
+      {
+        url: `${baseURL}/meta.png`,
+        width: 1200,
+        height: 630,
+        alt: "Austin Margarone | Realtor",
+      },
+    ],
+  },
 };
 
 export const dynamic = "force-dynamic";

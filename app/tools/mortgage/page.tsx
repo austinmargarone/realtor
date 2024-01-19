@@ -1,12 +1,24 @@
 import React from "react";
 import type { Metadata } from "next";
 
+const baseURL = process.env.NEXT_PUBLIC_BASE_URL;
+
 export const metadata: Metadata = {
   title: "Mortgage Calculator | Austin Margarone",
   description:
     "Austin Margarone's resoruces for buyers and sellers to calculate mortgage payments.",
   keywords:
     "Austin Margarone, Realtor, Real Estate, Rochester, NY, New York, Mortgage Calculator, Payment, Interest, Principal, Insurance, Mortgage Insurance, Buy, Sell, Rent",
+  openGraph: {
+    images: [
+      {
+        url: `${baseURL}/meta.png`,
+        width: 1200,
+        height: 630,
+        alt: "Austin Margarone | Realtor",
+      },
+    ],
+  },
 };
 
 const page = () => {

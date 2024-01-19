@@ -1,12 +1,24 @@
 import React from "react";
 import type { Metadata } from "next";
 
+const baseURL = process.env.NEXT_PUBLIC_BASE_URL;
+
 export const metadata: Metadata = {
   title: "Market Charts | Austin Margarone",
   description:
     "Austin Margarone's market charts for the Rochester, NY real estate market.",
   keywords:
     "Austin Margarone, Realtor, Real Estate, Rochester, NY, New York, Market, Charts, Home Prices, Sales Price, Price Per SQFT, Days on Market, Inventory, Homes For Sale, Listings, Buy, Sell, Rent",
+  openGraph: {
+    images: [
+      {
+        url: `${baseURL}/meta.png`,
+        width: 1200,
+        height: 630,
+        alt: "Austin Margarone | Realtor",
+      },
+    ],
+  },
 };
 
 const page = () => {

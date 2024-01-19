@@ -3,12 +3,24 @@ import Link from "next/link";
 import React from "react";
 import type { Metadata } from "next";
 
+const baseURL = process.env.NEXT_PUBLIC_BASE_URL;
+
 export const metadata: Metadata = {
   title: "Discloures | Austin Margarone",
   description:
     "Austin Margarone's resoruces and disclosures for real estate transactions.",
   keywords:
     "Austin Margarone, Realtor, Real Estate, Rochester, NY, New York, Homes, Houses, Property, Listing, Listings, Buy, Sell, Rent",
+  openGraph: {
+    images: [
+      {
+        url: `${baseURL}/meta.png`,
+        width: 1200,
+        height: 630,
+        alt: "Austin Margarone | Realtor",
+      },
+    ],
+  },
 };
 
 const page = () => {

@@ -4,6 +4,7 @@ import Cover from "@/components/home/Cover";
 import ListingCards from "@/components/home/ListingCards";
 import Reviews from "@/components/home/Reviews";
 import type { Metadata } from "next";
+const baseURL = process.env.NEXT_PUBLIC_BASE_URL;
 
 export const metadata: Metadata = {
   title: "Home | Austin Margarone",
@@ -11,6 +12,16 @@ export const metadata: Metadata = {
     "Austin Margarone is your local real estate agent in Rochester, NY. He is a member of the National Association of Realtors and provides a stress-free experience for his clients.",
   keywords:
     "Austin Margarone, Realtor, Real Estate, Rochester, NY, New York, Homes, Houses, Property, Listing, Listings, Buy, Sell, Rent",
+  openGraph: {
+    images: [
+      {
+        url: `${baseURL}/meta.png`,
+        width: 1200,
+        height: 630,
+        alt: "Austin Margarone | Realtor",
+      },
+    ],
+  },
 };
 
 export const dynamic = "force-dynamic";
