@@ -19,4 +19,6 @@ export type Post = {
   publishedAt: string;
   body: BlockContent[];
   links: { text: string; url: string }[];
+  keywords: string[];
+  description: string;
 };

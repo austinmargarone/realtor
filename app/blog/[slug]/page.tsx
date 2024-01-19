@@ -4,6 +4,33 @@ import PostBody from "@/components/blog/PostBody";
 import PostLinks from "@/components/blog/PostLinks";
 import { getPost } from "@/sanity/sanity-utils";
 import React from "react";
+import { Metadata } from "next";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string };
+}): Promise<Metadata> {
+  const post = await getPost(params.slug);
+
+  const metadata = {
+    title: post.title,
+    keywords: post.keywords,
+    description: post.description,
+    openGraph: {
+      images: [
+        {
+          url: post.mainImage.asset.url,
+          width: 1200,
+          height: 630,
+          alt: "Austin Margarone | Realtor",
+        },
+      ],
+    },
+  };
+
+  return metadata;
+}
 
 export const dynamic = "force-dynamic";
 export const revalidate = 1;

@@ -1,10 +1,17 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import type { Metadata } from "next";
 
-type Props = {};
+export const metadata: Metadata = {
+  title: "Tools | Austin Margarone",
+  description:
+    "Austin Margarone's resoruces for buyers and sellers in the Rochester, NY real estate market.",
+  keywords:
+    "Austin Margarone, Realtor, Real Estate, Rochester, NY, New York, Market Conditions, Mortgage Calculator, Matterport, Charts, Buy, Sell, Rent",
+};
 
-const page = (props: Props) => {
+const page = () => {
   return (
     <div className="breakpoint mx-auto mt-[2.5rem] flex flex-col gap-[1.25rem]">
       <h1 className="md:h1 h2 dark:text-white">Tools</h1>

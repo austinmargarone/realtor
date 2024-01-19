@@ -57,6 +57,21 @@ export default defineType({
       type: "blockContent",
     }),
     defineField({
+      name: "keywords",
+      title: "Keywords",
+      type: "array",
+      of: [{ type: "string" }],
+      options: {
+        layout: "tags",
+      },
+    }),
+    defineField({
+      name: "description",
+      title: "Description",
+      type: "text",
+      rows: 3,
+    }),
+    defineField({
       name: "links",
       title: "Links",
       type: "array",
