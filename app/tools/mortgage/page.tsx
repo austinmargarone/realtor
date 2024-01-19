@@ -1,4 +1,13 @@
 import React from "react";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Mortgage Calculator | Austin Margarone",
+  description:
+    "Austin Margarone's resoruces for buyers and sellers to calculate mortgage payments.",
+  keywords:
+    "Austin Margarone, Realtor, Real Estate, Rochester, NY, New York, Mortgage Calculator, Payment, Interest, Principal, Insurance, Mortgage Insurance, Buy, Sell, Rent",
+};
 
 const page = () => {
   return (

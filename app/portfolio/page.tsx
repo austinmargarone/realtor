@@ -2,6 +2,15 @@ import React from "react";
 import Listing from "@/components/shared/Listing";
 import Sold from "@/components/shared/Sold";
 import { getListPortfolio, getSoldPortfolio } from "@/sanity/sanity-utils";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Portfolio | Austin Margarone",
+  description:
+    "Austin Margarone's portfolio of listings and buyer transactions.",
+  keywords:
+    "Austin Margarone, Realtor, Real Estate, Rochester, NY, New York, Listing, Listings, Buy, Sell, Rent, Portfolio, Transactions",
+};
 
 export const dynamic = "force-dynamic";
 export const revalidate = 1;

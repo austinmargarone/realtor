@@ -2,6 +2,15 @@ import Post from "@/components/blog/Post";
 import { getAllPost } from "@/sanity/sanity-utils";
 
 import React from "react";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Blog | Austin Margarone",
+  description:
+    "Austin Margarone's blog about real estate, Rochester, NY, and more.",
+  keywords:
+    "Austin Margarone, Realtor, Real Estate, Rochester, NY, New York, Homes, Houses, Property, Listing, Listings, Buy, Sell, Rent, Blog",
+};
 
 export const dynamic = "force-dynamic";
 export const revalidate = 1;
