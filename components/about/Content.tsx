@@ -11,7 +11,7 @@ const Content = () => {
           Austin Margarone
         </h2>
         <h3 className="h4 my-[.75rem] flex justify-start dark:text-white">
-          Licensed Real Estate Agent
+          Licensed Real Estate Salesperson
         </h3>
         <p className="body dark:bodydark">
           I am a Rochester native who knows our city and surrounding areas. I

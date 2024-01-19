@@ -68,7 +68,7 @@ const Sold = ({
           <div className="flex items-center justify-between">
             <p className="w-[60%]">{address}</p>
             <Link href={`${link}`} target="_blank">
-              <Button className="w-fit border border-black text-black hover:animate-pulse dark:bg-kw-red dark:text-white">
+              <Button className="w-fit border border-black bg-kw-maingray text-white hover:animate-pulse dark:bg-kw-red dark:text-white">
                 View Listing
               </Button>
             </Link>
