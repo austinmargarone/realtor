@@ -17,6 +17,14 @@ export async function generateMetadata({
     title: post.title,
     keywords: post.keywords,
     description: post.description,
+    publishedTime: post.publishedAt,
+    type: "article",
+    author: "Austin Margarone",
+    twitter: {
+      cardType: "summary_large_image",
+      site: "@AustinMargarone",
+      handle: "AaustinMargarone",
+    },
     openGraph: {
       images: [
         {
