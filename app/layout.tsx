@@ -15,6 +15,7 @@ const inter = Inter({
 const baseURL = process.env.NEXT_PUBLIC_BASE_URL;
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://austinmargaronerealestate.com"),
   title: "Austin Margarone | Realtor",
   description:
     "Austin Margarone is your local real estate agent in Rochester, NY. He is a member of the National Association of Realtors and provides a stress-free experience for his clients.",
