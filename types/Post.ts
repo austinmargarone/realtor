@@ -2,6 +2,7 @@ import { Key } from "react";
 import { BlockContent } from "./BlockContent";
 
 export type Post = {
+  [x: string]: any;
   id: Key | null | undefined;
   map(
     arg0: (post: any) => import("react").JSX.Element

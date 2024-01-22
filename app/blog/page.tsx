@@ -3,6 +3,7 @@ import { getAllPost } from "@/sanity/sanity-utils";
 
 import React from "react";
 import type { Metadata } from "next";
+import { BlockContent } from "@/types/BlockContent";
 
 const baseURL = process.env.NEXT_PUBLIC_BASE_URL;
 
@@ -31,22 +32,41 @@ type Props = {
 };
 const page = async ({ params }: Props) => {
   const post = await getAllPost();
-
+  const sortedPost = post.sort(
+    (
+      a: { publishedAt: string | number | Date },
+      b: { publishedAt: string | number | Date }
+    ) => {
+      return (
+        new Date(b.publishedAt).valueOf() - new Date(a.publishedAt).valueOf()
+      );
+    }
+  );
   return (
     <article className="breakpoint mx-auto my-[1.25rem] flex flex-col">
       <h1 className="h1 mx-auto mb-[1.25rem] flex dark:text-white">Blog</h1>
-      {post.map((post) => (
-        <div key={post.id}>
-          <Post
-            title={post.title}
-            slug={post.slug}
-            mainImage={post.mainImage}
-            categories={post.categories}
-            publishedAt={post.publishedAt}
-            body={post.body}
-          />
-        </div>
-      ))}
+      {sortedPost.map(
+        (post: {
+          id: React.Key | null | undefined;
+          title: string;
+          slug: { current: string };
+          mainImage: { asset: { url: string } };
+          categories: { title: string; description: string }[];
+          publishedAt: string;
+          body: BlockContent[];
+        }) => (
+          <div key={post.id}>
+            <Post
+              title={post.title}
+              slug={post.slug}
+              mainImage={post.mainImage}
+              categories={post.categories}
+              publishedAt={post.publishedAt}
+              body={post.body}
+            />
+          </div>
+        )
+      )}
     </article>
   );
 };
