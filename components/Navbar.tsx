@@ -72,7 +72,9 @@ const Navbar: React.FC = () => {
             <Link href="/portfolio" passHref>
               <li>Portfolio</li>
             </Link>
-
+            <Link href="/contact" passHref>
+              <li>Contact</li>
+            </Link>
             {/* Use the Dropdown component for "Tools" */}
             <Dropdown options={toolOptions} onItemSelected={handleToolSelect} />
 
