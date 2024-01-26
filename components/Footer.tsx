@@ -37,7 +37,7 @@ const Footer = () => {
           </div>
           <div className="flex justify-center">
             <p className="text-black dark:text-white">
-              License #: <span className="">10401330819</span>
+              Cell #: <span className="">585-545-1757</span>
             </p>
           </div>
           <div className="flex justify-center gap-[.63rem]">
