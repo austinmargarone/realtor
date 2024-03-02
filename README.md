@@ -1,37 +1,95 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Realtor Profile
 
-## Getting Started
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
-First, run the development server:
+![Preview Image](preview.png)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Description
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Welcome to My Realtor Profile! This repository contains the codebase for my real estate profile application. This serves as a portfolio website to showcase my real estate portfolio, featuring properties I've listed, sold, and helped clients find. Whether you're looking to buy, sell, or invest in real estate, My application provides a comprehensive overview of my services and expertise in the industry as well as tools and information that will help you with your transaction.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Table of Contents
 
-## Learn More
+- [Demo](#demo)
+- [Technologies Used](#technologies-used)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+- [Acknowledgments](#acknowledgments)
+- [Contact](#contact)
 
-To learn more about Next.js, take a look at the following resources:
+## Demo
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Check out the live website [here](https://austinmargaronerealestate.com/).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Technologies Used
 
-## Deploy on Vercel
+My Real Estate Portfolio is built using the following technologies:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- HTML
+- TailwindCSS
+- Git & GitHub
+- NextJS
+- Sanity
+- TypeScript
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-# realtor
+## Features
+
+- See previous transactions and reviews.
+- Get information on the local real estate market.
+- Access tools like mortgage calculator and market charts.
+
+## Installation
+
+To set up the project locally, follow these steps:
+
+1. Clone this repository to your local machine:
+
+   ```bash
+   git clone github.com/austinmargarone/realtor.git
+   ```
+2. Navigate to the project directory:
+
+   ```bash
+   cd realtor
+   ```
+
+3. Install the necessary dependencies:
+
+   ```bash
+   npm install
+   ```
+
+4. Start the development server:
+
+   ```bash
+   npm start
+   ```
+
+## Usage
+
+Explore what the applicatoin has to offer!
+
+## Contributing
+
+We welcome contributions from the community! To contribute to the project, follow these steps:
+
+1. Fork this repository.
+2. Create a new branch (`git checkout -b feature/your-feature-name`).
+3. Make your changes and commit them (`git commit -am 'Add new feature'`).
+4. Push to the branch (`git push origin feature/your-feature-name`).
+5. Create a new Pull Request.
+
+Please review our [Contributing Guidelines](CONTRIBUTING.md) for more details.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+
+## Contact
+
+For questions or support, please contact Austin Margarone at Austin@margarone.dev.
