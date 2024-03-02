@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import Link from "next/link";
+import CopyNumber from "./ui/CopyNumber";
 
 const Footer = () => {
   return (
@@ -18,7 +19,7 @@ const Footer = () => {
               alt={"Realtor Logo"}
               width={150}
               height={150}
-              className="h-[5rem] w-[5rem] rounded-sm dark:shadow-lg lg:h-[7rem] lg:w-[7rem]"
+              className="size-[5rem] rounded-sm dark:shadow-lg lg:size-[7rem]"
             />
           </Link>
           <Image
@@ -37,7 +38,7 @@ const Footer = () => {
           </div>
           <div className="flex justify-center">
             <p className="text-black dark:text-white">
-              Cell #: <span className="">585-545-1757</span>
+              <CopyNumber />
             </p>
           </div>
           <div className="flex justify-center gap-[.63rem]">
