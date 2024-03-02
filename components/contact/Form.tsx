@@ -4,6 +4,8 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { formSchema } from "@/lib/types";
 import emailjs from "emailjs-com";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 // Define the interface for form data
 interface FormData {
@@ -59,6 +61,7 @@ const Form = () => {
 
       // Reset the form after successful submission
       reset();
+      notify();
 
       console.log("Email sent successfully");
     } catch (error) {
@@ -68,6 +71,23 @@ const Form = () => {
 
   // Log form validation errors
   console.log(errors);
+
+  const notify = () =>
+    toast("Form submitted successfully!", {
+      position: "top-center",
+      autoClose: 4200,
+      hideProgressBar: true,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      style: {
+        backgroundColor: "#666666",
+        color: "#ffffff",
+        borderRadius: "10px",
+        border: "2px solid #000000",
+      },
+    });
 
   return (
     <section className="flex min-w-[30px] max-w-[550px] grow rounded-md bg-kw-maingray p-8 shadow-lg dark:bg-kw-black">
@@ -144,6 +164,7 @@ const Form = () => {
               Selling Property
             </label>
           </div>
+          <ToastContainer />
         </div>
         <button className="button" type="submit">
           Submit

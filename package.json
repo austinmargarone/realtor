@@ -31,6 +31,7 @@
     "react-hook-form": "^7.49.2",
     "react-hook-form-resolvers": "^0.0.1",
     "react-slideshow-image": "^4.3.0",
+    "react-toastify": "^10.0.4",
     "sanity": "^3.23.4",
     "sharp": "^0.33.2",
     "styled-components": "^6.1.6",
