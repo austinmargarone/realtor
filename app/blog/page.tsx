@@ -43,7 +43,7 @@ const page = async ({ params }: Props) => {
     }
   );
   return (
-    <section className="mx-auto my-[1.25rem] flex flex-col px-[1rem]">
+    <section className="mx-auto my-[1.25rem] flex max-w-[1800px] flex-col px-[1rem] lg:px-[10rem]">
       <h1 className="h1 mx-auto mb-[1.25rem] flex dark:text-white">Blog</h1>
       {sortedPost.map(
         (post: {

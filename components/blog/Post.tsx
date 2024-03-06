@@ -33,7 +33,7 @@ const Post = ({
   return (
     <main>
       <Link href={`blog/${slug.current}`}>
-        <div className="mx-auto mb-[1.25rem] flex h-auto min-h-[12.5rem] rounded-[.5rem] border-[3px] border-kw-maingray bg-white p-[1rem] shadow-lg dark:border-kw-lessblack dark:bg-black md:h-[38rem] lg:h-[36rem] lg:max-h-[25rem]">
+        <div className="mx-auto mb-[1.25rem] flex h-auto min-h-[12.5rem] w-full rounded-[.5rem] border-[3px] border-kw-maingray bg-white p-[1rem] shadow-lg dark:border-kw-lessblack dark:bg-black md:h-[38rem] lg:h-[36rem] lg:max-h-[25rem]">
           <div className="my-[.75rem] flex w-full gap-[1.25rem] lg:my-[1.25rem]">
             <div className="hidden items-center justify-center lg:flex lg:w-[25%]">
               <Image
@@ -44,7 +44,7 @@ const Post = ({
                 className="h-fit w-full rounded-[0.75rem]"
               />
             </div>
-            <div className="my-auto flex flex-col justify-start lg:w-[75%]">
+            <div className="my-auto flex w-full flex-col justify-start lg:w-[75%]">
               <div className="mb-[.75rem]">
                 <h2 className="h3 line-clamp-2 flex justify-start dark:text-white">
                   {title}
@@ -64,7 +64,7 @@ const Post = ({
                   </div>
                 ))}
               </div>
-              <div className="m-auto my-[.75rem] flex items-center justify-center lg:hidden">
+              <div className="mx-auto my-[.75rem] flex items-center justify-center lg:hidden">
                 <Image
                   src={mainImage.asset.url}
                   width={500}
