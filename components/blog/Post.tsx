@@ -33,7 +33,7 @@ const Post = ({
   return (
     <main>
       <Link href={`blog/${slug.current}`}>
-        <div className="mx-auto mb-[1.25rem] flex h-[36rem] min-h-[12.5rem] rounded-[.5rem] border-[3px] border-kw-maingray bg-white p-[1rem] shadow-lg dark:border-kw-lessblack dark:bg-black md:h-[38rem] lg:h-[36rem] lg:max-h-[25rem]">
+        <div className="mx-auto mb-[1.25rem] flex h-auto min-h-[12.5rem] rounded-[.5rem] border-[3px] border-kw-maingray bg-white p-[1rem] shadow-lg dark:border-kw-lessblack dark:bg-black md:h-[38rem] lg:h-[36rem] lg:max-h-[25rem]">
           <div className="my-[.75rem] flex w-full gap-[1.25rem] lg:my-[1.25rem]">
             <div className="hidden items-center justify-center lg:flex lg:w-[25%]">
               <Image
@@ -64,13 +64,13 @@ const Post = ({
                   </div>
                 ))}
               </div>
-              <div className="mx-auto my-[.75rem] flex items-center justify-center lg:hidden">
+              <div className="m-auto my-[.75rem] flex items-center justify-center lg:hidden">
                 <Image
                   src={mainImage.asset.url}
                   width={500}
                   height={500}
                   alt={title}
-                  className="h-[15rem] w-full rounded-[0.75rem]"
+                  className="m-auto flex size-full max-h-[15rem] w-full items-center justify-center rounded-[0.75rem]"
                 />
               </div>
             </div>

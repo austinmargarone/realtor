@@ -43,7 +43,7 @@ const page = async ({ params }: Props) => {
     }
   );
   return (
-    <article className="breakpoint mx-auto my-[1.25rem] flex flex-col">
+    <section className="mx-auto my-[1.25rem] flex flex-col px-[1rem]">
       <h1 className="h1 mx-auto mb-[1.25rem] flex dark:text-white">Blog</h1>
       {sortedPost.map(
         (post: {
@@ -67,7 +67,7 @@ const page = async ({ params }: Props) => {
           </div>
         )
       )}
-    </article>
+    </section>
   );
 };
 
