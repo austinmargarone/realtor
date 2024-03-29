@@ -64,7 +64,7 @@ const Navbar: React.FC = () => {
           </p>
         </Link>
         <div className="flex items-center">
-          <ul className="hidden gap-[1.25rem] pr-[2rem] font-bold text-black dark:text-white lg:flex">
+          <ul className="z-50 hidden gap-[1.25rem] pr-[2rem] font-bold text-black dark:text-white lg:flex">
             {/* Other menu items */}
             <Link href="/" passHref>
               <li>Home</li>
@@ -75,7 +75,6 @@ const Navbar: React.FC = () => {
             <Link href="/contact" passHref>
               <li>Contact</li>
             </Link>
-            {/* Use the Dropdown component for "Tools" */}
             <Dropdown options={toolOptions} onItemSelected={handleToolSelect} />
 
             <Link href="/blog" passHref>
