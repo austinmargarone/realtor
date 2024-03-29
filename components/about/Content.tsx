@@ -5,8 +5,8 @@ import Link from "next/link";
 
 const Content = () => {
   return (
-    <section className="breakpoint my-auto flex flex-col py-[2.5rem] md:flex-row">
-      <div className="my-auto w-[50%]">
+    <section className="breakpoint my-auto flex flex-col-reverse py-[2.5rem] lg:flex-row">
+      <div className="my-auto w-full lg:w-[50%]">
         <h2 className="h2 flex justify-start dark:text-white">
           Austin Margarone
         </h2>
@@ -28,13 +28,13 @@ const Content = () => {
           </Button>
         </Link>
       </div>
-      <div className="my-auto w-[50%]">
+      <div className="my-auto mb-[1.25rem] w-full lg:mt-0 lg:w-[50%]">
         <Image
           src={"/smallheadshot.jpeg"}
           alt={"Listing Photo"}
           width={450}
           height={268}
-          className="mx-auto h-[300px] w-[300px] rounded-full border-[3px] border-black  bg-black p-5 shadow-lg md:h-[325px] md:w-[325px] lg:h-[400px] lg:w-[400px] xl:h-[420px] xl:w-[420px]"
+          className="mx-auto size-[300px] rounded-full border-[3px] border-black bg-black  p-5 shadow-lg md:size-[325px] lg:size-[400px] xl:size-[420px]"
         />
       </div>
     </section>

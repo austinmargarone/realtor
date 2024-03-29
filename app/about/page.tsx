@@ -26,7 +26,7 @@ export const metadata: Metadata = {
 const page = () => {
   return (
     <article className="bg-white dark:bg-kw-black">
-      <section className="mx-auto flex flex-col">
+      <section className="mx-auto flex w-full flex-col">
         <div className="breakpoint mx-auto">
           <h1 className="h1 my-[2.5rem] flex justify-start dark:text-white">
             About Me
