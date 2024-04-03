@@ -34,7 +34,7 @@ const CopyNumber = () => {
         }}
       >
         <ToastContainer />
-        <button className="border text-black dark:text-white">
+        <button className="text-black dark:text-white">
           Cell #: <span className="">585-545-1757</span>
         </button>
       </button>
