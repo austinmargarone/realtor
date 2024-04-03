@@ -90,7 +90,7 @@ const Form = () => {
     });
 
   return (
-    <section className="flex min-w-[30px] max-w-[550px] grow rounded-md bg-kw-maingray p-8 shadow-lg dark:bg-kw-black">
+    <section className="flex w-full max-w-[600px] grow rounded-md bg-kw-maingray p-8 shadow-lg dark:bg-kw-black">
       <form
         onSubmit={handleSubmit(onSubmit)}
         className="flex w-full flex-col gap-[1.25rem]"
