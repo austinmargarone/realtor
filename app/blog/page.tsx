@@ -1,9 +1,9 @@
 import Post from "@/components/blog/Post";
 import { getAllPost } from "@/sanity/sanity-utils";
+import { BlogPost } from "@/types/BlogPost";
 
-import React from "react";
 import type { Metadata } from "next";
-import { BlockContent } from "@/types/BlockContent";
+import React from "react";
 
 const baseURL = process.env.NEXT_PUBLIC_BASE_URL;
 
@@ -31,8 +31,10 @@ type Props = {
   params: { post: string };
 };
 const page = async ({ params }: Props) => {
-  const post = await getAllPost();
-  const sortedPost = post.sort(
+  const posts = await getAllPost();
+
+  // Sort posts by published date
+  const sortedPosts = posts.sort(
     (
       a: { publishedAt: string | number | Date },
       b: { publishedAt: string | number | Date }
@@ -42,35 +44,42 @@ const page = async ({ params }: Props) => {
       );
     }
   );
-  console.log(post);
+
+  const numberOfColumns = 2;
+
+  // Initialize an array to hold posts for each column
+  const columns: React.JSX.Element[][] = Array.from(
+    { length: numberOfColumns },
+    () => []
+  );
+
+  // Distribute posts into columns
+  sortedPosts.forEach((post: BlogPost, index: number) => {
+    const columnIndex = index % numberOfColumns;
+    columns[columnIndex].push(
+      <div key={post.id}>
+        <Post
+          title={post.title}
+          mainImage={post.mainImage}
+          categories={post.categories}
+          publishedAt={post.publishedAt}
+          body={post.body}
+          description={post.description}
+          slug={post.slug}
+        />
+      </div>
+    );
+  });
+
   return (
-    <section className="mx-auto my-[1.25rem] flex max-w-[1800px] flex-col px-[1rem] lg:px-[10rem]">
+    <section className="mx-auto my-[1.25rem] flex max-w-[1600px] flex-col px-[1rem] lg:px-[10rem]">
       <h1 className="h1 mx-auto mb-[1.25rem] flex dark:text-white">Blog</h1>
-      <div className="flex flex-wrap justify-center gap-[1.25rem]">
-        {sortedPost.map(
-          (post: {
-            id: React.Key | null | undefined;
-            title: string;
-            slug: { current: string };
-            mainImage: { asset: { url: string } };
-            categories: { title: string; description: string }[];
-            publishedAt: string;
-            body: BlockContent[];
-            description: string;
-          }) => (
-            <div key={post.id}>
-              <Post
-                title={post.title}
-                slug={post.slug}
-                mainImage={post.mainImage}
-                categories={post.categories}
-                publishedAt={post.publishedAt}
-                body={post.body}
-                description={post.description}
-              />
-            </div>
-          )
-        )}
+      <div className="grid grid-cols-1 gap-5 lg:grid-cols-2">
+        {columns.map((column, columnIndex) => (
+          <div key={columnIndex} className="flex flex-col gap-5">
+            {column}
+          </div>
+        ))}
       </div>
     </section>
   );
