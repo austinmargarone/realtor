@@ -61,7 +61,7 @@ const MobileNav = () => {
             Austin Margarone | Realtor
           </p>
         </Link>
-        <div>
+        <div style={{ maxHeight: "calc(100vh - 100px)", overflowY: "auto" }}>
           <SheetClose asChild>
             <NavContent />
           </SheetClose>
