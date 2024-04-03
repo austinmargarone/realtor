@@ -108,7 +108,7 @@ const Listing = ({
           <Link href={`/portfolio/${slug}`}>
             <div className="flex gap-2 font-bold">
               <div
-                className="my-auto flex h-3 w-3 rounded-full"
+                className="my-auto flex size-3 rounded-full"
                 style={{ backgroundColor: color }}
               ></div>
               <span>{status}</span>
@@ -131,7 +131,7 @@ const Listing = ({
             </div>
             <div className="flex items-center justify-between">
               <p className="w-[60%]">{address}</p>
-              <Button className="w-fit border border-black bg-kw-maingray text-white hover:animate-pulse dark:bg-kw-red dark:text-white">
+              <Button className="w-fit border border-black bg-kw-red text-white hover:animate-pulse dark:bg-kw-red dark:text-white">
                 View Listing
               </Button>
             </div>
