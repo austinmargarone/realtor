@@ -75,6 +75,7 @@ export async function getAllPost(): Promise<Post> {
         title,
       },
       publishedAt,
+      description,
       body
     }`
   );

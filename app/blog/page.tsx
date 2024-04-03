@@ -42,31 +42,36 @@ const page = async ({ params }: Props) => {
       );
     }
   );
+  console.log(post);
   return (
     <section className="mx-auto my-[1.25rem] flex max-w-[1800px] flex-col px-[1rem] lg:px-[10rem]">
       <h1 className="h1 mx-auto mb-[1.25rem] flex dark:text-white">Blog</h1>
-      {sortedPost.map(
-        (post: {
-          id: React.Key | null | undefined;
-          title: string;
-          slug: { current: string };
-          mainImage: { asset: { url: string } };
-          categories: { title: string; description: string }[];
-          publishedAt: string;
-          body: BlockContent[];
-        }) => (
-          <div key={post.id}>
-            <Post
-              title={post.title}
-              slug={post.slug}
-              mainImage={post.mainImage}
-              categories={post.categories}
-              publishedAt={post.publishedAt}
-              body={post.body}
-            />
-          </div>
-        )
-      )}
+      <div className="flex flex-wrap justify-center gap-[1.25rem]">
+        {sortedPost.map(
+          (post: {
+            id: React.Key | null | undefined;
+            title: string;
+            slug: { current: string };
+            mainImage: { asset: { url: string } };
+            categories: { title: string; description: string }[];
+            publishedAt: string;
+            body: BlockContent[];
+            description: string;
+          }) => (
+            <div key={post.id}>
+              <Post
+                title={post.title}
+                slug={post.slug}
+                mainImage={post.mainImage}
+                categories={post.categories}
+                publishedAt={post.publishedAt}
+                body={post.body}
+                description={post.description}
+              />
+            </div>
+          )
+        )}
+      </div>
     </section>
   );
 };
