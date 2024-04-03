@@ -72,7 +72,7 @@ const page = async ({ params }: Props) => {
   });
 
   return (
-    <section className="mx-auto my-[1.25rem] flex max-w-[1600px] flex-col px-[1rem] lg:px-[10rem]">
+    <section className="mx-auto my-[1.25rem] flex max-w-[1600px] flex-col px-[1rem] ">
       <h1 className="h1 mx-auto mb-[1.25rem] flex dark:text-white">Blog</h1>
       <div className="grid grid-cols-1 gap-5 lg:grid-cols-2">
         {columns.map((column, columnIndex) => (
