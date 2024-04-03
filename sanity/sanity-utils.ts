@@ -1,12 +1,12 @@
 import { createClient, groq } from "next-sanity";
 import { apiVersion, dataset, projectId } from "./env";
-import { Post } from "@/types/Post";
+import { BlogPost } from "@/types/BlogPost";
 import { Author } from "next/dist/lib/metadata/types/metadata-types";
 import { Category } from "@/types/Category";
 import { SoldPortfolio } from "@/types/SoldPortfolio";
 import { ListPortfolio } from "@/types/ListPortfolio";
 
-export async function getPost(slug: string): Promise<Post> {
+export async function getPost(slug: string): Promise<BlogPost> {
   const client = createClient({
     projectId,
     dataset,
@@ -46,7 +46,7 @@ export async function getPost(slug: string): Promise<Post> {
   );
 }
 
-export async function getAllPost(): Promise<Post> {
+export async function getAllPost(): Promise<BlogPost> {
   const client = createClient({
     projectId,
     dataset,
