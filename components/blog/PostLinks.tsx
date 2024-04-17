@@ -7,8 +7,8 @@ interface PostLinksProps {
 
 const PostLinks: React.FC<PostLinksProps> = ({ links }) => {
   return (
-    <div className="breakpoint mx-auto pt-[1.25rem]">
-      <h2 className="h2 flex justify-start dark:text-white">Links</h2>
+    <div className="lg:breakpoint mx-auto px-[1.5rem]">
+      <h2 className="h3 flex justify-start dark:text-white">Links</h2>
       {links ? (
         <ul className="list-disc pl-7 pt-[.25rem] dark:text-white">
           {links.map((linkItem, index) => (
