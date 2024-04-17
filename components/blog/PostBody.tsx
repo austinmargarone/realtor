@@ -27,7 +27,7 @@ const PostBody = ({ publishedAt, body }: Props) => {
   };
 
   return (
-    <div className="breakpoint mx-auto mt-[1.25rem] py-[2.5rem]">
+    <div className="lg:breakpoint mx-auto mt-[1.25rem] px-[1.5rem] py-[2.5rem]">
       <div>
         {body.map((bodyItem) => (
           <div key={bodyItem._key}>
@@ -64,7 +64,7 @@ const PostBody = ({ publishedAt, body }: Props) => {
                 width={500}
                 height={500}
                 src={builder.image(bodyItem.asset._ref).url()}
-                className="mx-auto my-[1.25rem] flex h-fit w-[325px] rounded-[0.75rem] xs:w-[350px] sm:w-[400px] md:w-[500px]"
+                className="mx-auto my-[1.25rem] flex h-fit w-[325px] rounded-[0.75rem] xs:w-[350px] sm:mx-0 sm:w-[400px] md:w-[500px]"
               />
             )}
           </div>
