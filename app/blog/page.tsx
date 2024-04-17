@@ -72,16 +72,36 @@ const page = async ({ params }: Props) => {
   });
 
   return (
-    <section className="mx-auto my-[1.25rem] flex max-w-[1600px] flex-col px-[1rem] ">
-      <h1 className="h1 mx-auto mb-[1.25rem] flex dark:text-white">Blog</h1>
-      <div className="grid grid-cols-1 gap-5 lg:grid-cols-2">
-        {columns.map((column, columnIndex) => (
-          <div key={columnIndex} className="flex flex-col gap-5">
-            {column}
-          </div>
-        ))}
-      </div>
-    </section>
+    <div>
+      <section className="mx-auto my-[1.25rem] hidden max-w-[1600px] flex-col px-[1rem] lg:flex">
+        <h1 className="h1 mx-auto mb-[1.25rem] flex dark:text-white">Blog</h1>
+        <div className="grid grid-cols-1 gap-5 lg:grid-cols-2">
+          {columns.map((column, columnIndex) => (
+            <div key={columnIndex} className="flex flex-col gap-5">
+              {column}
+            </div>
+          ))}
+        </div>
+      </section>
+      <section className="mx-auto my-[1.25rem] max-w-[1600px] flex-col px-[1rem] lg:hidden">
+        <h1 className="h1 mx-auto mb-[1.25rem]">Blog</h1>
+        <div className="grid gap-5">
+          {sortedPosts.map((post: BlogPost) => (
+            <div key={post.id} className="flex flex-col gap-5">
+              <Post
+                title={post.title}
+                mainImage={post.mainImage}
+                categories={post.categories}
+                publishedAt={post.publishedAt}
+                body={post.body}
+                description={post.description}
+                slug={post.slug}
+              />
+            </div>
+          ))}
+        </div>
+      </section>
+    </div>
   );
 };
 
