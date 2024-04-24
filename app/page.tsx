@@ -3,6 +3,7 @@ import Contact from "@/components/home/Contact";
 import Cover from "@/components/home/Cover";
 import ListingCards from "@/components/home/ListingCards";
 import Reviews from "@/components/home/Reviews";
+import NewsLetterSignUpForm from "@/components/newsletter/NewsLetterSignUpForm";
 import type { Metadata } from "next";
 const baseURL = process.env.NEXT_PUBLIC_BASE_URL;
 
@@ -35,6 +36,9 @@ export default function Home() {
       </section>
       <section>
         <About />
+      </section>
+      <section>
+        <NewsLetterSignUpForm />
       </section>
       <section className="mx-auto bg-kw-maingray py-[2.5rem] dark:bg-kw-lessblack">
         <Reviews />
