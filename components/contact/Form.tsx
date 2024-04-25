@@ -169,7 +169,7 @@ const Form = () => {
           <div className="flex gap-3">
             <input type="checkbox" id="Subscribe" {...register("Subscribe")} />
             <label htmlFor="Subscribe" className="dark:text-light-900">
-              Subscribe to Newsletter & Market Updates
+              Subscribe to Email Campaign
             </label>
           </div>
           <ToastContainer />

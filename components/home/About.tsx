@@ -13,7 +13,7 @@ const About = () => {
               alt={"Listing Photo"}
               width={450}
               height={268}
-              className="h-[300px] w-[300px] rounded-full border-[3px] border-black bg-black  p-5 shadow-lg hover:border-kw-red md:h-[325px] md:w-[325px] lg:h-[400px] lg:w-[400px] xl:h-[420px] xl:w-[420px]"
+              className="size-[300px] rounded-full border-[3px] border-black bg-black p-5  shadow-lg hover:border-kw-red md:size-[325px] lg:size-[400px] xl:size-[420px]"
             />
           </Link>
         </div>
@@ -24,6 +24,11 @@ const About = () => {
             dreams. My goal is to take the stress out of every transaction for
             my clients to make the experience enjoyable and exciting.
           </p>
+          <Link href={"/contact"}>
+            <button className="button mx-auto mt-[1.2rem] flex">
+              Subscribe to Email Campaign
+            </button>
+          </Link>
         </div>
       </div>
     </section>
