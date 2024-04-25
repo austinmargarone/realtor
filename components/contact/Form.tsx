@@ -17,6 +17,7 @@ interface FormData {
   Message: string;
   buyingProperty: boolean;
   sellingProperty: boolean;
+  Subscribe: boolean;
 }
 
 // Create the Zod resolver
@@ -50,6 +51,7 @@ const Form = () => {
         message: data.Message,
         buyingProperty: data.buyingProperty,
         sellingProperty: data.sellingProperty,
+        subscribe: data.Subscribe,
       };
 
       await emailjs.send(
@@ -162,6 +164,12 @@ const Form = () => {
             />
             <label htmlFor="sellingProperty" className="dark:text-light-900">
               Selling Property
+            </label>
+          </div>
+          <div className="flex gap-3">
+            <input type="checkbox" id="Subscribe" {...register("Subscribe")} />
+            <label htmlFor="Subscribe" className="dark:text-light-900">
+              Subscribe to Newsletter & Market Updates
             </label>
           </div>
           <ToastContainer />

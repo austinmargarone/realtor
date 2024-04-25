@@ -22,4 +22,5 @@ export const formSchema = z.object({
   Message: z.string().max(1000),
   buyingProperty: z.boolean(),
   sellingProperty: z.boolean(),
+  Subscribe: z.boolean(),
 });
