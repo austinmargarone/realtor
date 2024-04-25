@@ -25,7 +25,7 @@ const About = () => {
             my clients to make the experience enjoyable and exciting.
           </p>
           <Link href={"/contact"}>
-            <button className="button mx-auto mt-[1.2rem] flex">
+            <button className="button dark:buttondark mx-auto mt-[1.2rem] flex">
               Subscribe to Email Campaign
             </button>
           </Link>
