@@ -35,7 +35,7 @@ const page = async () => {
 
   return (
     <main>
-      <div className="breakpoint mx-auto my-[1.25rem] flex flex-col items-center justify-between">
+      <div className="breakpoint mx-auto my-[1.25rem] flex flex-col items-center justify-between hidden xs:flex">
         <div>
           <h2 className="md:h1 h2 max-w-[1100px] dark:text-white">
             My Listings
@@ -59,7 +59,39 @@ const page = async () => {
                 />
               ))}
           </div>
-          <div className="my-[2rem] flex flex-wrap justify-center gap-[2rem] flex xs:hidden">
+        </div>
+        <div className="mt-[1.25rem]">
+          <h2 className="h2 max-w-[1100px] dark:text-white">
+            Buyer Transactions
+          </h2>
+          <div className="my-[2rem] flex flex-wrap justify-center gap-[2rem]">
+            {solddata
+              .sort((a, b) => a.id.localeCompare(b.id))
+              .map((sold) => (
+                <Sold
+                  key={sold.id}
+                  address={sold.address}
+                  beds={sold.beds}
+                  baths={sold.baths}
+                  lot={sold.lot}
+                  list={sold.sale}
+                  sale={sold.sale}
+                  sqft={sold.sqft}
+                  link={sold.link}
+                  mainImage={sold.mainImage}
+                />
+              ))}
+          </div>
+        </div>
+      </div>
+      {/* Conditionally render for screen size
+       */}
+        <div className="mx-auto my-[1.25rem] flex flex-col items-center justify-between flex xs:hidden">
+        <div>
+          <h2 className="md:h1 h2 max-w-[1100px] dark:text-white">
+            My Listings
+          </h2>
+          <div className="my-[2rem] flex flex-wrap justify-center gap-[2rem]">
             {listdata
               .sort((a, b) => a.id.localeCompare(b.id))
               .map((listing) => (
@@ -83,25 +115,7 @@ const page = async () => {
           <h2 className="h2 max-w-[1100px] dark:text-white">
             Buyer Transactions
           </h2>
-          <div className="my-[2rem] flex flex-wrap justify-center gap-[2rem] xs:flex hidden">
-            {solddata
-              .sort((a, b) => a.id.localeCompare(b.id))
-              .map((sold) => (
-                <Sold
-                  key={sold.id}
-                  address={sold.address}
-                  beds={sold.beds}
-                  baths={sold.baths}
-                  lot={sold.lot}
-                  list={sold.sale}
-                  sale={sold.sale}
-                  sqft={sold.sqft}
-                  link={sold.link}
-                  mainImage={sold.mainImage}
-                />
-              ))}
-          </div>
-          <div className="my-[2rem] flex flex-wrap justify-center gap-[2rem] flex xs:hidden">
+          <div className="my-[2rem] flex flex-wrap justify-center gap-[2rem]">
             {solddata
               .sort((a, b) => a.id.localeCompare(b.id))
               .map((sold) => (

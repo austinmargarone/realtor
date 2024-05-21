@@ -60,8 +60,8 @@ const Listing = ({
 }: Props) => {
   return (
     <main>
-      <div className="w-fit min-w-[350px] max-w-[450px] rounded-[1rem] border bg-white p-[.5rem] shadow-lg dark:border-kw-darkgray dark:bg-kw-black">
-        <div className="w-[350px] xs:w-full">
+      <div className="w-full min-w-[200px] max-w-[350px] rounded-[1rem] border bg-white p-[.5rem] shadow-lg dark:border-kw-darkgray dark:bg-kw-black">
+        <div className="">
           <Fade
             transitionDuration={100}
             autoplay={false}
@@ -71,7 +71,7 @@ const Listing = ({
                 <Image
                   src={"/icons/icons8-chevron-left-30.png"}
                   alt={"Left Arrow"}
-                  width={25}
+                  width={0}
                   height={25}
                   className="shadow-lg"
                 />
@@ -83,7 +83,7 @@ const Listing = ({
                 <Image
                   src={"/icons/icons8-chevron-right-30.png"}
                   alt={"Right Arrow"}
-                  width={25}
+                  width={0}
                   height={25}
                   className="shadow-lg"
                 />
@@ -130,8 +130,8 @@ const Listing = ({
               </p>
             </div> */}
             <div className="flex items-center justify-between">
-              <p className="w-[60%]">{address}</p>
-              <Button className="w-fit border border-black bg-kw-red text-white hover:animate-pulse dark:bg-kw-red dark:text-white">
+              <p className="">{address}</p>
+              <Button className=" border border-black bg-kw-red text-white hover:animate-pulse dark:bg-kw-red dark:text-white">
                 View Listing
               </Button>
             </div>
