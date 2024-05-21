@@ -3,6 +3,7 @@ import Listing from "@/components/shared/Listing";
 import Sold from "@/components/shared/Sold";
 import { getListPortfolio, getSoldPortfolio } from "@/sanity/sanity-utils";
 import type { Metadata } from "next";
+import SmallListing from "@/components/shared/SmallListing";
 
 const baseURL = process.env.NEXT_PUBLIC_BASE_URL;
 
@@ -38,11 +39,30 @@ const page = async () => {
           <h2 className="md:h1 h2 max-w-[1100px] dark:text-white">
             My Listings
           </h2>
-          <div className="my-[2rem] flex flex-wrap justify-center gap-[2rem]">
+          <div className="my-[2rem] flex flex-wrap justify-center gap-[2rem] xs:flex hidden">
             {listdata
               .sort((a, b) => a.id.localeCompare(b.id))
               .map((listing) => (
                 <Listing
+                  key={listing.id}
+                  address={listing.address}
+                  beds={listing.beds}
+                  baths={listing.baths}
+                  lot={listing.lot}
+                  sale={listing.sale}
+                  sqft={listing.sqft}
+                  color={listing.color}
+                  slug={listing.slug}
+                  status={listing.status}
+                  imageSlideshow={listing.imageSlideshow}
+                />
+              ))}
+          </div>
+          <div className="my-[2rem] flex flex-wrap justify-center gap-[2rem] flex xs:hidden">
+            {listdata
+              .sort((a, b) => a.id.localeCompare(b.id))
+              .map((listing) => (
+                <SmallListing
                   key={listing.id}
                   address={listing.address}
                   beds={listing.beds}
