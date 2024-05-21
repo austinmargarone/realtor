@@ -115,7 +115,7 @@ const Listing = ({
               <span>-</span>
               <span>${sale}</span>
             </div>
-            <div className="my-[.1rem] flex justify-start gap-[1rem]">
+            {/* <div className="my-[.1rem] flex justify-start gap-[1rem]">
               <p>
                 <span className="font-bold">{beds}</span> bed
               </p>
@@ -128,7 +128,7 @@ const Listing = ({
               <p>
                 <span className="font-bold">{lot}</span> acre lot
               </p>
-            </div>
+            </div> */}
             <div className="flex items-center justify-between">
               <p className="w-[60%]">{address}</p>
               <Button className="w-fit border border-black bg-kw-red text-white hover:animate-pulse dark:bg-kw-red dark:text-white">
