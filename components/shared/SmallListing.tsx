@@ -61,7 +61,7 @@ const Listing = ({
   return (
     <main>
       <div className="w-full min-w-[200px] max-w-[350px] rounded-[1rem] border bg-white p-[.5rem] shadow-lg dark:border-kw-darkgray dark:bg-kw-black">
-        <div className="">
+        <div className="w-full min-w-[200px] max-w-[350px]">
           <Fade
             transitionDuration={100}
             autoplay={false}
@@ -71,7 +71,7 @@ const Listing = ({
                 <Image
                   src={"/icons/icons8-chevron-left-30.png"}
                   alt={"Left Arrow"}
-                  width={0}
+                  width={25}
                   height={25}
                   className="shadow-lg"
                 />
@@ -83,7 +83,7 @@ const Listing = ({
                 <Image
                   src={"/icons/icons8-chevron-right-30.png"}
                   alt={"Right Arrow"}
-                  width={0}
+                  width={25}
                   height={25}
                   className="shadow-lg"
                 />
@@ -129,8 +129,8 @@ const Listing = ({
                 <span className="font-bold flex flex-col">{lot}</span> acre
               </p>
             </div>
-            <div className="flex items-center justify-between flex-col">
-              <p className="">{address}</p>
+            <div className="flex gap-[.75rem] justify-between flex-col">
+              <p className="flex flex-start">{address}</p>
               <Button className="border border-black bg-kw-red text-white hover:animate-pulse dark:bg-kw-red dark:text-white">
                 View Listing
               </Button>

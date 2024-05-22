@@ -40,9 +40,9 @@ const SmallSold = ({
             <Image
               src={mainImage.asset.url}
               alt={"Listing Photo"}
-              width={450}
+              width={3500}
               height={268}
-              className="h-[280px] rounded-t-[.5rem]"
+              className="h-[280px] rounded-t-[.5rem] w-full min-w-[200px] max-w-[350px]"
             />
           </div>
         </Link>
@@ -67,10 +67,10 @@ const SmallSold = ({
                 <span className="font-bold flex flex-col">{lot}</span> acre
               </p>
           </div>
-          <div className="flex flex-col items-center justify-between">
-            <p className="">{address}</p>
+          <div className="flex gap-[.75rem] justify-between flex-col">
+            <p className="flex flex-start">{address}</p>
             <Link href={`${link}`} target="_blank">
-              <Button className=" border border-black bg-kw-red text-white hover:animate-pulse dark:bg-kw-red dark:text-white">
+            <Button className="w-full border border-black bg-kw-red text-white hover:animate-pulse dark:bg-kw-red dark:text-white">
                 View Listing
               </Button>
             </Link>
