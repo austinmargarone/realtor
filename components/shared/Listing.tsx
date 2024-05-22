@@ -60,8 +60,8 @@ const Listing = ({
 }: Props) => {
   return (
     <main>
-      <div className="w-fit min-w-[350px] max-w-[450px] rounded-[1rem] border bg-white p-[.5rem] shadow-lg dark:border-kw-darkgray dark:bg-kw-black">
-        <div className="w-[350px] xs:w-full">
+      <div className="w-fit min-w-[250px] max-w-[450px] rounded-[1rem] border bg-white p-[.5rem] shadow-lg dark:border-kw-darkgray dark:bg-kw-black">
+        <div >
           <Fade
             transitionDuration={100}
             autoplay={false}
@@ -126,7 +126,7 @@ const Listing = ({
                 <span className="font-bold">{sqft}</span> sqft
               </p>
               <p>
-                <span className="font-bold">{lot}</span> acre lot
+                <span className="font-bold">{lot}</span> acre
               </p>
             </div>
             <div className="flex items-center justify-between">

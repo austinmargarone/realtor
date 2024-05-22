@@ -62,7 +62,7 @@ const Sold = ({
               <span className="font-bold">{sqft}</span> sqft
             </p>
             <p>
-              <span className="font-bold">{lot}</span> acre lot
+              <span className="font-bold">{lot}</span> acre
             </p>
           </div>
           <div className="flex items-center justify-between">

@@ -35,7 +35,7 @@ const page = async () => {
 
   return (
     <main>
-      <div className="breakpoint mx-auto my-[1.25rem] flex flex-col items-center justify-between hidden xs:flex">
+      <div className=" mx-auto my-[1.25rem] flex flex-col items-center justify-between hidden xs:flex">
         <div>
           <h2 className="md:h1 h2 max-w-[1100px] dark:text-white">
             My Listings

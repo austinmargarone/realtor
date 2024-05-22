@@ -54,20 +54,20 @@ const SmallSold = ({
             <span>${sale && sale.trim() !== "" ? sale : list}</span>
           </div>
           <div className="my-[.1rem] flex justify-start gap-[1rem]">
-            <p>
-              <span className="font-bold">{beds}</span> bed
-            </p>
-            <p>
-              <span className="font-bold">{baths}</span> bath
-            </p>
-            <p>
-              <span className="font-bold">{sqft}</span> sqft
-            </p>
-            <p>
-              <span className="font-bold">{lot}</span> acre lot
-            </p>
+          <p>
+                <span className="font-bold flex flex-col">{beds}</span> bed
+              </p>
+              <p>
+                <span className="font-bold flex flex-col">{baths}</span> bath
+              </p>
+              <p>
+                <span className="font-bold flex flex-col">{sqft}</span> sqft
+              </p>
+              <p>
+                <span className="font-bold flex flex-col">{lot}</span> acre
+              </p>
           </div>
-          <div className="flex items-center justify-between">
+          <div className="flex flex-col items-center justify-between">
             <p className="">{address}</p>
             <Link href={`${link}`} target="_blank">
               <Button className=" border border-black bg-kw-red text-white hover:animate-pulse dark:bg-kw-red dark:text-white">
