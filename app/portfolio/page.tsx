@@ -86,7 +86,7 @@ const page = async () => {
       </div>
       {/* Conditionally render for screen size
        */}
-<div className="flex flex-col items-center">
+<main className="flex flex-col items-center px-0 xs:hidden">
   <div className="mx-auto my-[1.25rem] flex flex-col items-center justify-between w-full">
     <div className="w-full">
       <h2 className="h2 max-w-[350px] dark:text-white mx-auto">
@@ -136,7 +136,7 @@ const page = async () => {
       </div>
     </div>
   </div>
-</div>
+</main>
 
     </main>
   );

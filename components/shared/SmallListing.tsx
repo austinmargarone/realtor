@@ -128,9 +128,9 @@ const SmallListing = ({
                 <span className="font-bold">{lot}</span> acre
               </p>
             </div>
-            <div className="flex items-center justify-between">
-              <p className="w-[60%]">{address}</p>
-              <Button className="w-fit border border-black bg-kw-red text-white hover:animate-pulse dark:bg-kw-red dark:text-white">
+            <div className="flex flex-col items-center justify-between">
+              <p className="flex flex-start">{address}</p>
+              <Button className="mt-[.25rem] w-full border border-black bg-kw-red text-white hover:animate-pulse dark:bg-kw-red dark:text-white">
                 View Listing
               </Button>
             </div>
