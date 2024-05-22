@@ -32,16 +32,16 @@ const SmallSold = ({
   mainImage,
 }: Props) => {
   return (
-    <article className="flex justify-center">
-      <div className="w-full min-w-[200px] max-w-[325px] flex-shrink-0 rounded-[1rem] border bg-white p-[.5rem] shadow-lg dark:border-kw-darkgray dark:bg-kw-black">
+    <article className="w-full px-4">
+      <div className="w-full rounded-[1rem] border bg-white p-[.5rem] shadow-lg dark:border-kw-darkgray dark:bg-kw-black">
         <Link href={`${link}`} target="_blank">
           <div className="flex justify-center">
             <Image
               src={mainImage.asset.url}
               alt={"Listing Photo"}
-              width={3500}
+              width={450}
               height={268}
-              className="h-[280px] rounded-t-[.5rem] w-full"
+              className="h-[280px] w-full rounded-t-[.5rem]"
             />
           </div>
         </Link>
@@ -54,22 +54,22 @@ const SmallSold = ({
           </div>
           <div className="my-[.1rem] flex justify-start gap-[1rem]">
             <p>
-              <span className="font-bold flex flex-col">{beds}</span> bed
+              <span className="font-bold">{beds}</span> bed
             </p>
             <p>
-              <span className="font-bold flex flex-col">{baths}</span> bath
+              <span className="font-bold">{baths}</span> bath
             </p>
             <p>
-              <span className="font-bold flex flex-col">{sqft}</span> sqft
+              <span className="font-bold">{sqft}</span> sqft
             </p>
             <p>
-              <span className="font-bold flex flex-col">{lot}</span> acre
+              <span className="font-bold">{lot}</span> acre
             </p>
           </div>
-          <div className="flex gap-[.75rem] justify-between flex-col">
-            <p className="flex flex-start">{address}</p>
+          <div className="flex items-center justify-between">
+            <p className="w-[60%]">{address}</p>
             <Link href={`${link}`} target="_blank">
-              <Button className="w-full border border-black bg-kw-red text-white hover:animate-pulse dark:bg-kw-red dark:text-white">
+              <Button className="w-fit border border-black bg-kw-red text-white hover:animate-pulse dark:bg-kw-red dark:text-white">
                 View Listing
               </Button>
             </Link>

@@ -46,7 +46,7 @@ const customArrowStyle: React.CSSProperties = {
   cursor: "pointer",
 };
 
-const Listing = ({
+const SmallListing = ({
   color,
   beds,
   baths,
@@ -59,9 +59,9 @@ const Listing = ({
   imageSlideshow,
 }: Props) => {
   return (
-    <main className="flex justify-center items-center">
-      <div className="w-full min-w-[200px] max-w-[325px] flex-shrink-0 rounded-[1rem] border bg-white p-[.5rem] shadow-lg dark:border-kw-darkgray dark:bg-kw-black">
-        <div className="w-full min-w-[200px] max-w-[325px] flex-shrink-0">
+    <main className="w-full px-4">
+      <div className="w-full rounded-[1rem] border bg-white p-[.5rem] shadow-lg dark:border-kw-darkgray dark:bg-kw-black">
+        <div>
           <Fade
             transitionDuration={100}
             autoplay={false}
@@ -116,21 +116,21 @@ const Listing = ({
             </div>
             <div className="my-[.1rem] flex justify-start gap-[1rem]">
               <p>
-                <span className="font-bold flex flex-col">{beds}</span> bed
+                <span className="font-bold">{beds}</span> bed
               </p>
               <p>
-                <span className="font-bold flex flex-col">{baths}</span> bath
+                <span className="font-bold">{baths}</span> bath
               </p>
               <p>
-                <span className="font-bold flex flex-col">{sqft}</span> sqft
+                <span className="font-bold">{sqft}</span> sqft
               </p>
               <p>
-                <span className="font-bold flex flex-col">{lot}</span> acre
+                <span className="font-bold">{lot}</span> acre
               </p>
             </div>
-            <div className="flex gap-[.75rem] justify-between flex-col">
-              <p className="flex flex-start">{address}</p>
-              <Button className="border border-black bg-kw-red text-white hover:animate-pulse dark:bg-kw-red dark:text-white">
+            <div className="flex items-center justify-between">
+              <p className="w-[60%]">{address}</p>
+              <Button className="w-fit border border-black bg-kw-red text-white hover:animate-pulse dark:bg-kw-red dark:text-white">
                 View Listing
               </Button>
             </div>
@@ -141,4 +141,4 @@ const Listing = ({
   );
 };
 
-export default Listing;
+export default SmallListing;

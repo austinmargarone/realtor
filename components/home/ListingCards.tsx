@@ -41,7 +41,7 @@ const ListingCards = async () => {
       </div>
       <div className="my-[2rem] flex flex-wrap justify-center gap-[2rem] flex xs:hidden">
             {listdata
-              .sort((a, b) => a.id.localeCompare(b.id))
+              .sort((a, b) => a.id.localeCompare(b.id)).slice(0, 4)
               .map((listing) => (
                 <SmallListing
                   key={listing.id}

@@ -86,55 +86,58 @@ const page = async () => {
       </div>
       {/* Conditionally render for screen size
        */}
-        <div className="mx-auto my-[1.25rem] flex flex-col items-center justify-between flex xs:hidden">
-        <div>
-          <h2 className="md:h1 h2 max-w-[1100px] dark:text-white">
-            My Listings
-          </h2>
-          <div className="my-[2rem] flex flex-wrap justify-center gap-[2rem]">
-            {listdata
-              .sort((a, b) => a.id.localeCompare(b.id))
-              .map((listing) => (
-                <SmallListing
-                  key={listing.id}
-                  address={listing.address}
-                  beds={listing.beds}
-                  baths={listing.baths}
-                  lot={listing.lot}
-                  sale={listing.sale}
-                  sqft={listing.sqft}
-                  color={listing.color}
-                  slug={listing.slug}
-                  status={listing.status}
-                  imageSlideshow={listing.imageSlideshow}
-                />
-              ))}
-          </div>
-        </div>
-        <div className="mt-[1.25rem]">
-          <h2 className="h2 max-w-[1100px] dark:text-white">
-            Buyer Transactions
-          </h2>
-          <div className="my-[2rem] flex flex-wrap justify-center gap-[2rem]">
-            {solddata
-              .sort((a, b) => a.id.localeCompare(b.id))
-              .map((sold) => (
-                <SmallSold
-                  key={sold.id}
-                  address={sold.address}
-                  beds={sold.beds}
-                  baths={sold.baths}
-                  lot={sold.lot}
-                  list={sold.sale}
-                  sale={sold.sale}
-                  sqft={sold.sqft}
-                  link={sold.link}
-                  mainImage={sold.mainImage}
-                />
-              ))}
-          </div>
-        </div>
+<div className="flex flex-col items-center">
+  <div className="mx-auto my-[1.25rem] flex flex-col items-center justify-between w-full">
+    <div className="w-full">
+      <h2 className="h2 max-w-[350px] dark:text-white mx-auto">
+        My Listings
+      </h2>
+      <div className="my-[2rem] flex flex-wrap justify-center gap-[2rem]">
+        {listdata
+          .sort((a, b) => a.id.localeCompare(b.id))
+          .map((listing) => (
+            <SmallListing
+              key={listing.id}
+              address={listing.address}
+              beds={listing.beds}
+              baths={listing.baths}
+              lot={listing.lot}
+              sale={listing.sale}
+              sqft={listing.sqft}
+              color={listing.color}
+              slug={listing.slug}
+              status={listing.status}
+              imageSlideshow={listing.imageSlideshow}
+            />
+          ))}
       </div>
+    </div>
+    <div className="w-full mt-[1.25rem]">
+      <h2 className="h2 max-w-[350px] dark:text-white mx-auto">
+        Buyer Transactions
+      </h2>
+      <div className="my-[2rem] flex flex-wrap justify-center gap-[2rem]">
+        {solddata
+          .sort((a, b) => a.id.localeCompare(b.id))
+          .map((sold) => (
+            <SmallSold
+              key={sold.id}
+              address={sold.address}
+              beds={sold.beds}
+              baths={sold.baths}
+              lot={sold.lot}
+              list={sold.sale}
+              sale={sold.sale}
+              sqft={sold.sqft}
+              link={sold.link}
+              mainImage={sold.mainImage}
+            />
+          ))}
+      </div>
+    </div>
+  </div>
+</div>
+
     </main>
   );
 };
