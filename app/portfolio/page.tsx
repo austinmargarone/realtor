@@ -41,7 +41,8 @@ const page = async () => {
           <h2 className="md:h1 h2 max-w-[1100px] dark:text-white">
             My Listings
           </h2>
-          <div className="my-[2rem] flex flex-wrap justify-center gap-[2rem] xs:flex hidden">
+          <section className="xs:flex hidden">
+          <div className="my-[2rem] flex flex-wrap justify-center gap-[2rem] flex">
             {listdata
               .sort((a, b) => a.id.localeCompare(b.id))
               .map((listing) => (
@@ -60,6 +61,7 @@ const page = async () => {
                 />
               ))}
           </div>
+          </section>
         </div>
         <div className="mt-[1.25rem]">
           <h2 className="h2 max-w-[1100px] dark:text-white">
