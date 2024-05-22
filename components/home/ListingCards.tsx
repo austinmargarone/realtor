@@ -19,7 +19,8 @@ const ListingCards = async () => {
           </Link>
         </div>
       </div>
-      <div className="m-[2rem] flex flex-wrap justify-center gap-[2rem] hidden xs:block">
+      <section className="hidden xs:flex">
+      <div className="m-[2rem] flex flex-wrap justify-center gap-[2rem]">
         {listdata
           .sort((a, b) => a.id.localeCompare(b.id))
           .slice(0, 4)
@@ -39,7 +40,9 @@ const ListingCards = async () => {
             />
           ))}
       </div>
-      <div className="my-[2rem] flex flex-wrap justify-center gap-[2rem] flex xs:hidden">
+      </section>
+      <section className="flex xs:hidden">
+      <div className="my-[2rem] flex flex-wrap justify-center gap-[2rem] flex">
             {listdata
               .sort((a, b) => a.id.localeCompare(b.id)).slice(0, 4)
               .map((listing) => (
@@ -58,6 +61,7 @@ const ListingCards = async () => {
                 />
               ))}
           </div>
+          </section>
       <Link href="/portfolio">
         <button className="button dark:buttondark mx-auto flex sm:hidden">
           Portfoilo

@@ -35,7 +35,8 @@ const page = async () => {
 
   return (
     <main>
-      <div className="xs:breakpoint mx-auto my-[1.25rem] flex flex-col items-center justify-between hidden xs:block">
+      <section className="hidden xs:flex">
+      <div className="xs:breakpoint mx-auto my-[1.25rem] flex flex-col items-center justify-between">
         <div>
           <h2 className="md:h1 h2 max-w-[1100px] dark:text-white">
             My Listings
@@ -84,9 +85,11 @@ const page = async () => {
           </div>
         </div>
       </div>
+      </section>
       {/* Conditionally render for screen size
        */}
-<main className="flex flex-col items-center px-0 xs:hidden">
+       <section className="xs:hidden">
+<div className="flex flex-col items-center px-0">
   <div className="mx-auto my-[1.25rem] flex flex-col items-center justify-between w-full">
     <div className="w-full">
       <h2 className="h2 max-w-[350px] dark:text-white mx-auto">
@@ -136,7 +139,8 @@ const page = async () => {
       </div>
     </div>
   </div>
-</main>
+</div>
+</section>
 
     </main>
   );
