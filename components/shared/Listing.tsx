@@ -59,9 +59,9 @@ const Listing = ({
   imageSlideshow,
 }: Props) => {
   return (
-    <main>
-      <div className="w-fit min-w-[250px] max-w-[450px] rounded-[1rem] border bg-white p-[.5rem] shadow-lg dark:border-kw-darkgray dark:bg-kw-black">
-        <div >
+    <main className="flex justify-center">
+      <div className="w-full min-w-[250px] max-w-[450px] rounded-[1rem] border bg-white p-[.5rem] shadow-lg dark:border-kw-darkgray dark:bg-kw-black">
+        <div>
           <Fade
             transitionDuration={100}
             autoplay={false}
@@ -79,7 +79,6 @@ const Listing = ({
             }
             nextArrow={
               <div style={{ ...customArrowStyle }}>
-                {" "}
                 <Image
                   src={"/icons/icons8-chevron-right-30.png"}
                   alt={"Right Arrow"}

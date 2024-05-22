@@ -31,9 +31,9 @@ const Sold = ({
   mainImage,
 }: Props) => {
   return (
-    <article>
-      <div className="w-fit min-w-[350px] max-w-[450px] rounded-[1rem] border bg-white p-[.5rem] shadow-lg dark:border-kw-darkgray dark:bg-kw-black">
-        <Link href={`${link}`} target="_blank">
+    <article className="flex justify-center">
+      <div className="w-full min-w-[350px] max-w-[450px] rounded-[1rem] border bg-white p-[.5rem] shadow-lg dark:border-kw-darkgray dark:bg-kw-black">
+        <Link href={link} target="_blank">
           <div className="flex justify-center">
             <Image
               src={mainImage.asset.url}
@@ -67,7 +67,7 @@ const Sold = ({
           </div>
           <div className="flex items-center justify-between">
             <p className="w-[60%]">{address}</p>
-            <Link href={`${link}`} target="_blank">
+            <Link href={link} target="_blank">
               <Button className="w-fit border border-black bg-kw-red text-white hover:animate-pulse dark:bg-kw-red dark:text-white">
                 View Listing
               </Button>

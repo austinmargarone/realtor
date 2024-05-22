@@ -60,8 +60,8 @@ const Listing = ({
 }: Props) => {
   return (
     <main className="flex justify-center items-center">
-      <div className="w-full min-w-[200px] max-w-[350px] flex-shrink-0 rounded-[1rem] border bg-white p-[.5rem] shadow-lg dark:border-kw-darkgray dark:bg-kw-black">
-        <div className="w-full min-w-[200px] max-w-[350px] flex-shrink-0">
+      <div className="w-full min-w-[200px] max-w-[325px] flex-shrink-0 rounded-[1rem] border bg-white p-[.5rem] shadow-lg dark:border-kw-darkgray dark:bg-kw-black">
+        <div className="w-full min-w-[200px] max-w-[325px] flex-shrink-0">
           <Fade
             transitionDuration={100}
             autoplay={false}
