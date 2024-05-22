@@ -59,7 +59,7 @@ const SmallListing = ({
   imageSlideshow,
 }: Props) => {
   return (
-    <main className="w-full px-4">
+    <main className="w-full px-2.5">
       <div className="w-full rounded-[1rem] border bg-white p-[.5rem] shadow-lg dark:border-kw-darkgray dark:bg-kw-black">
         <div>
           <Fade
