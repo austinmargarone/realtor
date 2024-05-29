@@ -32,7 +32,7 @@ const Sold = ({
 }: Props) => {
   return (
     <article className="flex justify-center">
-      <div className="w-full min-w-[350px] max-w-[450px] rounded-[1rem] border bg-white p-[.5rem] shadow-lg dark:border-kw-darkgray dark:bg-kw-black">
+      <div className="w-full xs:w-[370px] sm:w-[475px] rounded-[1rem] border bg-white p-[.5rem] shadow-lg dark:border-kw-darkgray dark:bg-kw-black">
         <Link href={link} target="_blank">
           <div className="flex justify-center">
             <Image
