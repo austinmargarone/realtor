@@ -40,7 +40,7 @@ const Sold = ({
               alt={"Listing Photo"}
               width={450}
               height={268}
-              className="h-[280px] w-full rounded-t-[.5rem]"
+              className="h-auto w-full rounded-t-[.5rem]"
             />
           </div>
         </Link>
