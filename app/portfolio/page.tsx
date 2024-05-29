@@ -118,8 +118,8 @@ const page = async () => {
       </div>
     </div>
     <div className="w-full mt-[1.25rem]">
-      <h2 className="h2 max-w-[350px] dark:text-white mx-auto">
-        Buyer Transactions
+      <h2 className="h2 max-w-[350px] dark:text-white mx-auto flex-wrap flrx">
+        Buy Side
       </h2>
       <div className="my-[2rem] flex flex-wrap justify-center gap-[2rem]">
         {solddata
