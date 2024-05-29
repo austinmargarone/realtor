@@ -59,8 +59,8 @@ const Listing = ({
   imageSlideshow,
 }: Props) => {
   return (
-    <main className="flex justify-center">
-      <div className="w-full min-w-[250px] max-w-[450px] rounded-[1rem] border bg-white p-[.5rem] shadow-lg dark:border-kw-darkgray dark:bg-kw-black">
+    <main className="flex justify-center h-auto">
+      <div className="w-full xs:w-[370px] sm:w-[475px] rounded-[1rem] border bg-white p-[.5rem] shadow-lg dark:border-kw-darkgray dark:bg-kw-black">
         <div>
           <Fade
             transitionDuration={100}
