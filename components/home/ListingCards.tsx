@@ -2,6 +2,7 @@ import React from "react";
 import Listing from "../shared/Listing";
 import Link from "next/link";
 import { getListPortfolio } from "@/sanity/sanity-utils";
+import SmallListing from "@/components/shared/SmallListing";
 
 const ListingCards = async () => {
   const listdata = await getListPortfolio();
@@ -18,6 +19,7 @@ const ListingCards = async () => {
           </Link>
         </div>
       </div>
+      <section className="hidden xs:flex">
       <div className="m-[2rem] flex flex-wrap justify-center gap-[2rem]">
         {listdata
           .sort((a, b) => a.id.localeCompare(b.id))
@@ -38,6 +40,27 @@ const ListingCards = async () => {
             />
           ))}
       </div>
+      </section>
+      <div className="my-[2rem] flex flex-wrap justify-center gap-[2rem] flex xs:hidden">
+            {listdata
+              .sort((a, b) => a.id.localeCompare(b.id)).slice(0, 4)
+
+              .map((listing) => (
+                <SmallListing
+                  key={listing.id}
+                  address={listing.address}
+                  beds={listing.beds}
+                  baths={listing.baths}
+                  lot={listing.lot}
+                  sale={listing.sale}
+                  sqft={listing.sqft}
+                  color={listing.color}
+                  slug={listing.slug}
+                  status={listing.status}
+                  imageSlideshow={listing.imageSlideshow}
+                />
+              ))}
+          </div>
       <Link href="/portfolio">
         <button className="button dark:buttondark mx-auto flex sm:hidden">
           Portfoilo

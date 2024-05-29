@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { Button } from "../ui/button";
 import Link from "next/link";
@@ -19,7 +20,7 @@ interface Props {
   link: string;
 }
 
-const Sold = ({
+const SmallSold = ({
   beds,
   baths,
   sqft,
@@ -31,16 +32,16 @@ const Sold = ({
   mainImage,
 }: Props) => {
   return (
-    <article className="flex justify-center">
-      <div className="w-full min-w-[350px] max-w-[450px] rounded-[1rem] border bg-white p-[.5rem] shadow-lg dark:border-kw-darkgray dark:bg-kw-black">
-        <Link href={link} target="_blank">
+    <article className="w-full px-2.5">
+      <div className="w-full rounded-[1rem] border bg-white p-[.5rem] shadow-lg dark:border-kw-darkgray dark:bg-kw-black">
+        <Link href={`${link}`} target="_blank">
           <div className="flex justify-center">
             <Image
               src={mainImage.asset.url}
               alt={"Listing Photo"}
               width={450}
               height={268}
-              className="h-[280px] w-full rounded-t-[.5rem]"
+              className="h-auto w-full rounded-t-[.5rem]"
             />
           </div>
         </Link>
@@ -65,10 +66,10 @@ const Sold = ({
               <span className="font-bold">{lot}</span> acre
             </p>
           </div>
-          <div className="flex items-center justify-between">
-            <p className="w-[60%]">{address}</p>
-            <Link href={link} target="_blank">
-              <Button className="w-fit border border-black bg-kw-red text-white hover:animate-pulse dark:bg-kw-red dark:text-white">
+          <div className="flex flex-col justify-between">
+            <p className="flex flex-start">{address}</p>
+            <Link href={`${link}`} target="_blank" className="w-full">
+            <Button className="mt-[.25rem] w-full border border-black bg-kw-red text-white hover:animate-pulse dark:bg-kw-red dark:text-white">
                 View Listing
               </Button>
             </Link>
@@ -79,4 +80,4 @@ const Sold = ({
   );
 };
 
-export default Sold;
+export default SmallSold;

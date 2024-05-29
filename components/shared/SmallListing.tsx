@@ -46,7 +46,7 @@ const customArrowStyle: React.CSSProperties = {
   cursor: "pointer",
 };
 
-const Listing = ({
+const SmallListing = ({
   color,
   beds,
   baths,
@@ -59,8 +59,8 @@ const Listing = ({
   imageSlideshow,
 }: Props) => {
   return (
-    <main className="flex justify-center">
-      <div className="w-full min-w-[250px] max-w-[450px] rounded-[1rem] border bg-white p-[.5rem] shadow-lg dark:border-kw-darkgray dark:bg-kw-black">
+    <main className="w-full px-2.5">
+      <div className="w-full rounded-[1rem] border bg-white p-[.5rem] shadow-lg dark:border-kw-darkgray dark:bg-kw-black">
         <div>
           <Fade
             transitionDuration={100}
@@ -128,9 +128,9 @@ const Listing = ({
                 <span className="font-bold">{lot}</span> acre
               </p>
             </div>
-            <div className="flex items-center justify-between">
-              <p className="w-[60%]">{address}</p>
-              <Button className="w-fit border border-black bg-kw-red text-white hover:animate-pulse dark:bg-kw-red dark:text-white">
+            <div className="flex flex-col items-center justify-between">
+              <p className="flex flex-start">{address}</p>
+              <Button className="mt-[.25rem] w-full border border-black bg-kw-red text-white hover:animate-pulse dark:bg-kw-red dark:text-white">
                 View Listing
               </Button>
             </div>
@@ -141,4 +141,4 @@ const Listing = ({
   );
 };
 
-export default Listing;
+export default SmallListing;
