@@ -36,6 +36,14 @@ const Footer = () => {
               Austin Margarone
             </p>
           </div>
+          <Link
+            href={"https://mailchi.mp/be4735125a1b/subscribe"}
+            target="_blank"
+          >
+            <button className="m-auto my-[.075rem] flex rounded-sm bg-kw-red px-[2.25rem] py-[.125rem] font-semibold text-kw-ltgray hover:bg-kw-ltgray hover:text-kw-red dark:bg-kw-red dark:hover:bg-kw-maingray dark:hover:text-black">
+              Subscribe
+            </button>
+          </Link>
           <div className="flex justify-center">
             <p className="text-black dark:text-white">
               <CopyNumber />

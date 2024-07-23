@@ -24,7 +24,10 @@ const About = () => {
             dreams. My goal is to take the stress out of every transaction for
             my clients to make the experience enjoyable and exciting.
           </p>
-          <Link href={"/contact"}>
+          <Link
+            href={"https://mailchi.mp/be4735125a1b/subscribe"}
+            target="_blank"
+          >
             <button className="button dark:buttondark mx-auto mt-[1.2rem] flex">
               Subscribe to Email Campaign
             </button>
