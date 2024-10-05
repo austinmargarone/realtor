@@ -3,6 +3,7 @@ import { apiVersion, dataset, projectId } from "./env";
 import { BlogPost } from "@/types/BlogPost";
 import { Author } from "next/dist/lib/metadata/types/metadata-types";
 import { Category } from "@/types/Category";
+import { SoldPortfolio } from "@/types/SoldPortfolio";
 import { ListPortfolio } from "@/types/ListPortfolio";
 
 export async function getPost(slug: string): Promise<BlogPost> {
@@ -127,8 +128,11 @@ export async function getMyListing(slug: string): Promise<ListPortfolio> {
         sale,
         beds,
         baths,
+        sqft,
         lot,
         year,
+        status,
+        color,
         slug,
         description,
         list,
@@ -144,8 +148,10 @@ export async function getMyListing(slug: string): Promise<ListPortfolio> {
           },
           alt
         },
+        garage,
         tour,
         embed,
+        MLS,
         keywords,
         metadesc
       }`,
@@ -157,6 +163,37 @@ export async function getMyListing(slug: string): Promise<ListPortfolio> {
     console.error("Error fetching data:", error);
     throw error;
   }
+}
+
+export async function getSoldPortfolio(): Promise<SoldPortfolio[]> {
+  const client = createClient({
+    projectId,
+    dataset,
+    apiVersion,
+  });
+  return client.fetch(/* groq */ `*[_type == 'soldPortfolio'] {
+      id,
+      address,
+      mainImage{
+        asset->{
+          url,
+          metadata {
+            dimensions {
+              width,
+              height
+            }
+          }
+        },
+        alt
+      },  
+      sale,
+      beds,
+      baths,
+      sqft,
+      lot,
+      year,
+      link
+    }`);
 }
 
 export async function getListPortfolio(): Promise<ListPortfolio[]> {

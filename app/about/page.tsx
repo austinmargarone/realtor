@@ -6,18 +6,18 @@ import React from "react";
 const baseURL = process.env.NEXT_PUBLIC_BASE_URL;
 
 export const metadata: Metadata = {
-  title: "About | Greg Miller",
+  title: "About | Austin Margarone",
   description:
-    "Greg Miller is a licensed real estate salesperson in Rochester, NY. He works with buyers and sellers to make the process easy and stress-free.",
+    "Austin Margarone is a licensed real estate salesperson in Rochester, NY. He works with buyers and sellers to make the process easy and stress-free.",
   keywords:
-    "Greg Miller, Realtor, Real Estate, Rochester, NY, New York, Homes, Houses, Property, Listing, Listings, Buy, Sell, Rent",
+    "Austin Margarone, Realtor, Real Estate, Rochester, NY, New York, Homes, Houses, Property, Listing, Listings, Buy, Sell, Rent",
   openGraph: {
     images: [
       {
         url: `${baseURL}/meta.png`,
         width: 1200,
         height: 630,
-        alt: "Greg Miller | Realtor",
+        alt: "Austin Margarone | Realtor",
       },
     ],
   },

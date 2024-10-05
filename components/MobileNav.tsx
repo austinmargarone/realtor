@@ -58,7 +58,7 @@ const MobileNav = () => {
       >
         <Link href="/" className="flex items-center gap-1">
           <p className="h2-bold text-black dark:text-white">
-            Greg Miller | Realtor
+            Austin Margarone | Realtor
           </p>
         </Link>
         <div style={{ maxHeight: "calc(100vh - 100px)", overflowY: "auto" }}>

@@ -234,7 +234,7 @@ const PropertyListing = ({
       </section>
       <section>
         <div className="body dark:bodydark flex flex-col">
-          <span>Listing Agent: Greg Miller</span>
+          <span>Listing Agent: Austin Margarone</span>
           <span>MLS# {MLS}</span>
         </div>
       </section>

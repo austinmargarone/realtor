@@ -8,17 +8,18 @@ import React from "react";
 const baseURL = process.env.NEXT_PUBLIC_BASE_URL;
 
 export const metadata: Metadata = {
-  title: "Blog | Greg Miller",
-  description: "Greg Miller's blog about real estate, Rochester, NY, and more.",
+  title: "Blog | Austin Margarone",
+  description:
+    "Austin Margarone's blog about real estate, Rochester, NY, and more.",
   keywords:
-    "Greg Miller, Realtor, Real Estate, Rochester, NY, New York, Homes, Houses, Property, Listing, Listings, Buy, Sell, Rent, Blog",
+    "Austin Margarone, Realtor, Real Estate, Rochester, NY, New York, Homes, Houses, Property, Listing, Listings, Buy, Sell, Rent, Blog",
   openGraph: {
     images: [
       {
         url: `${baseURL}/meta.png`,
         width: 1200,
         height: 630,
-        alt: "Greg Miller | Realtor",
+        alt: "Austin Margarone | Realtor",
       },
     ],
   },

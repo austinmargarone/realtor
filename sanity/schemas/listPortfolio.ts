@@ -2,7 +2,7 @@ import { defineField, defineType } from "sanity";
 
 export default defineType({
   name: "listPortfolio",
-  title: "Portfolio",
+  title: "List Portfolio",
   type: "document",
   fields: [
     defineField({
@@ -36,6 +36,16 @@ export default defineType({
       ],
     }),
     defineField({
+      name: "sale",
+      title: "Sale Price",
+      type: "string",
+    }),
+    defineField({
+      name: "list",
+      title: "List Price",
+      type: "string",
+    }),
+    defineField({
       name: "beds",
       title: "Bedrooms",
       type: "number",
@@ -51,23 +61,58 @@ export default defineType({
       type: "string",
     }),
     defineField({
+      name: "lot",
+      title: "Lot Size",
+      type: "number",
+    }),
+    defineField({
       name: "year",
       title: "Year Built",
       type: "number",
     }),
-
+    defineField({
+      name: "status",
+      title: "Status",
+      type: "string",
+      options: {
+        list: ["Active", "SOLD", "PENDING"],
+      },
+    }),
+    defineField({
+      name: "color",
+      title: "Color",
+      type: "string",
+    }),
+    defineField({
+      name: "slug",
+      title: "Route",
+      type: "string",
+    }),
     defineField({
       name: "description",
       title: "Description",
       type: "text",
     }),
-
+    defineField({
+      name: "garage",
+      title: "Garage",
+      type: "number",
+    }),
+    defineField({
+      name: "tour",
+      title: "Tour Link",
+      type: "string",
+    }),
     defineField({
       name: "embed",
       title: "Embed Link",
       type: "string",
     }),
-
+    defineField({
+      name: "MLS",
+      title: "MLS",
+      type: "string",
+    }),
     defineField({
       name: "keywords",
       title: "Keywords",

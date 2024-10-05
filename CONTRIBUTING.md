@@ -1,6 +1,6 @@
 # Contributing to my Realtor Portfolio
 
-Welcome to my Realtor Portfolio! We're thrilled that you'd like to contribute to our project.
+Welcome to my Realtor Portfolio! We're thrilled that you'd like to contribute to our project. 
 
 Before getting started, please take a moment to review the guidelines below.
 
@@ -34,4 +34,4 @@ If you encounter any issues or bugs while using my Realtor Portfolio, please rep
 
 ## Contact
 
-If you have any questions or need further assistance, feel free to reach out to Greg Miller at austin@margarone.dev.
+If you have any questions or need further assistance, feel free to reach out to Austin Margarone at austin@margarone.dev.

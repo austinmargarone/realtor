@@ -50,6 +50,7 @@ const Listing = ({
   color,
   beds,
   baths,
+  sqft,
   lot,
   sale,
   address,
@@ -58,8 +59,8 @@ const Listing = ({
   imageSlideshow,
 }: Props) => {
   return (
-    <main className="flex h-auto justify-center">
-      <div className="w-full rounded-[1rem] border bg-white p-[.5rem] shadow-lg dark:border-kw-darkgray dark:bg-kw-black xs:w-[370px] sm:w-[475px]">
+    <main className="flex justify-center h-auto">
+      <div className="w-full xs:w-[370px] sm:w-[475px] rounded-[1rem] border bg-white p-[.5rem] shadow-lg dark:border-kw-darkgray dark:bg-kw-black">
         <div>
           <Fade
             transitionDuration={100}
@@ -109,9 +110,9 @@ const Listing = ({
                 className="my-auto flex size-3 rounded-full"
                 style={{ backgroundColor: color }}
               ></div>
-              <span>Nightly</span>
+              <span>{status}</span>
               <span>-</span>
-              <span>199${sale}</span>
+              <span>${sale}</span>
             </div>
             <div className="my-[.1rem] flex justify-start gap-[1rem]">
               <p>
@@ -119,6 +120,12 @@ const Listing = ({
               </p>
               <p>
                 <span className="font-bold">{baths}</span> bath
+              </p>
+              <p>
+                <span className="font-bold">{sqft}</span> sqft
+              </p>
+              <p>
+                <span className="font-bold">{lot}</span> acre
               </p>
             </div>
             <div className="flex items-center justify-between">

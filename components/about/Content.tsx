@@ -7,7 +7,9 @@ const Content = () => {
   return (
     <section className="breakpoint my-auto flex flex-col-reverse py-[2.5rem] lg:flex-row">
       <div className="my-auto w-full lg:w-[50%]">
-        <h2 className="h2 flex justify-start dark:text-white">Greg Miller</h2>
+        <h2 className="h2 flex justify-start dark:text-white">
+          Austin Margarone
+        </h2>
         <h3 className="h4 my-[.75rem] flex justify-start dark:text-white">
           Licensed Real Estate Salesperson
         </h3>

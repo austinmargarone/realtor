@@ -19,7 +19,7 @@ export async function generateMetadata({
     description: post.description,
     publishedTime: post.publishedAt,
     type: "article",
-    author: "Greg Miller",
+    author: "Austin Margarone",
     twitter: {
       cardType: "summary_large_image",
       site: "@AustinMargarone",
@@ -31,7 +31,7 @@ export async function generateMetadata({
           url: post.mainImage.asset.url,
           width: 1200,
           height: 630,
-          alt: "Greg Miller | Realtor",
+          alt: "Austin Margarone | Realtor",
         },
       ],
     },
