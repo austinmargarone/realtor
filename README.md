@@ -4,7 +4,6 @@
 
 ![Preview Image](preview.png)
 
-
 ## Description
 
 Welcome to My Realtor Profile! This repository contains the codebase for my real estate profile application. This serves as a portfolio website to showcase my real estate portfolio, featuring properties I've listed, sold, and helped clients find. Whether you're looking to buy, sell, or invest in real estate, My application provides a comprehensive overview of my services and expertise in the industry as well as tools and information that will help you with your transaction.
@@ -51,6 +50,7 @@ To set up the project locally, follow these steps:
    ```bash
    git clone github.com/austinmargarone/realtor.git
    ```
+
 2. Navigate to the project directory:
 
    ```bash
@@ -89,7 +89,7 @@ Please review our [Contributing Guidelines](CONTRIBUTING.md) for more details.
 
 This project is licensed under the [MIT License](LICENSE).
 
-
 ## Contact
 
-For questions or support, please contact Austin Margarone at Austin@margarone.dev.
+For questions or support, please contact Greg Miller at Austin@margarone.dev.
+# vacation-rental
