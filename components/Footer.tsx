@@ -8,33 +8,19 @@ const Footer = () => {
     <section className="border-black bg-white shadow-lg dark:bg-black">
       <div className="breakpoint mx-auto flex flex-col items-center pb-[1rem]  lg:flex-row lg:justify-between lg:py-[2.5rem]">
         <div className="mt-[1rem] flex items-center justify-center gap-[1.25rem] lg:mt-0">
-          <Link
-            href={
-              "https://www.realtor.com/realestateagents/austin-margarone_rochester_ny_3802982_051184163"
-            }
-            target="_blank"
-          >
+          <Link href={"https://www.airbnb.com/"} target="_blank">
             <Image
-              src={"/Realtor.jpg"}
+              src={"/Airbnb.png"}
               alt={"Realtor Logo"}
-              width={150}
+              width={300}
               height={150}
-              className="size-[5rem] rounded-sm dark:shadow-lg lg:size-[7rem]"
+              className="size-[5rem] w-full rounded-sm dark:shadow-lg lg:size-[7rem]"
             />
           </Link>
-          <Image
-            src={"/KWRed.png"}
-            alt={"KW Logo"}
-            width={150}
-            height={150}
-            className="h-[3rem] w-fit dark:shadow-lg lg:h-[4rem]"
-          />
         </div>
         <div className="mt-[1rem] flex flex-col">
           <div className="flex justify-center">
-            <p className="font-bold text-black dark:text-white">
-              Austin Margarone
-            </p>
+            <p className="font-bold text-black dark:text-white">Greg Miller</p>
           </div>
           <Link
             href={"https://mailchi.mp/be4735125a1b/subscribe"}
