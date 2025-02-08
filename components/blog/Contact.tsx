@@ -12,7 +12,7 @@ const Contact = () => {
           process.
         </p>
         <Link href={"/contact"}>
-          <button className="button dark:buttondark">Schdule Meeting</button>
+          <button className="button dark:buttondark">Schedule Meeting</button>
         </Link>
       </div>
     </section>
