@@ -30,7 +30,7 @@ const Content = () => {
       </div>
       <div className="my-auto mb-[1.25rem] w-full lg:mt-0 lg:w-[50%]">
         <Image
-          src={"/smallheadshot.jpeg"}
+          src={"/KWRed.png"}
           alt={"Listing Photo"}
           width={450}
           height={268}
