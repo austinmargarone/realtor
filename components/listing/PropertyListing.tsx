@@ -72,6 +72,7 @@ const PropertyListing = ({
   status,
   MLS,
   embed,
+  video,
   description,
   garage,
   imageSlideshow,
@@ -232,6 +233,20 @@ const PropertyListing = ({
         ) : (
           <></>
         )}
+      </section>
+      {/* Video Tour */}
+      <section>
+        {video ? (
+          <iframe
+            width="853"
+            height="480"
+            className="mx-auto flex h-[500px] w-[300px] rounded-md shadow-lg sm:w-[100%] lg:h-[600px]"
+            src={video}
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowFullScreen
+            style={{ border: "none" }}
+          />
+        ) : null}
       </section>
       <section>
         <div className="body dark:bodydark flex flex-col">
