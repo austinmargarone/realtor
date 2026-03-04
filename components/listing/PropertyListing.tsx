@@ -25,6 +25,7 @@ interface Props {
   status: string;
   MLS: string;
   embed: string;
+  video: string;
   description: string;
   garage: string;
   imageSlideshow: any;
@@ -86,7 +87,7 @@ const PropertyListing = ({
             canSwipe={true}
             prevArrow={
               <div
-                className="my-auto flex h-[5rem] w-[5rem] items-center rounded-full text-white"
+                className="my-auto flex size-[5rem] items-center rounded-full text-white"
                 style={{ ...customArrowStyle }}
               >
                 <Image
@@ -94,13 +95,13 @@ const PropertyListing = ({
                   alt={"Arrow Left"}
                   width={50}
                   height={50}
-                  className="h-[1.5rem] w-[1.5rem] shadow-lg md:h-[2rem] md:w-[2rem] lg:h-[2.5rem] lg:w-[2.5rem]"
+                  className="size-[1.5rem] shadow-lg md:size-[2rem] lg:size-[2.5rem]"
                 />
               </div>
             }
             nextArrow={
               <div
-                className="my-auto flex h-[5rem] w-[5rem] items-center justify-end rounded-full text-white"
+                className="my-auto flex size-[5rem] items-center justify-end rounded-full text-white"
                 style={{ ...customArrowStyle }}
               >
                 <Image
@@ -108,7 +109,7 @@ const PropertyListing = ({
                   alt={"Arrow Right"}
                   width={50}
                   height={50}
-                  className="h-[1.5rem] w-[1.5rem] shadow-lg md:h-[2rem] md:w-[2rem] lg:h-[2.5rem] lg:w-[2.5rem]"
+                  className="size-[1.5rem] shadow-lg md:size-[2rem] lg:size-[2.5rem]"
                 />
               </div>
             }
@@ -134,7 +135,7 @@ const PropertyListing = ({
           <h1 className="h4 mb-[.625rem]">{address}</h1>
           <div className="flex w-fit rounded-sm bg-black px-[15px] py-1 shadow-md">
             <div
-              className="my-auto mr-[12px] flex h-3 w-3 rounded-full"
+              className="my-auto mr-[12px] flex size-3 rounded-full"
               style={{ backgroundColor: color }}
             ></div>
             <p className="text-white">
@@ -149,7 +150,7 @@ const PropertyListing = ({
                   alt={"Icon8 Bedroom"}
                   width={50}
                   height={50}
-                  className="m-auto h-[1rem] w-[1rem]"
+                  className="m-auto size-[1rem]"
                 />
                 {beds}
                 <span> Beds</span>
@@ -160,7 +161,7 @@ const PropertyListing = ({
                   alt={"Icon8 Bathroom"}
                   width={50}
                   height={50}
-                  className="m-auto h-[1rem] w-[1rem]"
+                  className="m-auto size-[1rem]"
                 />
                 {baths}
                 <span> Bath</span>
@@ -171,7 +172,7 @@ const PropertyListing = ({
                   alt={"Icon8 Sqft"}
                   width={50}
                   height={50}
-                  className="m-auto h-[1rem] w-[1rem]"
+                  className="m-auto size-[1rem]"
                 />
                 {sqft}
                 <span> sqft</span>
@@ -184,7 +185,7 @@ const PropertyListing = ({
                   alt={"Icon8 Acres"}
                   width={50}
                   height={50}
-                  className="m-auto h-[1rem] w-[1rem]"
+                  className="m-auto size-[1rem]"
                 />
                 {lot}
                 <span> Acres</span>
@@ -195,7 +196,7 @@ const PropertyListing = ({
                   alt={"Icon8 Calendar"}
                   width={50}
                   height={50}
-                  className="m-auto h-[1rem] w-[1rem]"
+                  className="m-auto size-[1rem]"
                 />
                 <span>Built </span>
                 <span>{year}</span>
@@ -206,7 +207,7 @@ const PropertyListing = ({
                   alt={"Icon8 Garage"}
                   width={50}
                   height={50}
-                  className="m-auto h-[1rem] w-[1rem]"
+                  className="m-auto size-[1rem]"
                 />
                 {garage}
                 <span> Cars</span>

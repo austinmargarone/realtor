@@ -55,6 +55,7 @@ const Page = async ({ params }: Props) => {
         status={listing.status}
         MLS={listing.MLS}
         embed={listing.embed}
+        video={listing.video}
         description={listing.description}
         garage={listing.garage}
         imageSlideshow={listing.imageSlideshow}
