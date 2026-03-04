@@ -24,6 +24,7 @@ export type ListPortfolio = {
   list: string;
   garage: string;
   tour: string;
+  video: string;
   embed: string;
   MLS: string;
   keywords: string[];

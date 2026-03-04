@@ -109,6 +109,11 @@ export default defineType({
       type: "string",
     }),
     defineField({
+      name: "video",
+      title: "Video Link",
+      type: "string",
+    }),
+    defineField({
       name: "MLS",
       title: "MLS",
       type: "string",

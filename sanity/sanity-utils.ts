@@ -151,6 +151,7 @@ export async function getMyListing(slug: string): Promise<ListPortfolio> {
         garage,
         tour,
         embed,
+        video,
         MLS,
         keywords,
         metadesc
